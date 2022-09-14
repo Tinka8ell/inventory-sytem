@@ -34,7 +34,7 @@ This READMI.md is a start, but ...
 * try to work out what is independent of what - work out the real modules and plug-ins
 * use it for real, but knowingly, to generate "how to"s and "what is"s
 
-## [Documentation](Assets/Devion Games/Docs/README.md)
+## [Documentation](Assets/Devion%20Games/Docs/README.md)
 
 If you have a tangled ball of string, 
 you can keep teasing at the ends and loops till it comes apart.  
@@ -52,7 +52,7 @@ To complicate matters, there is "run time" and "editor" code,
 and there is the places where things link through Unity objects (components, etc)!
 
 Got to start somewhere, so let's hit the 
-["Inventory Ststem"](Assets/Devion Games/Docs/README.md) ...
+["Inventory Ststem"](Assets/Devion%20Games/Docs/README.md) ...
 
 ## From Original Item & Inventory System 2.1.4 preview
 
