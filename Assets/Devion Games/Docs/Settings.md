@@ -1,12 +1,17 @@
 # Settings
 
-observations
+Just a minimal super class for all "settings" and it implements INameable
 
 ## Contains:
-* internals
+* a name (sort of type)
 
 ## What is it?
-* discoveries
+* place to store names settings
 
 ## Significant dependant objects
-* [ClassName](ClassName.md)
+Subclasses of Configuration.Settings:
+* Default
+* Input
+* Notifications
+* SavingLoading
+* UI

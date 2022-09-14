@@ -17,7 +17,7 @@ what is required and what is used to demonstrate and what is good pactice
 
 ### Parts
 
-* [InventoryManager](InventoryManager.md)
-
-* [ItemDatabase](ItemDatabase.md)
-* [Settings](Settings.md)
+* Game state is held in the [InventoryManager](InventoryManager.md)
+  * Using [ItemDatabase](ItemDatabase.md) to hold the data 
+  * including [Settings](Settings.md)
+* [EquipmentHandler](EquipmentHandler.md)
