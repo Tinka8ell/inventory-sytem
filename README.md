@@ -1,20 +1,60 @@
-# Item & Inventory System 2.1.4 preview
+# Item & Inventory System Review and Update (fix)
+
+## First thoughts
+
+When I came across this asset I was impressed and encouraged.  
+The inventory system seemed clean and simple - clear and minimalist, 
+but packed with so much openness and extensibility.  I was excited ...
+
+... Then I started to use it.  Unfortuately there were holes.
+* First, and mainly was the documentation.
+  * The link (see [below](#from-original-item-&-inventory-system-2.1.4-preview)) 
+to the documentation takes you to a 
+[website](https://deviongames.com/inventory-system/getting-started/).
+I'd like to say it is incomplete, but really it was hardly started.
+  * The [Discord](https://discord.gg/y4fMXpZ) seems to be alive, but the creator is abscent
+  * On the Discord there isa link to the (original) 
+[tutorial videos](https://www.youtube.com/playlist?list=PLexJx2VysToal5by-GWz4U5gXo5HCUX5Y) 
+on YouTube
+    * Unfortunately they are now a bit out of date
+* Secondly, the author is MIA
+  * Last update on GitHub as June 2021
+  * Last update on Discord also 2021
+* After trying to mess with the Unity Asset (Currently version 2.1.3)
+  * things break
+  * error detection / handling is a bit suspect
+  * it is back-level Unity ans a few things just break moving forward
+  * not knowing what does what, or relies on what is dishaeartening
+
+## A Plan
+
+This READMI.md is a start, but ...
+* try not to touch the base code, yet
+* try to map out the structure / dependancies of the code
+* try to work out what is independent of what - work out the real modules and plug-ins
+* use it for real, but knowingly, to generate "how to"s and "what is"s
+
+## From Original Item & Inventory System 2.1.4 preview
+
 Inventory System is a highly flexible tool for unity. It can be used in any type of game genres such as RPG, FPS, RTS, Platformer and many more. It comes with full source code, allowing you to change anything and extend it as you wish.
-<br><br>• Organized Project
-<br>• Intuitive Editor
-<br>• Triggering System
-<br>• Visual Scripting
-<br>• Stat System
-<br>• Saving and Loading
-<br>• Multiple Inventories and Windows
-<br>• Animated Windows
-<br>• Currency System
-<br>• Vendor System
-<br>• Gathering Resources
-<br>• Crafting
-<br>• Restrictions
-<br>• Item Property Generators
-<br>• Easy to modify and extend
-<br>• Source code included
-<br>• Examples
-<br><br><b><a href="https://deviongames.com/inventory-system/getting-started/">Documentation</a> | <a href="https://discord.gg/y4fMXpZ">Discord</a> | <a href="https://assetstore.unity.com/packages/tools/gui/item-inventory-system-45568">Asset Store</a></b>
+* Organized Project
+* Intuitive Editor
+* Triggering System
+* Visual Scripting
+* Stat System
+* Saving and Loading
+* Multiple Inventories and Windows
+* Animated Windows
+* Currency System
+* Vendor System
+* Gathering Resources
+* Crafting
+* Restrictions
+* Item Property Generators
+* Easy to modify and extend
+* Source code included
+* Examples
+
+**[Documentation](https://deviongames.com/inventory-system/getting-started/) 
+| [Discord](https://discord.gg/y4fMXpZ) 
+| [Asset Store](https://assetstore.unity.com/packages/tools/gui/item-inventory-system-45568")**
