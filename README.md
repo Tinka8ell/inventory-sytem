@@ -34,6 +34,26 @@ This READMI.md is a start, but ...
 * try to work out what is independent of what - work out the real modules and plug-ins
 * use it for real, but knowingly, to generate "how to"s and "what is"s
 
+## [Documentation](Assets/Devion Games/Docs/README.md)
+
+If you have a tangled ball of string, 
+you can keep teasing at the ends and loops till it comes apart.  
+But it it is a tangled ball of strings and other things - ugh!
+There does not seem to be a sensible place to put documents, 
+and I don't want to start changing code! 
+So I am going to create a Docs folder and build ".md" files of what I find.
+It will also have other document types in it using the ".md" to link them together.
+
+There are "modules" of a sort in the folders things live in.
+I need to find the landing places in each 
+and see if I can itentify what is in and not in each real module
+and how they link and depend on each other.
+To complicate matters, there is "run time" and "editor" code, 
+and there is the places where things link through Unity objects (components, etc)!
+
+Got to start somewhere, so let's hit the 
+["Inventory Ststem"](Assets/Devion Games/Docs/README.md) ...
+
 ## From Original Item & Inventory System 2.1.4 preview
 
 Inventory System is a highly flexible tool for unity. It can be used in any type of game genres such as RPG, FPS, RTS, Platformer and many more. It comes with full source code, allowing you to change anything and extend it as you wish.
