@@ -20,4 +20,5 @@ what is required and what is used to demonstrate and what is good pactice
 * Game state is held in the [InventoryManager](InventoryManager.md)
   * Using [ItemDatabase](ItemDatabase.md) to hold the data 
   * including [Settings](Settings.md)
+* Player "state" held by [StatSystem](StatSystem.md)
 * [EquipmentHandler](EquipmentHandler.md)

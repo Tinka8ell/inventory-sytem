@@ -30,7 +30,7 @@ but I think this one only creates and empty game object with this as a component
 
 ## What is it?
 * Seems to be like a "Game Controler" object.
-* OnAwake:
+* Awake:
   * Makes sure it is a singleton
   * Instantiates (if missing) an EventSystem
   * If Camera.main hasn't got one, adds a PhysicsRaycaster
