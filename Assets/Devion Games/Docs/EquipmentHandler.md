@@ -1,11 +1,22 @@
 # EquipmentHandler
 
 Seems a significant object to do with instantiating "Visible Items"
-and moving them to and from ItemContainers
+and moving them to and from ItemContainers.
+From the [Default Avatar](DAEquipementHandler.png)
+we can get some idea of how it is supposed to be used.
 
 ## Contains:
-* Bones - a List of EquipmentBone
-* VisibleItems - a List of VisibleItem
+* [Bones](DAEquipementHandlerBones.png) - a List of EquipmentBone
+  * List of bones seems to be taken from the database (in the Inventoymanager?)
+  * Intersetingly, only 2 are defined in the working example:
+    * Right Hand Items
+    * left hand Items
+  * These are "extra" "null" (zero Transform) bones in the respective hands
+  * So the "hand bones" tak us to where the fingers are mounted 
+  and this placement is at that point
+* [VisibleItems](DAEquipementHandlerItems.png) - a List of VisibleItem
+  * This is prefilled
+  * Does it list the itmes we can hold?
 * Refs:
   * m_WindowName = "Equipment"
   * m_Database (ItemDatabase)

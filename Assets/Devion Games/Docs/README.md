@@ -19,6 +19,7 @@ but not a clue how it works, or links together.  So Plan B ...
   * So that means graphing the children
   * And graphing the Components
 * Use the graph to find the key objects
+* The players components and how they are set up is opening some clues - yeah!
 
 ### Main Scene
 * [Top-level GameObjects](MainGameScene.md)
