@@ -21,6 +21,9 @@ but not a clue how it works, or links together.  So Plan B ...
 * Use the graph to find the key objects
 * The players components and how they are set up is opening some clues - yeah!
 
+## Plan C
+* Look through the [Tools > Devion Games](ToolsDevionGames.md)
+
 ### Main Scene
 * [Top-level GameObjects](MainGameScene.md)
   * [UI GameObjects](UIGameobjects.md)
