@@ -1,0 +1,29 @@
+@startuml
+abstract class "GraphView`1"<T> {
+    + GraphView(host:EditorWindow)
+    + OnGUI(position:Rect) : void
+    + <<virtual>> OnBeforeSerialize() : void
+    + <<virtual>> OnAfterDeserialize() : void
+    + SaveSelection() : void
+    + LoadSelection() : void
+    + CenterGraphView() : void
+}
+enum SelectionMode {
+    None,
+    Pick,
+    Rect,
+}
+class Styles <<static>> {
+    + <<const>> gridMinorSize : float = 12f
+    + <<const>> gridMajorSize : float = 120f
+    + {static} gridMinorColor : Color
+    + {static} gridMajorColor : Color
+    + {static} background : GUIStyle
+    + {static} selectionRect : GUIStyle
+    {static} Styles()
+}
+IGraphView <|-- "GraphView`1"
+ISerializationCallbackReceiver <|-- "GraphView`1"
+"GraphView`1" +-- SelectionMode
+"GraphView`1" +-- Styles
+@enduml

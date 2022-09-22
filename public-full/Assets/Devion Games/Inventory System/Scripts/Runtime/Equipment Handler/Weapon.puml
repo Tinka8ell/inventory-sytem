@@ -1,0 +1,27 @@
+@startuml
+abstract class Weapon {
+    + <<override>> Callbacks : string[] <<get>>
+    + m_ItemID : int = 0
+    + <<override>> OnItemEquip(item:Item) : void
+    + <<override>> OnItemUnEquip(item:Item) : void
+}
+enum ActivationType {
+    Automatic,
+    Button,
+    Toggle,
+}
+enum StartType {
+    Automatic,
+    Down,
+    Press,
+}
+enum StopType {
+    Up,
+    EndUseEvent,
+    Manual,
+}
+VisibleItem <|-- Weapon
+Weapon +-- ActivationType
+Weapon +-- StartType
+Weapon +-- StopType
+@enduml

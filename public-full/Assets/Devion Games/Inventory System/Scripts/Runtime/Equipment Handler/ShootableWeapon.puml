@@ -1,0 +1,10 @@
+@startuml
+class ShootableWeapon {
+}
+enum ProjectileVisibility {
+    OnFire,
+    Always,
+}
+Weapon <|-- ShootableWeapon
+ShootableWeapon +-- ProjectileVisibility
+@enduml

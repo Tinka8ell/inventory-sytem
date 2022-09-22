@@ -1,0 +1,22 @@
+@startuml
+class ModuleManagerWindow {
+    + {static} ShowWindow() : void
+    {static} ModuleManagerWindow()
+}
+class Styles <<static>> {
+    + {static} minusButton : GUIStyle
+    + {static} selectButton : GUIStyle
+    + {static} background : GUIStyle
+    + {static} seperator : GUIStyle
+    + {static} thumbnail : GUIStyle
+    + {static} thumbnailText : GUIStyle
+    + {static} largeLabel : GUIStyle
+    + {static} largeFoldout : GUIStyle
+    + {static} richTextLabel : GUIStyle
+    + {static} selectButtonText : GUIStyle
+    {static} Styles()
+    + {static} Seperator() : void
+}
+EditorWindow <|-- ModuleManagerWindow
+ModuleManagerWindow +-- Styles
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class SM_AnimSpeedRandomizer {
+    + minSpeed : float = 0.7f
+    + maxSpeed : float = 1.5f
+}
+MonoBehaviour <|-- SM_AnimSpeedRandomizer
+@enduml

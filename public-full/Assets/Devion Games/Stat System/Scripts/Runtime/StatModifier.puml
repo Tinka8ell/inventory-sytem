@@ -1,0 +1,14 @@
+@startuml
+enum StatModType {
+    Flat,
+    PercentAdd,
+    PercentMult,
+}
+class StatModifier {
+    + source : object
+    + Value : float <<get>>
+    + Type : StatModType <<get>>
+    + StatModifier()
+    + StatModifier(value:float, type:StatModType, source:object)
+}
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+class DialogBox {
+    + autoClose : bool = true
+    + title : Text
+    + text : Text
+    + icon : Image
+    + button : Button
+    + <<virtual>> Show(settings:NotificationOptions, result:UnityAction<int>, buttons:string[]) : void
+    + <<virtual>> Show(title:string, text:string, buttons:string[]) : void
+    + <<virtual>> Show(title:string, text:string, result:UnityAction<int>, buttons:string[]) : void
+    + <<virtual>> Show(title:string, text:string, icon:Sprite, result:UnityAction<int>, buttons:string[]) : void
+}
+UIWidget <|-- DialogBox
+@enduml

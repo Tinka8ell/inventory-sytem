@@ -1,0 +1,16 @@
+@startuml
+class Slot {
+    + restrictions : List<Restriction>
+    + ObservedItem : Item <<get>> <<set>>
+    + IsEmpty : bool <<get>>
+    + Container : ItemContainer <<get>> <<set>>
+    + Index : int <<get>> <<set>>
+    + <<override>> Callbacks : string[] <<get>>
+    + <<virtual>> Repaint() : void
+    + <<virtual>> Use() : void
+    + <<virtual>> CanUse() : bool
+    + <<virtual>> MoveItem() : bool
+    + <<virtual>> CanAddItem(item:Item) : bool
+}
+CallbackHandler <|-- Slot
+@enduml

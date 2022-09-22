@@ -1,0 +1,5 @@
+@startuml
+interface INameable {
+    Name : string <<get>> <<set>>
+}
+@enduml

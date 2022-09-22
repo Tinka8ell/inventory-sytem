@@ -1,0 +1,31 @@
+@startuml
+class NamedVariable {
+    + Name : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + VariableType : NamedVariableType <<get>> <<set>>
+    + ValueType : Type <<get>>
+    + VariableTypeNames : string[] <<get>>
+    + stringValue : string
+    + intValue : int = 0
+    + floatValue : float = 0f
+    + colorValue : Color
+    + boolValue : bool = false
+    + objectReferenceValue : UnityEngine.Object = null
+    + vector2Value : Vector2
+    + vector3Value : Vector3
+    + GetValue() : object
+    + SetValue(value:object) : void
+    + PropertyPath : string <<get>>
+}
+enum NamedVariableType {
+    String= 0,
+    Bool= 2,
+    Color= 3,
+    Float= 4,
+    Object= 5,
+    Int= 6,
+    Vector2= 7,
+    Vector3= 8,
+}
+INameable <|-- NamedVariable
+@enduml

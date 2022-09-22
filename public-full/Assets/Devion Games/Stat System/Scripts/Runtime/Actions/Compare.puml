@@ -1,0 +1,8 @@
+@startuml
+class Compare {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Compare
+ICondition <|-- Compare
+@enduml

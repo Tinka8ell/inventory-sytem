@@ -1,0 +1,10 @@
+@startuml
+class Skill {
+    + CurrentValue : float <<get>> <<set>>
+    + GainModifier : SkillModifier <<get>> <<set>>
+    + CheckSkill() : bool
+    + <<override>> GetObjectData(data:Dictionary<string, object>) : void
+    + <<override>> SetObjectData(data:Dictionary<string, object>) : void
+}
+UsableItem <|-- Skill
+@enduml

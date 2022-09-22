@@ -1,0 +1,9 @@
+@startuml
+class Evaluate {
+    + time : float
+    + curve : AnimationCurve
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Evaluate
+@enduml

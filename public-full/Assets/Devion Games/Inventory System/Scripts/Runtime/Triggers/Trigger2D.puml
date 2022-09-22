@@ -1,0 +1,6 @@
+@startuml
+class Trigger2D {
+    + <<override>> CanUse() : bool
+}
+Trigger <|-- Trigger2D
+@enduml

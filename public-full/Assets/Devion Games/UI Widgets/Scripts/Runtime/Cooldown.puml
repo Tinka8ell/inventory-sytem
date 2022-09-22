@@ -1,0 +1,10 @@
+@startuml
+class Cooldown {
+    + overlay : Image
+    + IsCoolDown : bool <<get>>
+    + Update() : void
+    + OnPointerClick(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- Cooldown
+IPointerClickHandler <|-- Cooldown
+@enduml

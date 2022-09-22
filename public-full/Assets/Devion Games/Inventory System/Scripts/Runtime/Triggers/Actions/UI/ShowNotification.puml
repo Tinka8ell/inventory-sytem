@@ -1,0 +1,6 @@
+@startuml
+class ShowNotification {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- ShowNotification
+@enduml

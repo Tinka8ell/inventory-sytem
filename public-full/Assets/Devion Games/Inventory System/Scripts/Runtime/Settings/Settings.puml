@@ -1,0 +1,7 @@
+@startuml
+abstract class Settings {
+    + <<virtual>> Name : string <<get>> <<set>>
+}
+ScriptableObject <|-- Settings
+INameable <|-- Settings
+@enduml

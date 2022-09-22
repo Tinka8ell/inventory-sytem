@@ -1,0 +1,6 @@
+@startuml
+class UpdateEquipment {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- UpdateEquipment
+@enduml

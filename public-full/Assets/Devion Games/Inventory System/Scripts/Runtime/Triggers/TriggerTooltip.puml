@@ -1,0 +1,6 @@
+@startuml
+class TriggerTooltip {
+    + Show(title:string, instruction:string) : void
+}
+UIWidget <|-- TriggerTooltip
+@enduml

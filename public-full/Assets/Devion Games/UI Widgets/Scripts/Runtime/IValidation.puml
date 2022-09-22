@@ -1,0 +1,5 @@
+@startuml
+interface "IValidation`1"<T> {
+    Validate(item:T) : bool
+}
+@enduml

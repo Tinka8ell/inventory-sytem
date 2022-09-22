@@ -1,0 +1,7 @@
+@startuml
+class SphereCast {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SphereCast
+@enduml

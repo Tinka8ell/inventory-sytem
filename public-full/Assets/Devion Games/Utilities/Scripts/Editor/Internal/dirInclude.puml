@@ -1,0 +1,6 @@
+@startuml
+!include BuiltInResourcesWindow.puml
+!include CopyComponentEditor.puml
+!include InternalTestingTools.puml
+!include TextToTextMeshPro.puml
+@enduml

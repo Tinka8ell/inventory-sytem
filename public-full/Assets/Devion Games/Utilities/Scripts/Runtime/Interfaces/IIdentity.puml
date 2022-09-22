@@ -1,0 +1,5 @@
+@startuml
+interface IIdentity {
+    ID : int <<get>> <<set>>
+}
+@enduml

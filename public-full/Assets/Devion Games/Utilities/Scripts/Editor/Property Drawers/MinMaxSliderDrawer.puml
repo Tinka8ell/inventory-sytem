@@ -1,0 +1,7 @@
+@startuml
+class MinMaxSliderDrawer {
+    + <<override>> OnGUI(position:Rect, property:SerializedProperty, label:GUIContent) : void
+    + {static} Round(value:float, digits:int) : float
+}
+PropertyDrawer <|-- MinMaxSliderDrawer
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class GraphUtility <<static>> {
+    + {static} AddNode(graph:Graph) : T
+    + {static} AddNode(graph:Graph, type:System.Type) : Node
+    + {static} RemoveNodes(graph:Graph, nodes:FlowNode[]) : void
+    + {static} RemoveNodes(graph:Graph, nodes:Node[]) : void
+    + {static} Save(graph:Graph) : void
+    + {static} Load(graph:Graph) : void
+    + {static} ConvertToArray(collection:IList) : object
+    + {static} ConvertToArray(collection:IList, arrayType:Type) : object
+}
+@enduml

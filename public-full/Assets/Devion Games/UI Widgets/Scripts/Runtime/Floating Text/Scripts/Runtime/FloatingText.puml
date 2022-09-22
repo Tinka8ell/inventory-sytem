@@ -1,0 +1,6 @@
+@startuml
+class FloatingText {
+    + SetText(target:Transform, text:string, color:Color, offset:Vector3) : void
+}
+MonoBehaviour <|-- FloatingText
+@enduml

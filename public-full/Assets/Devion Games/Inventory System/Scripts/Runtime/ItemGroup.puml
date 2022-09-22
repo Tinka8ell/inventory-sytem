@@ -1,0 +1,10 @@
+@startuml
+class ItemGroup {
+    + Name : string <<get>> <<set>>
+    + Items : Item[] <<get>>
+    + Amounts : int[] <<get>>
+    + Modifiers : List<ItemModifierList> <<get>>
+}
+ScriptableObject <|-- ItemGroup
+INameable <|-- ItemGroup
+@enduml

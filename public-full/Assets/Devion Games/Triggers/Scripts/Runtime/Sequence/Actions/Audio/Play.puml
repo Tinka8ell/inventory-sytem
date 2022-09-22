@@ -1,0 +1,6 @@
+@startuml
+class Play {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Play
+@enduml

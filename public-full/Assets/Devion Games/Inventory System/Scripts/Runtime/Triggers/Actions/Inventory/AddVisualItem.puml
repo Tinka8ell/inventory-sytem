@@ -1,0 +1,7 @@
+@startuml
+class AddVisualItem {
+    + <<override>> OnUpdate() : ActionStatus
+    + <<override>> OnInterrupt() : void
+}
+Action <|-- AddVisualItem
+@enduml

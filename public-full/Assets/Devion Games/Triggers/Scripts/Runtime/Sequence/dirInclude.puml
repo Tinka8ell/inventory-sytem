@@ -1,0 +1,12 @@
+@startuml
+!include Actions/dirInclude.puml
+!include Action.puml
+!include Actions.puml
+!include ActionStatus.puml
+!include ActionTemplate.puml
+!include ConditionType.puml
+!include IAction.puml
+!include ICondition.puml
+!include Sequence.puml
+!include TriggerEventListener.puml
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+interface IGenerator {
+    enabled : bool <<get>> <<set>>
+}
+@enduml

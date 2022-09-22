@@ -1,0 +1,10 @@
+@startuml
+abstract class "ObjectCollectionEditor`1"<T> {
+    + <<override>> ToolbarName : string <<get>>
+    + ObjectCollectionEditor(serializedObject:SerializedObject, serializedProperty:SerializedProperty)
+    + ObjectCollectionEditor(toolbar:string, serializedObject:SerializedObject, serializedProperty:SerializedProperty)
+    + <<override>> OnEnable() : void
+    + <<override>> OnDisable() : void
+}
+"CollectionEditor`1" "<T>" <|-- "ObjectCollectionEditor`1"
+@enduml

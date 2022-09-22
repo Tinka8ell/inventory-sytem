@@ -1,0 +1,10 @@
+@startuml
+abstract class CustomDrawer {
+    + declaringObject : object
+    + fieldInfo : FieldInfo
+    + value : object
+    + dirty : bool = false
+    + <<virtual>> OnGUI(label:GUIContent) : void
+    + SetDirty() : void
+}
+@enduml

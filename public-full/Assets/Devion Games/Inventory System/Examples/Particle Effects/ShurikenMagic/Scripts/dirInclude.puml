@@ -1,0 +1,8 @@
+@startuml
+!include SM_AnimSpeedRandomizer.puml
+!include SM_DestroyTimed.puml
+!include SM_PrefabGenerator.puml
+!include SM_RandomScale.puml
+!include SM_Rotate.puml
+!include SM_TrailFade.puml
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class StringVariable {
+    + Value : string <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + StringVariable()
+    + StringVariable(name:string)
+}
+Variable <|-- StringVariable
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class Fullscreen {
+    + SetFullscreen(fullScreen:bool) : void
+}
+MonoBehaviour <|-- Fullscreen
+@enduml

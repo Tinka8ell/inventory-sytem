@@ -1,0 +1,7 @@
+@startuml
+class SendMessageUpwards {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SendMessageUpwards
+@enduml

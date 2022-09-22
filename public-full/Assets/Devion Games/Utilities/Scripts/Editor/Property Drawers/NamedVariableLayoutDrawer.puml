@@ -1,0 +1,6 @@
+@startuml
+class NamedVariableLayoutDrawer {
+    + <<override>> OnGUI(label:GUIContent) : void
+}
+CustomDrawer <|-- NamedVariableLayoutDrawer
+@enduml

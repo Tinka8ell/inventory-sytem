@@ -1,0 +1,9 @@
+@startuml
+class DisplayTriggerTooltip {
+    + OnWentOutOfRange(player:GameObject) : void
+    + OnTriggerUsed(player:GameObject) : void
+}
+MonoBehaviour <|-- DisplayTriggerTooltip
+ITriggerWentOutOfRange <|-- DisplayTriggerTooltip
+ITriggerUsedHandler <|-- DisplayTriggerTooltip
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class BroadcastMessage {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- BroadcastMessage
+@enduml

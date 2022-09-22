@@ -1,0 +1,8 @@
+@startuml
+class InventorySystemInspector {
+    + OnEnable() : void
+    + OnDisable() : void
+    + OnDestroy() : void
+    + OnGUI(position:Rect) : void
+}
+@enduml

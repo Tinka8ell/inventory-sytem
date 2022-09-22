@@ -1,0 +1,7 @@
+@startuml
+class EquipmentHandlerInspector {
+    playModeStateChange : bool
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- EquipmentHandlerInspector
+@enduml

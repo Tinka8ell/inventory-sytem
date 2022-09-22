@@ -1,0 +1,7 @@
+@startuml
+class ThirdPersonControllerEditor {
+    playModeStateChange : bool
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- ThirdPersonControllerEditor
+@enduml

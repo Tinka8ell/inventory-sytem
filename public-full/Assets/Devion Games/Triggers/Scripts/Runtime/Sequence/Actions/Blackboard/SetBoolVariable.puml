@@ -1,0 +1,6 @@
+@startuml
+class SetBoolVariable {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SetBoolVariable
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class UI {
+    + <<override>> Name : string <<get>>
+    + notificationName : string = "Notification"
+    + dialogBoxName : string = "Dialog Box"
+    + notification : Notification <<get>>
+    + dialogBox : DialogBox <<get>>
+}
+Settings <|-- UI
+@enduml

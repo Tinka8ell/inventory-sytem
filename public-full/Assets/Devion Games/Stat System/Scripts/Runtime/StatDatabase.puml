@@ -1,0 +1,8 @@
+@startuml
+class StatDatabase {
+    + items : List<Stat>
+    + effects : List<StatEffect>
+    + settings : List<Configuration.Settings>
+}
+ScriptableObject <|-- StatDatabase
+@enduml

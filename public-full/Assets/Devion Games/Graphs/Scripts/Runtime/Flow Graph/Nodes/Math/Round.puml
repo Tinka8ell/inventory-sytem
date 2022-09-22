@@ -1,0 +1,8 @@
+@startuml
+class Round {
+    + value : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Round
+@enduml

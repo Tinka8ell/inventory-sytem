@@ -1,0 +1,5 @@
+@startuml
+!include Instantiate.puml
+!include PlaySound.puml
+!include SetLayerWeight.puml
+@enduml

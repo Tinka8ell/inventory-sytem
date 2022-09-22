@@ -1,0 +1,5 @@
+@startuml
+class ExcludeFromCreation {
+}
+Attribute <|-- ExcludeFromCreation
+@enduml

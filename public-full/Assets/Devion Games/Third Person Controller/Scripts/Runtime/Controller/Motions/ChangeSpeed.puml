@@ -1,0 +1,8 @@
+@startuml
+class ChangeSpeed {
+    + <<override>> OnStart() : void
+    + <<override>> OnStop() : void
+    + <<override>> CanStop() : bool
+}
+MotionState <|-- ChangeSpeed
+@enduml

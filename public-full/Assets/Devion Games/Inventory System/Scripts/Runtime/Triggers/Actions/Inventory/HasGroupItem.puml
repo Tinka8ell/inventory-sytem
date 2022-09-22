@@ -1,0 +1,7 @@
+@startuml
+class HasGroupItem {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- HasGroupItem
+ICondition <|-- HasGroupItem
+@enduml

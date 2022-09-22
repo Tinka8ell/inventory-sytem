@@ -1,0 +1,7 @@
+@startuml
+!include Component/dirInclude.puml
+!include Inventory/dirInclude.puml
+!include Physics/dirInclude.puml
+!include Skills/dirInclude.puml
+!include UI/dirInclude.puml
+@enduml

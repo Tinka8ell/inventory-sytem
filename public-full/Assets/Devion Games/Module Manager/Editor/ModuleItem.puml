@@ -1,0 +1,25 @@
+@startuml
+class ModuleItem {
+    + name : string
+    + id : string
+    + assetPath : string = ""
+    + version : string
+    + unityVersion : string = "19.1.1"
+    + assetStore : string
+    + downloadPath : string
+    + documentation : string
+    + author : string
+    + email : string
+    + description : string
+    + dependencies : string[]
+    + changelogs : Changelog[]
+    + IsDownloading : bool <<get>> <<set>>
+    + DownloadProgress : float <<get>> <<set>>
+    + Icon : Texture2D <<get>>
+    + IsInstalled : bool <<get>>
+    + InstalledModule : ModuleItem <<get>>
+    + DependencyModules : ModuleItem[] <<get>>
+    + CanInstall : bool <<get>>
+    + Initialize() : void
+}
+@enduml

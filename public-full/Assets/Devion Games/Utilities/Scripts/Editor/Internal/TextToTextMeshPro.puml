@@ -1,0 +1,6 @@
+@startuml
+class TextToTextMeshPro {
+    + {static} ShowWindow() : void
+}
+EditorWindow <|-- TextToTextMeshPro
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+!include ContextMenuTrigger.puml
+!include DialogBoxTrigger.puml
+!include NotificationTrigger.puml
+!include RadialMenuTrigger.puml
+!include TooltipTrigger.puml
+!include WidgetTrigger.puml
+@enduml

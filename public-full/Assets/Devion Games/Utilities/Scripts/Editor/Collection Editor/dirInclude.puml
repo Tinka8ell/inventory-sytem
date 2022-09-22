@@ -1,0 +1,7 @@
+@startuml
+!include CollectionEditor.puml
+!include ICollectionEditor.puml
+!include NamedVariableCollectionEditor.puml
+!include ObjectCollectionEditor.puml
+!include ScriptableObjectCollectionEditor.puml
+@enduml

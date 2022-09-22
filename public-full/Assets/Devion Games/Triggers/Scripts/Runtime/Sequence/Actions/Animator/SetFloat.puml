@@ -1,0 +1,8 @@
+@startuml
+class SetFloat {
+    + <<override>> OnSequenceStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+    + <<override>> Update() : void
+}
+Action <|-- SetFloat
+@enduml

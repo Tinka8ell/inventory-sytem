@@ -1,0 +1,6 @@
+@startuml
+class SavingLoadingInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- SavingLoadingInspector
+@enduml

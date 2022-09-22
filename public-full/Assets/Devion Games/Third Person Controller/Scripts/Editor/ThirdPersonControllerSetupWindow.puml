@@ -1,0 +1,6 @@
+@startuml
+class ThirdPersonControllerSetupWindow {
+    + {static} ShowWindow() : void
+}
+EditorWindow <|-- ThirdPersonControllerSetupWindow
+@enduml

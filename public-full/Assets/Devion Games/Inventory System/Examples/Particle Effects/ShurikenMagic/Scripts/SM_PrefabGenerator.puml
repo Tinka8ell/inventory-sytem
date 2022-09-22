@@ -1,0 +1,16 @@
+@startuml
+class SM_PrefabGenerator {
+    + createThis : GameObject[]
+    + thisManyTimes : int = 3
+    + overThisTime : float = 1.0f
+    + xWidth : float
+    + yWidth : float
+    + zWidth : float
+    + xRotMax : float
+    + yRotMax : float = 180f
+    + zRotMax : float
+    + allUseSameRotation : bool = false
+    + detachToWorld : bool = true
+}
+MonoBehaviour <|-- SM_PrefabGenerator
+@enduml

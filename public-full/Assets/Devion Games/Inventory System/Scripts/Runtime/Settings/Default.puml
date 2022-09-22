@@ -1,0 +1,11 @@
+@startuml
+class Default {
+    + <<override>> Name : string <<get>>
+    + playerTag : string = "Player"
+    + maxDropDistance : float = 3f
+    + queriesHitTriggers : bool = false
+    + debugMessages : bool = true
+    + showAllComponents : bool = false
+}
+Settings <|-- Default
+@enduml

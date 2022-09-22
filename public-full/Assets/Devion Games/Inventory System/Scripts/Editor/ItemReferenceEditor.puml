@@ -1,0 +1,6 @@
+@startuml
+class ItemReferenceEditor {
+    + {static} ShowWindow() : void
+}
+EditorWindow <|-- ItemReferenceEditor
+@enduml

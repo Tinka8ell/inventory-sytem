@@ -1,0 +1,13 @@
+@startuml
+class CompareNumber {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+enum Condition {
+    Greater,
+    Less,
+}
+Action <|-- CompareNumber
+ICondition <|-- CompareNumber
+CompareNumber +-- Condition
+@enduml

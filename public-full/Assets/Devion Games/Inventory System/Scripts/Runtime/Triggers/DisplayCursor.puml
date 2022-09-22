@@ -1,0 +1,9 @@
+@startuml
+class DisplayCursor {
+    + OnPointerEnter(eventData:PointerEventData) : void
+    + OnPointerExit(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- DisplayCursor
+IPointerEnterHandler <|-- DisplayCursor
+IPointerExitHandler <|-- DisplayCursor
+@enduml

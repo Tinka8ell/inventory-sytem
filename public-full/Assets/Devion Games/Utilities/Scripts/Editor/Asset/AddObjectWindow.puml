@@ -1,0 +1,31 @@
+@startuml
+class AddObjectWindow {
+    + onAddCallback : AddObjectWindow.AddCallbackDelegate
+    + onCreateCallback : AddObjectWindow.CreateCallbackDelegate
+    + {static} ShowWindow(buttonRect:Rect, addCallback:AddObjectWindow.AddCallbackDelegate, createCallback:AddObjectWindow.CreateCallbackDelegate) : void
+    + {static} ShowWindow(buttonRect:Rect, type:Type, addCallback:AddObjectWindow.AddCallbackDelegate, createCallback:AddObjectWindow.CreateCallbackDelegate) : void
+    + {static} IsAssignableToGenericType(givenType:Type, genericType:Type) : bool
+}
+class Element {
+    + type : Type
+    + parent : Element
+    + onGUI : System.Action
+    + path : string <<get>>
+    + label : GUIContent <<get>> <<set>>
+    + Element(label:string, path:string)
+    + children : List<Element> <<get>> <<set>>
+    + Contains(item:Element) : bool
+    + Find(path:string) : Element
+}
+class Styles {
+    + header : GUIStyle
+    + rightArrow : GUIStyle = "AC RightArrow"
+    + leftArrow : GUIStyle = "AC LeftArrow"
+    + elementButton : GUIStyle
+    + background : GUIStyle = "grey_border"
+    + Styles()
+}
+EditorWindow <|-- AddObjectWindow
+AddObjectWindow +-- Element
+AddObjectWindow +-- Styles
+@enduml

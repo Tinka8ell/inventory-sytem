@@ -1,0 +1,7 @@
+@startuml
+class MoveTowards {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- MoveTowards
+@enduml

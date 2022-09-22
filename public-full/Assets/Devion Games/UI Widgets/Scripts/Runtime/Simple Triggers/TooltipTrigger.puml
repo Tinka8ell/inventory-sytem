@@ -1,0 +1,18 @@
+@startuml
+class TooltipTrigger {
+    + tooltipTitle : string
+    + tooltip : string
+    + icon : Sprite
+    + properties : StringPair[]
+    + OnPointerEnter(eventData:PointerEventData) : void
+    + OnPointerExit(eventData:PointerEventData) : void
+}
+class StringPair {
+    + key : string
+    + value : string
+}
+MonoBehaviour <|-- TooltipTrigger
+IPointerEnterHandler <|-- TooltipTrigger
+IPointerExitHandler <|-- TooltipTrigger
+TooltipTrigger +-- StringPair
+@enduml

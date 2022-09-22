@@ -1,0 +1,21 @@
+@startuml
+class PropertyBinding {
+    + UpdateTarget() : void
+}
+enum Execution {
+    Start,
+    Update,
+    LateUpdate,
+    FixedUpdate,
+    Interval,
+}
+class PropertyRef {
+    + component : Component <<get>>
+    + propertyPath : string <<get>>
+    + GetValue() : object
+    + SetValue(value:object) : bool
+}
+MonoBehaviour <|-- PropertyBinding
+PropertyBinding +-- Execution
+PropertyBinding +-- PropertyRef
+@enduml

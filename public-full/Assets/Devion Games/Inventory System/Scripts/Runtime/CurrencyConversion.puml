@@ -1,0 +1,6 @@
+@startuml
+class CurrencyConversion {
+    + factor : float = 1.0f
+    + currency : Currency
+}
+@enduml

@@ -1,0 +1,94 @@
+@startuml
+enum InputButton {
+    Left= 1,
+    Right= 2,
+    Middle= 4,
+}
+class ItemContainer {
+    + <<override>> Callbacks : string[] <<get>>
+    +  <<event>> OnAddItem : AddItemDelegate 
+    +  <<event>> OnFailedToAddItem : FailedToAddItemDelegate 
+    +  <<event>> OnRemoveItem : RemoveItemDelegate 
+    +  <<event>> OnFailedToRemoveItem : FailedToRemoveItemDelegate 
+    +  <<event>> OnTryUseItem : UseItemDelegate 
+    +  <<event>> OnUseItem : UseItemDelegate 
+    +  <<event>> OnDropItem : DropItemDelegate 
+    + useButton : InputButton
+    + UseReferences : bool <<get>> <<protected set>>
+    + CanDragIn : bool <<get>> <<protected set>>
+    + CanDragOut : bool <<get>> <<protected set>>
+    + CanDropItems : bool <<get>> <<protected set>>
+    + CanReferenceItems : bool <<get>> <<protected set>>
+    + CanSellItems : bool <<get>> <<protected set>>
+    + CanUseItems : bool <<get>> <<protected set>>
+    + UseContextMenu : bool <<get>> <<protected set>>
+    + ContextMenuButton : InputButton <<get>> <<set>>
+    + ContextMenuFunctions : List<string> <<get>>
+    + ShowTooltips : bool <<get>> <<protected set>>
+    + MoveUsedItem : bool <<get>> <<protected set>>
+    + moveItemConditions : List<MoveItemCondition>
+    + restrictions : List<Restriction>
+    + Slots : ReadOnlyCollection<Slot> <<get>>
+    + Collection : ItemCollection <<set>>
+    + <<override>> Show() : void
+    + StackOrSwap(s1:Slot, s2:Slot) : bool
+    + SwapItems(s1:Slot, s2:Slot) : bool
+    + CanSwapItems(s1:Slot, s2:Slot) : bool
+    + <<virtual>> StackOrAdd(item:Item) : bool
+    + <<virtual>> StackOrAdd(slot:Slot, item:Item) : bool
+    + <<virtual>> AddItem(item:Item) : bool
+    + StackItem(item:Item) : bool
+    + <<virtual>> CanAddItem(index:int, item:Item) : bool
+    + <<virtual>> CanAddItem(item:Item) : bool
+    + <<virtual>> CanAddItem(item:Item, slot:Slot, createSlot:bool) : bool
+    + <<virtual>> ReplaceItem(index:int, item:Item) : Item[]
+    + <<virtual>> RemoveItem(index:int) : bool
+    + <<virtual>> RemoveItem(item:Item, amount:int) : bool
+    + <<virtual>> RemoveItem(item:Item) : bool
+    + <<virtual>> RemoveItems(keepInCollection:bool) : void
+    + HasItem(item:Item, amount:int) : bool
+    + HasItem(item:Item, amount:int, existingAmount:int) : bool
+    + HasCategoryItem(category:Category) : bool
+    + GetItems(idOrName:string) : Item[]
+    + GetItems(inherit:bool) : T[]
+    + GetItems(type:Type, inherit:bool) : Item[]
+    + <<virtual>> GetRequiredSlots(item:Item, preferedSlot:Slot) : List<Slot>
+    + GetSlots(item:Item) : Slot[]
+    + RefreshSlots() : void
+    + GetSlots() : T[]
+    + GetSlots(type:Type) : Slot[]
+    + CanStack(slot:Slot, item:Item) : bool
+    + CanStack(item:Item) : bool
+    + ShowByCategory(dropdown:Dropdown) : void
+    + {static} RemoveItems(windowName:string, keepInCollection:bool) : void
+    + {static} RemoveItem(windowName:string, item:Item, amount:int) : bool
+    + {static} RemoveItemCompletely(item:Item) : void
+    + {static} RemoveItemReferences(item:Item) : void
+    + {static} HasItem(windowName:string, item:Item, amount:int) : bool
+    + {static} HasCategoryItem(windowName:string, category:Category) : bool
+    + {static} GetItem(nameOrId:string) : Item
+    + {static} GetItem(windowName:string, nameOrId:string) : Item
+    + {static} GetItemAmount(windowName:string, nameOrId:string) : int
+    + {static} AddItems(windowName:string, items:Item[], allowStacking:bool) : bool
+    + {static} AddItem(windowName:string, item:Item, allowStacking:bool) : bool
+    + {static} CanAddItems(windowName:string, items:Item[], createSlot:bool) : bool
+    + {static} CanStackItems(windowName:string, items:Item[]) : bool
+    + {static} CanAddItem(windowName:string, item:Item, createSlot:bool) : bool
+    + {static} CanAddItem(windowName:string, item:Item, slot:Slot, createSlot:bool) : bool
+    + {static} Cooldown(item:Item, globalCooldown:float) : void
+    + OnDrop(eventData:PointerEventData) : void
+    + NotifyDropItem(item:Item, instance:GameObject) : void
+    + NotifyUseItem(item:Item, slot:Slot) : void
+    + NotifyTryUseItem(item:Item, slot:Slot) : void
+    + NotifyAddItem(item:Item, slot:Slot) : void
+    + NotifyRemoveItem(item:Item, amount:int, slot:Slot) : void
+    + MoveTo(windowName:string) : void
+}
+class MoveItemCondition {
+    + window : string
+    + requiresVisibility : bool = true
+}
+UIWidget <|-- ItemContainer
+IDropHandler <|-- ItemContainer
+ItemContainer +-- MoveItemCondition
+@enduml

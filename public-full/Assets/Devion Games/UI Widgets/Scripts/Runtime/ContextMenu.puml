@@ -1,0 +1,8 @@
+@startuml
+class ContextMenu {
+    + <<override>> Show() : void
+    + <<virtual>> Clear() : void
+    + <<virtual>> AddMenuItem(text:string, used:UnityAction) : MenuItem
+}
+UIWidget <|-- ContextMenu
+@enduml

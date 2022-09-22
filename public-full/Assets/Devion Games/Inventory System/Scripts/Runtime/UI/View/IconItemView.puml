@@ -1,0 +1,6 @@
+@startuml
+class IconItemView {
+    + <<override>> Repaint(item:Item) : void
+}
+ItemView <|-- IconItemView
+@enduml

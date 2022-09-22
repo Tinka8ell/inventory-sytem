@@ -1,0 +1,7 @@
+@startuml
+class AudioEventListenerInspector {
+    + <<override>> OnInspectorGUI() : void
+    + <<override>> UseDefaultMargins() : bool
+}
+Editor <|-- AudioEventListenerInspector
+@enduml

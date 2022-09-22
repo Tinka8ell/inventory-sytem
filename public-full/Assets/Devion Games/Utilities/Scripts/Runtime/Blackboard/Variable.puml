@@ -1,0 +1,11 @@
+@startuml
+abstract class Variable {
+    + <<virtual>> name : string <<get>> <<set>>
+    + <<virtual>> isShared : bool <<get>> <<set>>
+    + <<virtual>> isNone : bool <<get>>
+    + {abstract} type : Type <<get>>
+    + {abstract} RawValue : object <<get>> <<set>>
+    + Variable()
+    + Variable(name:string)
+}
+@enduml

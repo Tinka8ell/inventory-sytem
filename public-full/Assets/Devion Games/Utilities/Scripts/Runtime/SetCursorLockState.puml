@@ -1,0 +1,7 @@
+@startuml
+class SetCursorLockState {
+    + key : KeyCode
+    + <<override>> Callbacks : string[] <<get>>
+}
+CallbackHandler <|-- SetCursorLockState
+@enduml

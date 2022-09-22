@@ -1,0 +1,8 @@
+@startuml
+class SetEnabled {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+    + <<override>> OnInterrupt() : void
+}
+Action <|-- SetEnabled
+@enduml

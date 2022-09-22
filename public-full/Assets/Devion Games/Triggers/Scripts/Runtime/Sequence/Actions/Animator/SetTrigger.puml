@@ -1,0 +1,7 @@
+@startuml
+class SetTrigger {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SetTrigger
+@enduml

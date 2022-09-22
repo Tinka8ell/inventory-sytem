@@ -1,0 +1,17 @@
+@startuml
+class UIWidget {
+    + Name : string <<get>> <<set>>
+    + <<override>> Callbacks : string[] <<get>>
+    + priority : int
+    + IgnoreTimeScale : bool <<get>>
+    + IsVisible : bool <<get>>
+    + IsLocked : bool <<get>>
+    + <<virtual>> Show() : void
+    + <<virtual>> Close() : void
+    + <<virtual>> Toggle() : void
+    + <<virtual>> Focus() : void
+    + Lock(state:bool) : void
+    + {static} LockAll(state:bool) : void
+}
+CallbackHandler <|-- UIWidget
+@enduml

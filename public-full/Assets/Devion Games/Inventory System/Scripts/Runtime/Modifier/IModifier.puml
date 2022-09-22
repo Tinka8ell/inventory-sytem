@@ -1,0 +1,5 @@
+@startuml
+interface "IModifier`1"<T> {
+    Modify(item:T) : void
+}
+@enduml

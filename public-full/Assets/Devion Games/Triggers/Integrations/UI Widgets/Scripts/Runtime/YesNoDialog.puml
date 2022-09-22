@@ -1,0 +1,7 @@
+@startuml
+class YesNoDialog {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- YesNoDialog
+@enduml

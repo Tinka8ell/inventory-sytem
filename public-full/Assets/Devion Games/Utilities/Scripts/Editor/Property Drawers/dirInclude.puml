@@ -1,0 +1,11 @@
+@startuml
+!include ArgumentVariableDrawer.puml
+!include CompoundDrawer.puml
+!include EnumFlagsDrawer.puml
+!include HeaderLineDrawer.puml
+!include InspectorLabelDrawer.puml
+!include MinMaxSliderDrawer.puml
+!include NamedVariableDrawer.puml
+!include NamedVariableLayoutDrawer.puml
+!include VariablePropertyDrawer.puml
+@enduml

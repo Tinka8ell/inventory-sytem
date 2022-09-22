@@ -1,0 +1,7 @@
+@startuml
+class SaveLoadSlot {
+    + OnPointerUp(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- SaveLoadSlot
+IPointerUpHandler <|-- SaveLoadSlot
+@enduml

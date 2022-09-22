@@ -1,0 +1,18 @@
+@startuml
+class FlowGraphView {
+    + FlowGraphView(host:EditorWindow, graph:FlowGraph, target:UnityEngine.Object)
+}
+class Styles <<static>> {
+    + {static} nodeNormal : GUIStyle
+    + {static} nodeActive : GUIStyle
+    + {static} nodeSelected : GUIStyle
+    + {static} port : GUIStyle
+    + {static} portConnected : GUIStyle
+    + {static} seperator : GUIStyle
+    + {static} nodeHeaderText : GUIStyle
+    + {static} nodeText : GUIStyle
+    {static} Styles()
+}
+"GraphView`1" "<FlowNode>" <|-- FlowGraphView
+FlowGraphView +-- Styles
+@enduml

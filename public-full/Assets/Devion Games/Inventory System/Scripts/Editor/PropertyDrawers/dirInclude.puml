@@ -1,0 +1,12 @@
+@startuml
+!include CategoryPickerDrawer.puml
+!include CraftingRecipeDrawer.puml
+!include CurrencyPickerDrawer.puml
+!include EquipmentPickerDrawer.puml
+!include HasCategoryItemDrawer.puml
+!include HasItemDrawer.puml
+!include ItemGroupPickerDrawer.puml
+!include ItemPickerDrawer.puml
+!include PickerDrawer.puml
+!include RarityPickerDrawer.puml
+@enduml

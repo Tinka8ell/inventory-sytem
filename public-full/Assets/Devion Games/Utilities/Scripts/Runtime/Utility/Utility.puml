@@ -1,0 +1,19 @@
+@startuml
+class Utility <<static>> {
+    {static} Utility()
+    + {static} GetType(typeName:string) : Type
+    + {static} GetElementType(type:Type) : Type
+    + {static} GetAllMethods(type:Type) : MethodInfo[]
+    + {static} GetSerializedField(type:Type, name:string) : FieldInfo
+    + {static} GetAllSerializedFields(type:Type) : FieldInfo[]
+    + {static} GetSerializedFields(type:Type) : FieldInfo[]
+    + {static} BaseTypesAndSelf(type:Type) : IEnumerable<Type>
+    + {static} BaseTypes(type:Type) : IEnumerable<Type>
+    + {static} GetCustomAttributes(memberInfo:MemberInfo, inherit:bool) : object[]
+    + {static} GetCustomAttributes(memberInfo:MemberInfo) : T[]
+    + {static} GetCustomAttribute(memberInfo:MemberInfo) : T
+    + {static} HasAttribute(memberInfo:MemberInfo) : bool
+    + {static} HasAttribute(memberInfo:MemberInfo, attributeType:Type) : bool
+    + {static} Contains(mask:LayerMask, layer:int) : bool
+}
+@enduml

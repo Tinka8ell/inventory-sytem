@@ -1,0 +1,7 @@
+@startuml
+class InternalTestingTools {
+    + {static} DeletePlayerPrefs() : void
+    + {static} DeleteEditorPrefs() : void
+    + {static} RecompileScripts() : void
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class CallbackEventData {
+    + CallbackEventData()
+    + AddData(key:string, value:object) : void
+    + GetData(key:string) : object
+}
+@enduml

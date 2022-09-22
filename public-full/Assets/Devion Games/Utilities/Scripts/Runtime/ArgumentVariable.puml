@@ -1,0 +1,19 @@
+@startuml
+class ArgumentVariable {
+    + ArgumentType : ArgumentType <<get>> <<set>>
+    + IsNone : bool <<get>>
+    + GetValue() : object
+    + {static} GetPropertyValuePath(argumentType:ArgumentType) : string
+}
+enum ArgumentType {
+    None,
+    Bool,
+    Int,
+    Float,
+    String,
+    Vector2,
+    Vector3,
+    Color,
+    Object,
+}
+@enduml

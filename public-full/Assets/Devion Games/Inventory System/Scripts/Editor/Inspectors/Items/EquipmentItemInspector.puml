@@ -1,0 +1,5 @@
+@startuml
+class EquipmentItemInspector {
+}
+UsableItemInspector <|-- EquipmentItemInspector
+@enduml

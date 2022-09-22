@@ -1,0 +1,6 @@
+@startuml
+class RarityModifierInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- RarityModifierInspector
+@enduml

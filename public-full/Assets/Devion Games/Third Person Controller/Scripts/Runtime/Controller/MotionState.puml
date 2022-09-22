@@ -1,0 +1,43 @@
+@startuml
+abstract class MotionState {
+    + FriendlyName : string <<get>>
+    + InputName : string <<get>> <<set>>
+    + StartType : StartType <<get>> <<set>>
+    + StopType : StopType <<get>> <<set>>
+    + ConsumeInputOverUI : bool <<get>>
+    + PauseItemUpdate : bool <<get>>
+    + TransitionDuration : float <<get>>
+    + State : string <<get>> <<set>>
+    + CameraPreset : string <<get>> <<set>>
+    + IsActive : bool <<get>>
+    + Index : int <<get>> <<set>>
+    + Layer : int <<get>> <<set>>
+    + Controller : ThirdPersonController <<get>> <<set>>
+    + StopMotion(force:bool) : void
+    + StartMotion() : void
+    + IsPlaying() : bool
+    + <<virtual>> CanStart() : bool
+    + <<virtual>> OnStart() : void
+    + <<virtual>> UpdateVelocity(velocity:Vector3) : bool
+    + <<virtual>> UpdateRotation() : bool
+    + <<virtual>> UpdateAnimator() : bool
+    + <<virtual>> UpdateAnimatorIK(layer:int) : bool
+    + <<virtual>> CheckGround() : bool
+    + <<virtual>> CheckStep() : bool
+    + <<virtual>> CanStop() : bool
+    + <<virtual>> OnStop() : void
+    + <<virtual>> GetDestinationState() : string
+}
+enum StartType {
+    Automatic,
+    Down,
+    Press,
+}
+enum StopType {
+    Automatic,
+    Manual,
+    Up,
+    Toggle,
+}
+MonoBehaviour <|-- MotionState
+@enduml

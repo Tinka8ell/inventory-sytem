@@ -1,0 +1,7 @@
+@startuml
+class StringPairSlot {
+    + Target : KeyValuePair<string, string> <<get>> <<set>>
+    + <<virtual>> Repaint() : void
+}
+MonoBehaviour <|-- StringPairSlot
+@enduml

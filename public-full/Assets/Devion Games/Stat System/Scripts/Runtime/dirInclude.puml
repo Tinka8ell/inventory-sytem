@@ -1,0 +1,18 @@
+@startuml
+!include Actions/dirInclude.puml
+!include Nodes/dirInclude.puml
+!include Settings/dirInclude.puml
+!include Attribute.puml
+!include DamageData.puml
+!include Level.puml
+!include SelectableUIStat.puml
+!include StatCallback.puml
+!include StatDatabase.puml
+!include StatEffect.puml
+!include StatModifier.puml
+!include StatPickerAttribute.puml
+!include Stat.puml
+!include StatsHandler.puml
+!include StatsManager.puml
+!include UIStat.puml
+@enduml

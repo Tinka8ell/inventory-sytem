@@ -1,0 +1,9 @@
+@startuml
+class CraftingTrigger {
+    + <<override>> Callbacks : string[] <<get>>
+    + <<override>> OverrideUse(slot:Slot, item:Item) : bool
+    + StartCrafting(item:Item, amount:int) : void
+    + StopCrafting(item:Item) : void
+}
+Trigger <|-- CraftingTrigger
+@enduml

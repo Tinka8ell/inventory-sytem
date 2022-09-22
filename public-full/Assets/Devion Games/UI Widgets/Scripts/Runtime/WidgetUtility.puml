@@ -1,0 +1,12 @@
+@startuml
+class WidgetUtility <<static>> {
+    + {static} Find(name:string) : T
+    {static} WidgetUtility()
+    + {static} FindAll(name:string) : T[]
+    + {static} FindAll() : T[]
+    + {static} PlaySound(clip:AudioClip, volume:float) : void
+    + {static} ColorToHex(color:Color32) : string
+    + {static} HexToColor(hex:string) : Color
+    + {static} ColorString(value:string, color:Color) : string
+}
+@enduml

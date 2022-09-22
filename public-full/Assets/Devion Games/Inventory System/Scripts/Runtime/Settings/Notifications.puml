@@ -1,0 +1,31 @@
+@startuml
+class NotificationExtension <<static>> {
+    + {static} Show(options:NotificationOptions, replacements:string[]) : void
+}
+class Notifications {
+    + <<override>> Name : string <<get>>
+    + containerFull : NotificationOptions
+    + failedRestriction : NotificationOptions
+    + missingItem : NotificationOptions
+    + missingCategoryItem : NotificationOptions
+    + inCooldown : NotificationOptions
+    + selectItem : NotificationOptions
+    + alreadyCrafting : NotificationOptions
+    + craftedItem : NotificationOptions
+    + missingIngredient : NotificationOptions
+    + failedToCraft : NotificationOptions
+    + alreadyEnchanting : NotificationOptions
+    + enchantedItem : NotificationOptions
+    + missingMaterials : NotificationOptions
+    + failedToEnchant : NotificationOptions
+    + soldItem : NotificationOptions
+    + boughtItem : NotificationOptions
+    + noCurrencyToBuy : NotificationOptions
+    + cantSellItem : NotificationOptions
+    + toFarAway : NotificationOptions
+    + inUse : NotificationOptions
+    + empty : NotificationOptions
+    + skillGain : NotificationOptions
+}
+Settings <|-- Notifications
+@enduml

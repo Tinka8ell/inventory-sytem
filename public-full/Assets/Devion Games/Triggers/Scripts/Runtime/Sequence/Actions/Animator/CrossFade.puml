@@ -1,0 +1,7 @@
+@startuml
+class CrossFade {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- CrossFade
+@enduml

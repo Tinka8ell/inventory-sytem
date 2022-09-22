@@ -1,0 +1,20 @@
+@startuml
+class CraftingRecipe {
+    + Name : string <<get>> <<set>>
+    + Duration : float <<get>>
+    + AnimatorState : string <<get>>
+    + Skill : Skill <<get>>
+    + RemoveIngredientsWhenFailed : bool <<get>>
+    + Ingredients : List<ItemAmountDefinition> <<get>>
+    + CraftingModifier : ItemModifierList <<get>> <<set>>
+    + conditions : List<ICondition>
+    + CheckConditions() : bool
+}
+class ItemAmountDefinition {
+    + item : Item
+    + amount : int = 1
+}
+ScriptableObject <|-- CraftingRecipe
+INameable <|-- CraftingRecipe
+CraftingRecipe +-- ItemAmountDefinition
+@enduml

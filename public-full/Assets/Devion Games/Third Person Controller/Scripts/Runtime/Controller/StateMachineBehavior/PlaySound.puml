@@ -1,0 +1,19 @@
+@startuml
+class PlaySound {
+    + condition : Condition
+    + sound : AudioClip
+    + audioMixerGroup : AudioMixerGroup
+    + volume : float = 1f
+    + normalizedPlayTime : float
+    + <<override>> OnStateEnter(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+    + <<override>> OnStateUpdate(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+    + <<override>> OnStateExit(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+}
+enum Condition {
+    OnEnter,
+    OnUpdate,
+    OnExit,
+}
+StateMachineBehaviour <|-- PlaySound
+PlaySound +-- Condition
+@enduml

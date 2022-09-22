@@ -1,0 +1,6 @@
+@startuml
+class GetStatCurrentValue {
+    + <<override>> OnRequestValue(port:Port) : object
+}
+StatNode <|-- GetStatCurrentValue
+@enduml

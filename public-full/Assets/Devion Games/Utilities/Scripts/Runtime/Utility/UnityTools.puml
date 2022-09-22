@@ -1,0 +1,28 @@
+@startuml
+class UnityTools <<static>> {
+    + {static} PlaySound(clip:AudioClip, volumeScale:float, audioMixerGroup:AudioMixerGroup) : void
+    + {static} IsPointerOverUI() : bool
+    + {static} ColorToHex(color:Color32) : string
+    + {static} HexToColor(hex:string) : Color
+    + {static} ColorString(value:string, color:Color) : string
+    + {static} Replace(source:string, oldString:string, newString:string) : string
+    + {static} IsNumeric(expression:object) : bool
+    + {static} IsInteger(value:Type) : bool
+    + {static} IsFloat(value:Type) : bool
+    + {static} FindChild(target:GameObject, name:string, includeInactive:bool) : GameObject
+    + {static} Stretch(rectTransform:RectTransform, offset:RectOffset) : void
+    + {static} Stretch(rectTransform:RectTransform) : void
+    + {static} SetActiveObjectsOfType(state:bool) : void
+    + {static} IgnoreCollision(gameObject1:GameObject, gameObject2:GameObject) : void
+    + {static} GetBounds(obj:GameObject) : Bounds
+    + {static} KeyToCaption(key:KeyCode) : string
+    + {static} HasFlag(value:T, flag:T) : bool
+    + {static} StartCoroutine(routine:IEnumerator) : Coroutine
+    + {static} StartCoroutine(methodName:string, value:object) : Coroutine
+    + {static} StartCoroutine(methodName:string) : Coroutine
+    + {static} StopCoroutine(routine:IEnumerator) : void
+    + {static} StopCoroutine(methodName:string) : void
+    + {static} StopCoroutine(routine:Coroutine) : void
+    + {static} StopAllCoroutines() : void
+}
+@enduml

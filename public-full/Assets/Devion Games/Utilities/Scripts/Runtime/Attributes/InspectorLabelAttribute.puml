@@ -1,0 +1,9 @@
+@startuml
+class InspectorLabelAttribute {
+    + <<readonly>> label : string
+    + <<readonly>> tooltip : string
+    + InspectorLabelAttribute(label:string)
+    + InspectorLabelAttribute(label:string, tooltip:string)
+}
+PropertyAttribute <|-- InspectorLabelAttribute
+@enduml

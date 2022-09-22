@@ -1,0 +1,13 @@
+@startuml
+interface IAction {
+    Initialize(gameObject:GameObject, playerInfo:PlayerInfo, blackboard:Blackboard) : void
+    isActiveAndEnabled : bool <<get>>
+    OnSequenceStart() : void
+    OnStart() : void
+    OnUpdate() : ActionStatus
+    Update() : void
+    OnEnd() : void
+    OnSequenceEnd() : void
+    OnInterrupt() : void
+}
+@enduml

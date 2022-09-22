@@ -1,0 +1,7 @@
+@startuml
+class WidgetTrigger {
+    + Show(name:string) : void
+    + Close(name:string) : void
+}
+MonoBehaviour <|-- WidgetTrigger
+@enduml

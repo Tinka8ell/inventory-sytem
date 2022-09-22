@@ -1,0 +1,6 @@
+@startuml
+!include Category.puml
+!include EquipmentRegion.puml
+!include Profession.puml
+!include Restriction.puml
+@enduml

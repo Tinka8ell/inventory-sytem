@@ -1,0 +1,11 @@
+@startuml
+class "UISlot`1"<T> {
+    + Container : UIContainer<T> <<get>> <<set>>
+    + Index : int <<get>> <<set>>
+    + <<virtual>> ObservedItem : T <<get>> <<set>>
+    + IsEmpty : bool <<get>>
+    + <<virtual>> Repaint() : void
+    + <<virtual>> CanAddItem(item:T) : bool
+}
+MonoBehaviour <|-- "UISlot`1"
+@enduml

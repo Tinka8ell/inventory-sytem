@@ -1,0 +1,16 @@
+@startuml
+class EquipmentHandler {
+    + Bones : List<EquipmentBone> <<get>> <<set>>
+    + VisibleItems : List<VisibleItem> <<get>> <<set>>
+    + EquipItem(item:EquipmentItem) : void
+    + UnEquipItem(item:EquipmentItem) : void
+    + UpdateEquipment() : void
+    + GetBone(region:EquipmentRegion) : Transform
+}
+class EquipmentBone {
+    + region : EquipmentRegion
+    + bone : GameObject
+}
+MonoBehaviour <|-- EquipmentHandler
+EquipmentHandler +-- EquipmentBone
+@enduml

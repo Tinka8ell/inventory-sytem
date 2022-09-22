@@ -1,0 +1,19 @@
+@startuml
+class ObjectPickerWindow {
+    + onSelectCallback : ObjectPickerWindow.SelectCallbackDelegate
+    + onCreateCallback : ObjectPickerWindow.CreateCallbackDelegate
+    + {static} ShowWindow(buttonRect:Rect, selectCallback:ObjectPickerWindow.SelectCallbackDelegate, createCallback:ObjectPickerWindow.CreateCallbackDelegate, acceptNull:bool) : void
+    + {static} ShowWindow(buttonRect:Rect, type:Type, selectCallback:ObjectPickerWindow.SelectCallbackDelegate, createCallback:ObjectPickerWindow.CreateCallbackDelegate, acceptNull:bool) : void
+    + {static} ShowWindow(buttonRect:Rect, type:Type, selectableObjects:Dictionary<UnityEngine.Object,List<UnityEngine.Object>>, selectCallback:ObjectPickerWindow.SelectCallbackDelegate, createCallback:ObjectPickerWindow.CreateCallbackDelegate, acceptNull:bool) : void
+}
+class Styles {
+    + header : GUIStyle
+    + rightArrow : GUIStyle = "AC RightArrow"
+    + leftArrow : GUIStyle = "AC LeftArrow"
+    + elementButton : GUIStyle
+    + background : GUIStyle = "grey_border"
+    + Styles()
+}
+EditorWindow <|-- ObjectPickerWindow
+ObjectPickerWindow +-- Styles
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+enum ActionStatus {
+    Inactive,
+    Failure,
+    Success,
+    Running,
+}
+@enduml

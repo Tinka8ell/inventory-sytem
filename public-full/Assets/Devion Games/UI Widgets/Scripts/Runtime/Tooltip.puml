@@ -1,0 +1,11 @@
+@startuml
+class Tooltip {
+    + <<override>> Show() : void
+    + <<virtual>> Show(text:string) : void
+    + <<virtual>> Show(title:string, text:string) : void
+    + <<virtual>> Show(title:string, text:string, icon:Sprite, pairs:List<KeyValuePair<string, string>>) : void
+    + <<virtual>> Show(title:string, text:string, icon:Sprite, pairs:List<KeyValuePair<string, string>>, width:float, showBackground:bool) : void
+    + <<override>> Close() : void
+}
+UIWidget <|-- Tooltip
+@enduml

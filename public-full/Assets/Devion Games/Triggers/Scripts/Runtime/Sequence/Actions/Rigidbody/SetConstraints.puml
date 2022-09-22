@@ -1,0 +1,8 @@
+@startuml
+class SetConstraints {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+    + <<override>> OnInterrupt() : void
+}
+Action <|-- SetConstraints
+@enduml

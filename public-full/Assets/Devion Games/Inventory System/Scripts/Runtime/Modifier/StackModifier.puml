@@ -1,0 +1,6 @@
+@startuml
+class StackModifier {
+    + <<override>> Modify(item:Item) : void
+}
+ItemModifier <|-- StackModifier
+@enduml

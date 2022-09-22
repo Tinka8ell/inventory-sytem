@@ -1,0 +1,6 @@
+@startuml
+class Log {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Log
+@enduml

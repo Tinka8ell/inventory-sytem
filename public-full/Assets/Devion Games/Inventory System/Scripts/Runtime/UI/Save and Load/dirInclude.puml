@@ -1,0 +1,4 @@
+@startuml
+!include SaveLoadMenu.puml
+!include SaveLoadSlot.puml
+@enduml

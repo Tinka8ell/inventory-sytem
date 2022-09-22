@@ -1,0 +1,7 @@
+@startuml
+class EquipmentRegion {
+    + Name : string <<get>> <<set>>
+}
+ScriptableObject <|-- EquipmentRegion
+INameable <|-- EquipmentRegion
+@enduml

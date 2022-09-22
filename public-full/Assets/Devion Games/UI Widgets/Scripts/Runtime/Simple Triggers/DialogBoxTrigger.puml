@@ -1,0 +1,11 @@
+@startuml
+class DialogBoxTrigger {
+    + title : string
+    + text : string
+    + icon : Sprite
+    + options : string[]
+    + Show() : void
+    + ShowWithCallback() : void
+}
+MonoBehaviour <|-- DialogBoxTrigger
+@enduml

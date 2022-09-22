@@ -1,0 +1,6 @@
+@startuml
+class StatEffectPickerDrawer {
+    + <<override>> OnGUI(position:Rect, property:SerializedProperty, label:GUIContent) : void
+}
+PropertyDrawer <|-- StatEffectPickerDrawer
+@enduml

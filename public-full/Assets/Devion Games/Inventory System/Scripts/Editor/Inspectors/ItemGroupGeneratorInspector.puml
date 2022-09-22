@@ -1,0 +1,6 @@
+@startuml
+class ItemGroupGeneratorInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- ItemGroupGeneratorInspector
+@enduml

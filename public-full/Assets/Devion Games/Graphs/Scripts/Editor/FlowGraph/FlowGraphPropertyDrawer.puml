@@ -1,0 +1,5 @@
+@startuml
+class FlowGraphPropertyDrawer {
+}
+"GraphPropertyDrawer`1" "<FlowGraphView>" <|-- FlowGraphPropertyDrawer
+@enduml

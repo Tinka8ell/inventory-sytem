@@ -1,0 +1,7 @@
+@startuml
+class LookAtTrigger {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- LookAtTrigger
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class NotificationExtension <<static>> {
+    + {static} Show(options:NotificationOptions, result:UnityAction<int>, buttons:string[]) : void
+    + {static} Show(options:NotificationOptions, replacements:string[]) : void
+}
+class Notifications {
+    + <<override>> Name : string <<get>>
+}
+Settings <|-- Notifications
+@enduml

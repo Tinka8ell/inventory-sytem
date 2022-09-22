@@ -1,0 +1,30 @@
+@startuml
+class EventHandler {
+    {static} EventHandler()
+    + {static} Execute(eventName:string) : void
+    + {static} Execute(obj:object, eventName:string) : void
+    + {static} Execute(eventName:string, arg1:T1) : void
+    + {static} Execute(obj:object, eventName:string, arg1:T1) : void
+    + {static} Execute(eventName:string, arg1:T1, arg2:T2) : void
+    + {static} Execute(obj:object, eventName:string, arg1:T1, arg2:T2) : void
+    + {static} Execute(eventName:string, arg1:T1, arg2:T2, arg3:T3) : void
+    + {static} Execute(obj:object, eventName:string, arg1:T1, arg2:T2, arg3:T3) : void
+    + {static} Register(eventName:string, handler:System.Action) : void
+    + {static} Register(obj:object, eventName:string, handler:System.Action) : void
+    + {static} Register(eventName:string, handler:Action<T1>) : void
+    + {static} Register(obj:object, eventName:string, handler:Action<T1>) : void
+    + {static} Register(eventName:string, handler:Action<T1, T2>) : void
+    + {static} Register(obj:object, eventName:string, handler:Action<T1,T2>) : void
+    + {static} Register(eventName:string, handler:Action<T1, T2, T3>) : void
+    + {static} Register(obj:object, eventName:string, handler:Action<T1, T2,T3>) : void
+    + {static} Unregister(eventName:string, handler:System.Action) : void
+    + {static} Unregister(obj:object, eventName:string, handler:System.Action) : void
+    + {static} Unregister(eventName:string, handler:Action<T1>) : void
+    + {static} Unregister(obj:object, eventName:string, handler:Action<T1>) : void
+    + {static} Unregister(eventName:string, handler:Action<T1, T2>) : void
+    + {static} Unregister(obj:object, eventName:string, handler:Action<T1, T2>) : void
+    + {static} Unregister(eventName:string, handler:Action<T1, T2, T3>) : void
+    + {static} Unregister(obj:object, eventName:string, handler:Action<T1, T2, T3>) : void
+}
+MonoBehaviour <|-- EventHandler
+@enduml

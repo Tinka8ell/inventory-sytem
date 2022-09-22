@@ -1,0 +1,11 @@
+@startuml
+class VendorTrigger {
+    + <<override>> Callbacks : string[] <<get>>
+    + <<override>> OverrideUse(slot:Slot, item:Item) : bool
+    + BuyItem(item:Item, amount:int, showDialog:bool) : void
+    + SellItem(item:Item, amount:int, showDialog:bool) : void
+    + OnTriggerUnUsed(player:GameObject) : void
+}
+Trigger <|-- VendorTrigger
+ITriggerUnUsedHandler <|-- VendorTrigger
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+class InventorySystemMenu <<static>> {
+    {static} ValidateCreateInventoryManager() : bool
+}
+@enduml

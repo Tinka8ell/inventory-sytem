@@ -1,0 +1,11 @@
+@startuml
+class RecipeItemView {
+    + <<override>> Repaint(item:Item) : void
+}
+enum RecipeType {
+    Crafting,
+    Enchanting,
+}
+ItemView <|-- RecipeItemView
+RecipeItemView +-- RecipeType
+@enduml

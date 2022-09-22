@@ -1,0 +1,9 @@
+@startuml
+class ShowWindow {
+    + <<override>> OnSequenceStart() : void
+    + OnTriggerUnUsed(player:GameObject) : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- ShowWindow
+ITriggerUnUsedHandler <|-- ShowWindow
+@enduml

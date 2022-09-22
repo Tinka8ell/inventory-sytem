@@ -1,0 +1,6 @@
+@startuml
+class RarityModifier {
+    + <<override>> Modify(item:Item) : void
+}
+ItemModifier <|-- RarityModifier
+@enduml

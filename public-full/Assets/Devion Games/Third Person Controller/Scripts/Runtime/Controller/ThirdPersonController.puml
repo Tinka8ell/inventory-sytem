@@ -1,0 +1,54 @@
+@startuml
+class ThirdPersonController {
+    + Motions : List<MotionState> <<get>> <<set>>
+    + ForwardInput : string <<get>> <<set>>
+    + HorizontalInput : string <<get>> <<set>>
+    + SpeedMultiplier : float <<get>> <<set>>
+    + AimType : AimType <<get>> <<set>>
+    + AimInput : string <<get>> <<set>>
+    + AimRotation : float <<get>> <<set>>
+    + RotationSpeed : float <<get>> <<set>>
+    + AirSpeed : Vector3 <<get>> <<set>>
+    + AirDampening : float <<get>> <<set>>
+    + GroundDampening : float <<get>> <<set>>
+    + StepOffset : float <<get>> <<set>>
+    + SlopeLimit : float <<get>> <<set>>
+    + GroundLayer : LayerMask <<get>> <<set>>
+    + SkinWidth : float <<get>> <<set>>
+    + IdleFriction : PhysicMaterial <<get>> <<set>>
+    + MovementFriction : PhysicMaterial <<get>> <<set>>
+    + StepFriction : PhysicMaterial <<get>> <<set>>
+    + AirFriction : PhysicMaterial <<get>> <<set>>
+    + ForwardDampTime : float <<get>> <<set>>
+    + HorizontalDampTime : float <<get>> <<set>>
+    + IsGrounded : bool <<get>> <<set>>
+    + IsStepping : bool <<get>>
+    + RawInput : Vector3 <<get>> <<set>>
+    + RelativeInput : Vector3 <<get>>
+    + IsMoving : bool <<get>>
+    + IsAiming : bool <<get>> <<set>>
+    + Velocity : Vector3 <<get>> <<set>>
+    + LookRotation : Quaternion <<get>>
+    + RootMotionForce : Vector3 <<get>>
+    + UpdateVelocity() : void
+    Normalize(input:float, min:float, max:float) : float
+    + UpdateFrictionMaterial() : void
+    + DeterminanteDefaultStates() : void
+    + CheckDefaultAnimatorStates() : void
+    + CheckGround() : void
+    + CheckStep() : void
+    + SetControllerActive(active:bool) : void
+    + SetMotionEnabled(data:object[]) : void
+    + SetMotionEnabled(name:string, state:bool) : void
+    + GetMotion(name:string) : MotionState
+    + CopyProperties(other:ThirdPersonController) : void
+    CopyComponent(original:T, destination:GameObject) : T
+}
+enum AimType {
+    Button= 1,
+    Axis= 2,
+    Toggle= 4,
+    Selectable= 8,
+}
+MonoBehaviour <|-- ThirdPersonController
+@enduml

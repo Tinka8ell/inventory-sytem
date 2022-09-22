@@ -1,0 +1,29 @@
+@startuml
+abstract class "CollectionEditor`1"<T> {
+    + <<virtual>> ToolbarName : string <<get>>
+    + CollectionEditor()
+    + CollectionEditor(title:string)
+    + <<virtual>> OnEnable() : void
+    + <<virtual>> OnDisable() : void
+    + <<virtual>> OnDestroy() : void
+    + <<virtual>> OnGUI(position:Rect) : void
+}
+class Styles <<static>> {
+    + {static} minusButton : GUIStyle
+    + {static} selectButton : GUIStyle
+    + {static} background : GUIStyle
+    + {static} leftPane : GUIStyle <<get>>
+    + {static} centerPane : GUIStyle <<get>>
+    + {static} selectButtonText : GUIStyle
+    + {static} normalColor : Color
+    + {static} hoverColor : Color
+    + {static} activeColor : Color
+    + {static} warningColor : Color
+    + {static} dragInsertion : GUIStyle
+    + {static} errorIcon : Texture2D
+    + {static} indicatorColor : GUIStyle
+    {static} Styles()
+}
+ICollectionEditor <|-- "CollectionEditor`1"
+"CollectionEditor`1" +-- Styles
+@enduml

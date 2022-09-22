@@ -1,0 +1,6 @@
+@startuml
+!include DeleteVariable.puml
+!include InvokeWithVariable.puml
+!include SetBoolVariable.puml
+!include SetFloatVariable.puml
+@enduml

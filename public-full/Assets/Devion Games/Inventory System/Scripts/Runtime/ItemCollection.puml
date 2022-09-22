@@ -1,0 +1,22 @@
+@startuml
+class ItemCollection {
+    + saveable : bool = true
+    + onChange : UnityEvent
+    + Initialize() : void
+    + Count : int <<get>>
+    + IsEmpty : bool <<get>>
+    + GetEnumerator() : IEnumerator<Item>
+    GetEnumerator() : IEnumerator
+    + Add(items:Item[]) : void
+    + Add(item:Item, allowStacking:bool) : void
+    + Remove(item:Item) : bool
+    + Insert(index:int, child:Item) : void
+    + RemoveAt(index:int) : void
+    + Clear() : void
+    + GetObjectData(data:Dictionary<string, object>) : void
+    + SetObjectData(data:Dictionary<string, object>) : void
+}
+MonoBehaviour <|-- ItemCollection
+"IEnumerable`1" "<Item>" <|-- ItemCollection
+IJsonSerializable <|-- ItemCollection
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+class SelectableObjectName {
+}
+MonoBehaviour <|-- SelectableObjectName
+@enduml

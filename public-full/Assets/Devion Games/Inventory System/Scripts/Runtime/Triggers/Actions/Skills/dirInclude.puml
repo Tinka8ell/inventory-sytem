@@ -1,0 +1,4 @@
+@startuml
+!include CheckSkill.puml
+!include CompareSkill.puml
+@enduml

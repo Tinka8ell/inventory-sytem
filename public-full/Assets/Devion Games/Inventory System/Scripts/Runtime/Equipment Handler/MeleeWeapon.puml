@@ -1,0 +1,5 @@
+@startuml
+class MeleeWeapon {
+}
+Weapon <|-- MeleeWeapon
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class AssetWindow {
+    + {static} ShowWindow(title:string, elements:SerializedProperty) : void
+}
+EditorWindow <|-- AssetWindow
+@enduml

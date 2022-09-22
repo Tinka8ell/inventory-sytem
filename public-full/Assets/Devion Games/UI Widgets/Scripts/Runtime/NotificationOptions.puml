@@ -1,0 +1,13 @@
+@startuml
+class NotificationOptions {
+    + title : string
+    + text : string
+    + color : Color
+    + icon : Sprite
+    + delay : float = 2.0f
+    + duration : float = 2.0f
+    + ignoreTimeScale : bool = true
+    + NotificationOptions(other:NotificationOptions)
+    + NotificationOptions()
+}
+@enduml

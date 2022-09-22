@@ -1,0 +1,13 @@
+@startuml
+class BuiltInResourcesWindow {
+    + {static} ShowWindow() : void
+    OnGUI() : void
+    CopyText(pText:string) : void
+}
+class Drawing <<struct>> {
+    + Rect : Rect
+    + Draw : System.Action
+}
+EditorWindow <|-- BuiltInResourcesWindow
+BuiltInResourcesWindow +-- Drawing
+@enduml

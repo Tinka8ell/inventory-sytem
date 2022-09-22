@@ -79,3 +79,8 @@ crashlytics-build.properties
 /[Aa]ssets/AssetStoreTools*
 # Tutorial
 /[Aa]ssets/Tutorial*
+
+# PlantUML temp
+/plantuml*
+/full-uml*
+

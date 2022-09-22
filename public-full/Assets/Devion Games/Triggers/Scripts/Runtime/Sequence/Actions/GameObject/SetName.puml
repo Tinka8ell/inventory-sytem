@@ -1,0 +1,6 @@
+@startuml
+class SetName {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SetName
+@enduml

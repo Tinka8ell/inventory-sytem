@@ -1,0 +1,8 @@
+@startuml
+class Sqrt {
+    + value : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Sqrt
+@enduml

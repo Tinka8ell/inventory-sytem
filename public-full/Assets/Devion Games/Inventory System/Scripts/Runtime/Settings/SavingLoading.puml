@@ -1,0 +1,14 @@
+@startuml
+class SavingLoading {
+    + <<override>> Name : string <<get>>
+    + autoSave : bool = true
+    + savingKey : string = "Player"
+    + savingRate : float = 60f
+    + provider : SavingProvider
+}
+enum SavingProvider {
+    PlayerPrefs,
+}
+Settings <|-- SavingLoading
+SavingLoading +-- SavingProvider
+@enduml

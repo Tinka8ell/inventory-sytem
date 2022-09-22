@@ -1,0 +1,7 @@
+@startuml
+class AddEffect {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- AddEffect
+@enduml

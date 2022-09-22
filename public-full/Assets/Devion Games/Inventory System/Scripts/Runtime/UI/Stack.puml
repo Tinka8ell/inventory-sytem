@@ -1,0 +1,9 @@
+@startuml
+class Stack {
+    + item : Item
+    + SetItem(item:Item) : void
+    + Unstack() : void
+    + Cancel() : void
+}
+UIWidget <|-- Stack
+@enduml

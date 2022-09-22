@@ -1,0 +1,19 @@
+@startuml
+abstract class CallbackHandler {
+    + delegates : List<CallbackHandler.Entry>
+    + {abstract} Callbacks : string[] <<get>>
+    + RegisterListener(eventID:string, call:UnityAction<CallbackEventData>) : void
+    + RemoveListener(eventID:string, call:UnityAction<CallbackEventData>) : void
+}
+class Entry {
+    + eventID : string
+    + callback : CallbackEvent
+    + Entry()
+}
+class CallbackEvent {
+}
+MonoBehaviour <|-- CallbackHandler
+CallbackHandler +-- Entry
+CallbackHandler +-- CallbackEvent
+"UnityEvent`1" "<CallbackEventData>" <|-- CallbackEvent
+@enduml

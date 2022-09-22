@@ -1,0 +1,72 @@
+@startuml
+class EditorTools <<static>> {
+    {static} EditorTools()
+    + {static} SearchField(search:string, focus:bool, options:GUILayoutOption[]) : string
+    + {static} SearchField(search:string, filter:string, filters:List<string>, options:GUILayoutOption[]) : string[]
+    + {static} LeftButton(content:GUIContent, options:GUILayoutOption[]) : bool
+    + {static} RightArrowButton(content:GUIContent, options:GUILayoutOption[]) : bool
+    + {static} RightArrowToolbarButton(content:GUIContent, options:GUILayoutOption[]) : bool
+    + {static} RightArrowButton(position:Rect, content:GUIContent) : bool
+    + {static} Seperator() : void
+    + {static} BeginIndent(indent:int, fold:bool) : void
+    + {static} EndIndent() : void
+    + {static} LayerMaskField(label:GUIContent, layerMask:LayerMask, options:GUILayoutOption[]) : LayerMask
+    + {static} LayerMaskField(rect:Rect, label:GUIContent, layerMask:LayerMask) : LayerMask
+    + {static} Foldout(hash:string, content:GUIContent) : bool
+    + {static} Foldout(hash:string, content:GUIContent, context:GenericMenu) : bool
+    + {static} Foldout(hash:string, content:GUIContent, context:GenericMenu, style:GUIStyle) : bool
+    + {static} Titlebar(target:object) : bool
+    + {static} Titlebar(target:object, menu:GenericMenu) : bool
+    + {static} Titlebar(hash:string, target:object, menu:GenericMenu) : bool
+    + {static} Titlebar(hash:string, content:GUIContent, target:object, menu:GenericMenu) : bool
+    + {static} CovertToAliasString(type:Type) : string
+    + {static} CreateAsset(displayFilePanel:bool) : T
+    + {static} CreateAsset() : T
+    + {static} CreateAsset(path:string) : T
+    + {static} CreateAsset(type:Type, displayFilePanel:bool) : ScriptableObject
+    + {static} CreateAsset(type:Type) : ScriptableObject
+    + {static} CreateAsset(type:Type, path:string) : ScriptableObject
+    + {static} FindInScene() : List<T>
+    + {static} FindAssets() : T[]
+    + {static} FindMonoScript(type:Type) : MonoScript
+    {static} arrayElementRegex : Regex
+    + {static} GetValue(property:SerializedProperty) : object
+    + {static} SetValue(property:SerializedProperty, value:object) : void
+    + {static} GetParent(property:SerializedProperty) : object
+    + {static} ReserveEvent(areas:Rect[]) : EventType
+    + {static} PropertyElementField(arrayProperty:SerializedProperty, index:int, drawScript:bool) : float
+    + {static} PropertyElementField(rect:Rect, arrayProperty:SerializedProperty, index:int, drawScript:bool) : float
+    + {static} PropertyElementHeight(arrayProperty:SerializedProperty, index:int, drawScript:bool) : float
+    + {static} HasCustomPropertyDrawer(type:Type) : bool
+    + {static} DrawFields(rect:Rect, obj:object) : object
+    + {static} DrawField(rect:Rect, label:GUIContent, obj:object, value:object, field:FieldInfo, options:GUILayoutOption[]) : object
+    + {static} DrawFields(obj:object, options:GUILayoutOption[]) : object
+    + {static} DrawField(label:GUIContent, obj:object, value:object, field:FieldInfo, options:GUILayoutOption[]) : object
+    + {static} CalcHeight(obj:object) : float
+    + {static} CalcHeight(label:GUIContent, obj:object, value:object, field:FieldInfo) : float
+    + {static} EnumerateChildProperties(property:SerializedProperty) : IEnumerable<SerializedProperty>
+    + {static} Duplicate(source:object) : object
+    + {static} IsDocked(window:EditorWindow) : bool
+}
+class PropertyPath <<struct>> {
+    + propertyName : string
+    + elementIndex : int
+}
+class DrawerKeySet <<struct>> {
+    + drawer : Type
+    + type : Type
+}
+class Styles <<static>> {
+    + {static} seperator : GUIStyle
+    + {static} rightArrow : Texture2D
+    + {static} leftTextButton : GUIStyle
+    + {static} leftTextToolbarButton : GUIStyle
+    + {static} inspectorTitle : GUIStyle
+    + {static} inspectorTitleText : GUIStyle
+    + {static} inspectorBigTitle : GUIStyle
+    {static} Styles()
+}
+EditorTools +-- PropertyPath
+EditorTools +-- DrawerKeySet
+EditorTools +-- Styles
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+!include Changelog.puml
+!include JsonHelper.puml
+!include ModuleItem.puml
+!include ModuleManagerWindow.puml
+!include UpdateNotificationWindow.puml
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class IsName {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- IsName
+ICondition <|-- IsName
+@enduml

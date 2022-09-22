@@ -1,0 +1,6 @@
+@startuml
+!include IGenerator.puml
+!include ItemGeneratorData.puml
+!include ItemGenerator.puml
+!include ItemGroupGenerator.puml
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class Category {
+    + <<override>> CanAddItem(item:Item) : bool
+}
+Restriction <|-- Category
+@enduml

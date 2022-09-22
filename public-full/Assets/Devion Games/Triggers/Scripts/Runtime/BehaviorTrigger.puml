@@ -1,0 +1,10 @@
+@startuml
+class BehaviorTrigger {
+    + actionTemplate : ActionTemplate
+    + actions : List<Action>
+    + <<override>> PlayerInfo : PlayerInfo <<get>>
+    + <<override>> Use() : bool
+    + Execute(template:ActionTemplate) : void
+}
+BaseTrigger <|-- BehaviorTrigger
+@enduml

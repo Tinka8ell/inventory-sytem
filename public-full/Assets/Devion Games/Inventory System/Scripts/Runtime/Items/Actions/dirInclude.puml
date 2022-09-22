@@ -1,0 +1,4 @@
+@startuml
+!include Inventory/dirInclude.puml
+!include ItemAction.puml
+@enduml

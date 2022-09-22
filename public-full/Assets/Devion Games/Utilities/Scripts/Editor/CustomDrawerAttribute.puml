@@ -1,0 +1,9 @@
+@startuml
+class CustomDrawerAttribute {
+    + Type : Type <<get>>
+    + UseForChildren : bool <<get>>
+    + CustomDrawerAttribute(type:Type)
+    + CustomDrawerAttribute(type:Type, useForChildren:bool)
+}
+Attribute <|-- CustomDrawerAttribute
+@enduml

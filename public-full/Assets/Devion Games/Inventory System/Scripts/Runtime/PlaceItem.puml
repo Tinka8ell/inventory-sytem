@@ -1,0 +1,10 @@
+@startuml
+class PlaceItem {
+    + mask : LayerMask
+    + maxHeightDiffrence : float = 1.0f
+    + maxDistance : float = 10
+    + rotate : KeyCode
+    + onPlace : UnityEvent
+}
+MonoBehaviour <|-- PlaceItem
+@enduml

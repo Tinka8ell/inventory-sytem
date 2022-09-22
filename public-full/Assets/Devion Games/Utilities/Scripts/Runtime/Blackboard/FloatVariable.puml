@@ -1,0 +1,10 @@
+@startuml
+class FloatVariable {
+    + Value : float <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + FloatVariable()
+    + FloatVariable(name:string)
+}
+Variable <|-- FloatVariable
+@enduml

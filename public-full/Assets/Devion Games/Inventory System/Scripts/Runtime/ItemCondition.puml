@@ -1,0 +1,9 @@
+@startuml
+class ItemCondition {
+    + item : Item
+    + category : Category
+    + boolValue : bool
+    + stringValue : string
+    + intValue : int
+}
+@enduml

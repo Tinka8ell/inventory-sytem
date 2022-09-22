@@ -1,0 +1,5 @@
+@startuml
+class BaseTriggerInspector {
+}
+CallbackHandlerInspector <|-- BaseTriggerInspector
+@enduml

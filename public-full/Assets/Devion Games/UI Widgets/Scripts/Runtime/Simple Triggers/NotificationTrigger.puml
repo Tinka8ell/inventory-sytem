@@ -1,0 +1,9 @@
+@startuml
+class NotificationTrigger {
+    + options : NotificationOptions[]
+    + AddRandomNotification() : void
+    + AddNotification(input:InputField) : void
+    + AddNotification(index:float) : void
+}
+MonoBehaviour <|-- NotificationTrigger
+@enduml

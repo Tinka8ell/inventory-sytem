@@ -1,0 +1,5 @@
+@startuml
+class MoveForward {
+}
+MonoBehaviour <|-- MoveForward
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+class FloatTween <<struct>> {
+    + easeType : EasingEquations.EaseType <<get>> <<set>>
+    + startValue : float <<get>> <<set>>
+    + targetValue : float <<get>> <<set>>
+    + duration : float <<get>> <<set>>
+    + ignoreTimeScale : bool <<get>> <<set>>
+    + ValidTarget() : bool
+    + TweenValue(floatPercentage:float) : void
+    + AddOnChangedCallback(callback:UnityAction<float>) : void
+    + AddOnFinishCallback(callback:UnityAction) : void
+    + OnFinish() : void
+}
+class FloatTweenCallback {
+    + FloatTweenCallback()
+}
+class FloatTweenFinishCallback {
+    + FloatTweenFinishCallback()
+}
+ITweenValue <|-- FloatTween
+FloatTween +-- FloatTweenCallback
+"UnityEvent`1" "<float>" <|-- FloatTweenCallback
+FloatTween +-- FloatTweenFinishCallback
+UnityEvent <|-- FloatTweenFinishCallback
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class ActionListDrawer {
+    + <<override>> OnGUI(label:GUIContent) : void
+}
+CustomDrawer <|-- ActionListDrawer
+@enduml

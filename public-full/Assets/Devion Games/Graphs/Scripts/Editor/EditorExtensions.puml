@@ -1,0 +1,5 @@
+@startuml
+class EditorExtensions <<static>> {
+    + {static} IsDocked(window:EditorWindow) : bool
+}
+@enduml

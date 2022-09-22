@@ -1,0 +1,25 @@
+@startuml
+class StatsHandler {
+    + HandlerName : string <<get>>
+    + saveable : bool = false
+    + m_Stats : List<Stat>
+    + onUpdate : System.Action
+    + ApplyDamage(data:object[]) : void
+    + ApplyDamage(name:string, damage:float) : void
+    + GetStat(stat:Stat) : Stat
+    + GetStat(name:string) : Stat
+    + CanApplyDamage(name:string, damage:float) : bool
+    + AddEffect(effect:StatEffect) : void
+    + RemoveEffect(effect:StatEffect) : void
+    + AddModifier(data:object[]) : void
+    + AddModifier(statName:string, value:float, type:StatModType, source:object) : void
+    + RemoveModifiersFromSource(data:object[]) : bool
+    + RemoveModifiersFromSource(statName:string, source:object) : bool
+    + GetStatValue(name:string) : float
+    + GetStatCurrentValue(name:string) : float
+    + GetObjectData(data:Dictionary<string, object>) : void
+    + SetObjectData(data:Dictionary<string, object>) : void
+}
+MonoBehaviour <|-- StatsHandler
+IJsonSerializable <|-- StatsHandler
+@enduml

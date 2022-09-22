@@ -1,0 +1,6 @@
+@startuml
+class NameItemView {
+    + <<override>> Repaint(item:Item) : void
+}
+ItemView <|-- NameItemView
+@enduml

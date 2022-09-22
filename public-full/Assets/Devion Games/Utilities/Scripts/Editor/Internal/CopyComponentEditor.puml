@@ -1,0 +1,6 @@
+@startuml
+class CopyComponentEditor {
+    + {static} ShowWindow() : void
+}
+EditorWindow <|-- CopyComponentEditor
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class Ceil {
+    + value : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Ceil
+@enduml

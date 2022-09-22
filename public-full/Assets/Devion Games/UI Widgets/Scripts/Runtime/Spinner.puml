@@ -1,0 +1,26 @@
+@startuml
+class Spinner {
+    + changeDelay : float = 0.1f
+    + current : float <<get>> <<set>>
+    + step : float = 1.0f
+    + min : float
+    + max : float
+    + onChange : SpinnerEvent
+    + m_OnChange : SpinnerTextEvent
+    + SetCurrent(value:string) : void
+    + StartIncrease() : void
+    + StartDecrease() : void
+    + Stop() : void
+    + Increase() : IEnumerator
+    + Decrease() : IEnumerator
+}
+class SpinnerEvent {
+}
+class SpinnerTextEvent {
+}
+MonoBehaviour <|-- Spinner
+Spinner +-- SpinnerEvent
+"UnityEvent`1" "<float>" <|-- SpinnerEvent
+Spinner +-- SpinnerTextEvent
+"UnityEvent`1" "<string>" <|-- SpinnerTextEvent
+@enduml

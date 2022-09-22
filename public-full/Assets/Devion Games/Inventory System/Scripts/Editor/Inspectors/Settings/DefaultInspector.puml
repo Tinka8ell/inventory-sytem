@@ -1,0 +1,6 @@
+@startuml
+class DefaultInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- DefaultInspector
+@enduml

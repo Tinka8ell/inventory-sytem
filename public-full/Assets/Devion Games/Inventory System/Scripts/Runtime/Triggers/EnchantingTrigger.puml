@@ -1,0 +1,6 @@
+@startuml
+class EnchantingTrigger {
+    + <<override>> OverrideUse(slot:Slot, item:Item) : bool
+}
+CraftingTrigger <|-- EnchantingTrigger
+@enduml

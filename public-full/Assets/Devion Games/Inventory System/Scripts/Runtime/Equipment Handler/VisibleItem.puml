@@ -1,0 +1,20 @@
+@startuml
+abstract class VisibleItem {
+    + <<override>> Callbacks : string[] <<get>>
+    + item : Item
+    + attachments : Attachment[]
+    + <<virtual>> OnItemEquip(item:Item) : void
+    + <<virtual>> OnItemUnEquip(item:Item) : void
+}
+class Attachment {
+    + region : EquipmentRegion
+    + prefab : GameObject
+    + position : Vector3
+    + rotation : Vector3
+    + scale : Vector3
+    + gameObject : GameObject
+    + Instantiate(handler:EquipmentHandler) : GameObject
+}
+CallbackHandler <|-- VisibleItem
+VisibleItem +-- Attachment
+@enduml

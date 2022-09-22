@@ -1,0 +1,5 @@
+@startuml
+class EquipmentPickerDrawer {
+}
+"PickerDrawer`1" "<EquipmentRegion>" <|-- EquipmentPickerDrawer
+@enduml

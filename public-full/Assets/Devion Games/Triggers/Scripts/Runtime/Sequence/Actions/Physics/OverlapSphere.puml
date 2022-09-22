@@ -1,0 +1,7 @@
+@startuml
+class OverlapSphere {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- OverlapSphere
+@enduml

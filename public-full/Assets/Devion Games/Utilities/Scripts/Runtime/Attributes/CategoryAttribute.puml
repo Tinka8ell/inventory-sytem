@@ -1,0 +1,7 @@
+@startuml
+class CategoryAttribute <<sealed>> {
+    + Category : string <<get>>
+    + CategoryAttribute(category:string)
+}
+Attribute <|-- CategoryAttribute
+@enduml

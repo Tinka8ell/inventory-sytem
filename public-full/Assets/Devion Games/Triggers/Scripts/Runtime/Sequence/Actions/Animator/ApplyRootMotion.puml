@@ -1,0 +1,7 @@
+@startuml
+class ApplyRootMotion {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- ApplyRootMotion
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+class StatsManager {
+    + {static} current : StatsManager <<get>>
+    + {static} Database : StatDatabase <<get>>
+    + {static} DefaultSettings : Default <<get>>
+    + {static} UI : UI <<get>>
+    + {static} Notifications : Notifications <<get>>
+    + {static} SavingLoading : SavingLoading <<get>>
+    + dontDestroyOnLoad : bool = true
+    + {static} Save() : void
+    + {static} Save(key:string) : void
+    + {static} Load() : void
+    + {static} Load(key:string) : void
+    + {static} RegisterStatsHandler(handler:StatsHandler) : void
+    + {static} GetStatsHandler(name:string) : StatsHandler
+}
+MonoBehaviour <|-- StatsManager
+@enduml

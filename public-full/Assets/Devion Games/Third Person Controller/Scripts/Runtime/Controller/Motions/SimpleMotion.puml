@@ -1,0 +1,8 @@
+@startuml
+class SimpleMotion {
+    + <<override>> OnStop() : void
+    + <<override>> OnStart() : void
+    + <<override>> CanStart() : bool
+}
+MotionState <|-- SimpleMotion
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class AudioPlaylist {
+    + Count : int <<get>>
+}
+ScriptableObject <|-- AudioPlaylist
+@enduml

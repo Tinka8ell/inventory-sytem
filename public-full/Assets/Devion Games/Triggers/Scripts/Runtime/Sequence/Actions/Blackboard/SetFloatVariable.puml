@@ -1,0 +1,7 @@
+@startuml
+class SetFloatVariable {
+    + <<override>> OnUpdate() : ActionStatus
+    + <<override>> Update() : void
+}
+Action <|-- SetFloatVariable
+@enduml

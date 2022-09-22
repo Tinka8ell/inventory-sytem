@@ -1,0 +1,7 @@
+@startuml
+class NamedVariableCollectionEditor {
+    + <<override>> ToolbarName : string <<get>>
+    + NamedVariableCollectionEditor(serializedObject:SerializedObject, serializedProperty:SerializedProperty)
+}
+"ObjectCollectionEditor`1" "<NamedVariable>" <|-- NamedVariableCollectionEditor
+@enduml

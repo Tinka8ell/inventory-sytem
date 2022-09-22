@@ -1,0 +1,44 @@
+@startuml
+class InputAttribute <<sealed>> {
+    + <<readonly>> label : bool = true
+    + <<readonly>> port : bool = true
+    + InputAttribute()
+    + InputAttribute(label:bool, port:bool)
+}
+class OutputAttribute <<sealed>> {
+    + OutputAttribute()
+}
+enum PortDirection {
+    Input= 0,
+    Output= 1,
+}
+enum PortCapacity {
+    Single= 0,
+    Multiple= 1,
+}
+class Edge {
+    + nodeId : string
+    + fieldName : string
+    + port : Port
+}
+class Port {
+    + node : FlowNode
+    + fieldType : Type <<get>>
+    + fieldName : string
+    + drawPort : bool = true
+    + label : bool = true
+    + capacity : PortCapacity
+    + direction : PortDirection
+    + Connections : List<Edge> <<get>>
+    + m_FieldTypeName : string
+    + Port()
+    + Port(node:FlowNode, fieldName:string, fieldType:Type, capacity:PortCapacity, direction:PortDirection)
+    + <<virtual>> GetValue(defaultValue:T) : T
+    + <<virtual>> GetValues() : IEnumerable<T>
+    + Connect(port:Port) : void
+    + Disconnect(port:Port) : void
+    + DisconnectAll() : void
+}
+Attribute <|-- InputAttribute
+Attribute <|-- OutputAttribute
+@enduml

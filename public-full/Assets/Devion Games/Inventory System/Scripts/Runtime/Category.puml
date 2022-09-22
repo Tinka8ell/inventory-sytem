@@ -1,0 +1,11 @@
+@startuml
+class Category {
+    + Parent : Category <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + EditorColor : Color <<get>>
+    + Cooldown : float <<get>>
+    + IsAssignable(other:Category) : bool
+}
+ScriptableObject <|-- Category
+INameable <|-- Category
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class PropertyBindingInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+class Entry {
+    + target : Component
+    + name : string
+    + <<override>> ToString() : string
+}
+Editor <|-- PropertyBindingInspector
+PropertyBindingInspector +-- Entry
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+class DragPanel {
+    Awake() : void
+    + OnPointerDown(data:PointerEventData) : void
+    + OnDrag(data:PointerEventData) : void
+    ClampToWindow(data:PointerEventData) : Vector2
+}
+MonoBehaviour <|-- DragPanel
+IPointerDownHandler <|-- DragPanel
+IDragHandler <|-- DragPanel
+@enduml

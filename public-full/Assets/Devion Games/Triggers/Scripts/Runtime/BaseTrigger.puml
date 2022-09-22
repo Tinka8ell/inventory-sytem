@@ -1,0 +1,24 @@
+@startuml
+abstract class BaseTrigger {
+    + {abstract} PlayerInfo : PlayerInfo <<get>>
+    + <<override>> Callbacks : string[] <<get>>
+    + useDistance : float = 1.2f
+    + triggerType : TriggerInputType
+    + key : KeyCode
+    + {static} currentUsedTrigger : BaseTrigger
+    + InRange : bool <<get>> <<protected set>>
+    + InUse : bool <<get>> <<set>>
+    + <<virtual>> Use() : bool
+    + <<virtual>> CanUse() : bool
+    + <<virtual>> IsBestTrigger() : bool
+}
+enum TriggerInputType {
+    LeftClick= 1,
+    RightClick= 2,
+    MiddleClick= 4,
+    Key= 8,
+    OnTriggerEnter= 16,
+}
+CallbackHandler <|-- BaseTrigger
+BaseTrigger +-- TriggerInputType
+@enduml

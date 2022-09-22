@@ -1,0 +1,7 @@
+@startuml
+class CompareTag {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- CompareTag
+ICondition <|-- CompareTag
+@enduml

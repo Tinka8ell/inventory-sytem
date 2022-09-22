@@ -1,0 +1,7 @@
+@startuml
+class EquipmentItem {
+    + EquipPrefab : GameObject <<get>>
+    + Region : List<EquipmentRegion> <<get>> <<set>>
+}
+UsableItem <|-- EquipmentItem
+@enduml

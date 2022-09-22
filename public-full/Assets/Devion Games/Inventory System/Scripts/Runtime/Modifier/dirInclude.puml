@@ -1,0 +1,10 @@
+@startuml
+!include IModifier.puml
+!include ItemModifierHandler.puml
+!include ItemModifierList.puml
+!include ItemModifier.puml
+!include PropertyModifier.puml
+!include RarityModifier.puml
+!include SkillModifier.puml
+!include StackModifier.puml
+@enduml

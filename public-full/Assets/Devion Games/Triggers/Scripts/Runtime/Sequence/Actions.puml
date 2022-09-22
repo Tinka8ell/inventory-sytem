@@ -1,0 +1,5 @@
+@startuml
+class Actions {
+    + actions : List<Action>
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+!include AudioEventListenerInspector.puml
+!include BlackboardInspector.puml
+!include CallbackHandlerInspector.puml
+!include PropertyBindingInspector.puml
+!include SelectionHandlerInspector.puml
+@enduml

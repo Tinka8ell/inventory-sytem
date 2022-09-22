@@ -1,0 +1,12 @@
+@startuml
+class Rarity {
+    + Name : string <<get>> <<set>>
+    + UseAsNamePrefix : bool <<get>>
+    + Color : Color <<get>> <<set>>
+    + Chance : int <<get>> <<set>>
+    + Multiplier : float <<get>> <<set>>
+    + PriceMultiplier : float <<get>> <<set>>
+}
+ScriptableObject <|-- Rarity
+INameable <|-- Rarity
+@enduml

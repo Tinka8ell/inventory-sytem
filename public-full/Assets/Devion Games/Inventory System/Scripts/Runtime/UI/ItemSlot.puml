@@ -1,0 +1,33 @@
+@startuml
+class ItemSlot {
+    + IsCooldown : bool <<get>>
+    + {static} dragObject : DragObject <<get>> <<set>>
+    + OnPointerEnter(eventData:PointerEventData) : void
+    + OnPointerExit(eventData:PointerEventData) : void
+    + <<virtual>> OnPointerDown(eventData:PointerEventData) : void
+    + <<virtual>> OnPointerUp(eventData:PointerEventData) : void
+    + <<virtual>> OnBeginDrag(eventData:PointerEventData) : void
+    + <<virtual>> OnDrag(eventData:PointerEventData) : void
+    + <<virtual>> OnEndDrag(eventData:PointerEventData) : void
+    + <<virtual>> OnDrop(data:PointerEventData) : void
+    + Cooldown(duration:float) : void
+    + <<override>> Use() : void
+    + <<override>> CanUse() : bool
+}
+class DragObject {
+    + container : ItemContainer
+    + slot : Slot
+    + item : Item
+    + DragObject(slot:Slot)
+}
+Slot <|-- ItemSlot
+IBeginDragHandler <|-- ItemSlot
+IDragHandler <|-- ItemSlot
+IEndDragHandler <|-- ItemSlot
+IDropHandler <|-- ItemSlot
+IPointerDownHandler <|-- ItemSlot
+IPointerUpHandler <|-- ItemSlot
+IPointerEnterHandler <|-- ItemSlot
+IPointerExitHandler <|-- ItemSlot
+ItemSlot +-- DragObject
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class ItemTooltip {
+    + Show(item:Item) : void
+}
+Tooltip <|-- ItemTooltip
+@enduml

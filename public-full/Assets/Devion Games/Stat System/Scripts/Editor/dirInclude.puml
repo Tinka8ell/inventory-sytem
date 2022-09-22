@@ -1,0 +1,14 @@
+@startuml
+!include ExecutionOrderValidator.puml
+!include SavingLoadingInspector.puml
+!include StatCollectionEditor.puml
+!include StatEffectInspector.puml
+!include StatEffectPickerDrawer.puml
+!include StatInspector.puml
+!include StatPickerDrawer.puml
+!include StatSettingsEditor.puml
+!include StatsHandlerInspector.puml
+!include StatSystemEditor.puml
+!include StatSystemInspector.puml
+!include StatSystemMenu.puml
+@enduml

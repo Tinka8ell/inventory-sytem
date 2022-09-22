@@ -1,0 +1,12 @@
+@startuml
+interface IControllerEventHandler {
+}
+interface IControllerGrounded {
+    OnControllerGrounded(grounded:bool) : void
+}
+interface IControllerAim {
+    OnControllerAim(aim:bool) : void
+}
+IControllerEventHandler <|-- IControllerGrounded
+IControllerEventHandler <|-- IControllerAim
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+abstract class Restriction {
+    + {abstract} CanAddItem(item:Item) : bool
+}
+MonoBehaviour <|-- Restriction
+@enduml

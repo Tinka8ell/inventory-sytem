@@ -1,0 +1,8 @@
+@startuml
+class Progressbar {
+    + <<virtual>> SetProgress(progress:float) : void
+    + <<override>> Show() : void
+    + <<virtual>> Show(title:string) : void
+}
+UIWidget <|-- Progressbar
+@enduml

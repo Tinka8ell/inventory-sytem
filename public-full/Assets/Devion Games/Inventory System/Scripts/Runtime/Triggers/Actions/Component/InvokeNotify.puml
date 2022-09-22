@@ -1,0 +1,8 @@
+@startuml
+class InvokeNotify {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- InvokeNotify
+ICondition <|-- InvokeNotify
+@enduml

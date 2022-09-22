@@ -1,0 +1,8 @@
+@startuml
+class SpecularLighting {
+    + specularLight : Transform
+    + Start() : void
+    + Update() : void
+}
+MonoBehaviour <|-- SpecularLighting
+@enduml

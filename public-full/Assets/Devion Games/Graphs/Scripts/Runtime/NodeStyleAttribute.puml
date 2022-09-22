@@ -1,0 +1,12 @@
+@startuml
+class NodeStyleAttribute {
+    + <<readonly>> iconPath : string
+    + <<readonly>> displayHeader : bool
+    + <<readonly>> category : string
+    + NodeStyleAttribute(displayHeader:bool)
+    + NodeStyleAttribute(displayHeader:bool, category:string)
+    + NodeStyleAttribute(iconPath:string)
+    + NodeStyleAttribute(iconPath:string, displayHeader:bool, category:string)
+}
+Attribute <|-- NodeStyleAttribute
+@enduml

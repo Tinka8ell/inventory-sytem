@@ -1,0 +1,7 @@
+@startuml
+class AddModifier {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- AddModifier
+@enduml

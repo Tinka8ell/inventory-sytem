@@ -1,0 +1,11 @@
+@startuml
+class SelectableObject {
+    + {static} current : SelectableObject
+    + position : Vector3 <<get>>
+    + <<override>> Callbacks : string[] <<get>>
+    + OnSelect() : void
+    + OnDeselect() : void
+}
+CallbackHandler <|-- SelectableObject
+ISelectable <|-- SelectableObject
+@enduml

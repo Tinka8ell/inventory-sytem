@@ -1,0 +1,10 @@
+@startuml
+class Vector2Variable {
+    + Value : Vector2 <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + Vector2Variable()
+    + Vector2Variable(name:string)
+}
+Variable <|-- Vector2Variable
+@enduml

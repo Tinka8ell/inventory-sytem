@@ -1,0 +1,7 @@
+@startuml
+class SM_RandomScale {
+    + minScale : float = 1f
+    + maxScale : float = 2f
+}
+MonoBehaviour <|-- SM_RandomScale
+@enduml

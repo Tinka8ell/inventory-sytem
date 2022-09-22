@@ -1,0 +1,13 @@
+@startuml
+class Input {
+    + <<override>> Name : string <<get>>
+    + unstackEvent : UnstackInput
+    + unstackKeyCode : KeyCode
+}
+enum UnstackInput {
+    OnClick= 1,
+    OnDrag= 2,
+}
+Settings <|-- Input
+Input +-- UnstackInput
+@enduml

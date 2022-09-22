@@ -1,0 +1,9 @@
+@startuml
+class MenuItem {
+    + onTrigger : UnityEvent <<get>> <<set>>
+    + OnPointerClick(eventData:PointerEventData) : void
+    + <<override>> OnPointerEnter(eventData:PointerEventData) : void
+}
+Selectable <|-- MenuItem
+IPointerClickHandler <|-- MenuItem
+@enduml

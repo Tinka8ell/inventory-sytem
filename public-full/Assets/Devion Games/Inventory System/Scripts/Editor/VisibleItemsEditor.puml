@@ -1,0 +1,16 @@
+@startuml
+class VisibleItemsEditor {
+    + <<new>> {static} ShowWindow(title:string, elements:SerializedProperty) : void
+}
+class Styles {
+    + header : GUIStyle
+    + rightArrow : GUIStyle = "AC RightArrow"
+    + leftArrow : GUIStyle = "AC LeftArrow"
+    + elementButton : GUIStyle
+    + background : GUIStyle = "grey_border"
+    + elementButtonText : GUIStyle
+    + Styles()
+}
+AssetWindow <|-- VisibleItemsEditor
+VisibleItemsEditor +-- Styles
+@enduml

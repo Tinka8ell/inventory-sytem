@@ -1,0 +1,5 @@
+@startuml
+class SwimTrigger {
+}
+MotionTrigger <|-- SwimTrigger
+@enduml

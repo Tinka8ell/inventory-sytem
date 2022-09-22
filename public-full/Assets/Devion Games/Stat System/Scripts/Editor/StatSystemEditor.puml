@@ -1,0 +1,6 @@
+@startuml
+class StatSystemEditor {
+    + {static} ShowWindow() : void
+}
+EditorWindow <|-- StatSystemEditor
+@enduml

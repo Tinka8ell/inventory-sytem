@@ -1,0 +1,8 @@
+@startuml
+class UtilityBehavior {
+    + QuitApplication() : void
+    + LoadScene(scene:string) : void
+    + Instantiate(gameObject:GameObject) : void
+}
+MonoBehaviour <|-- UtilityBehavior
+@enduml

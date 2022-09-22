@@ -1,0 +1,6 @@
+@startuml
+abstract class ItemAction {
+    + item : Item
+}
+Action <|-- ItemAction
+@enduml

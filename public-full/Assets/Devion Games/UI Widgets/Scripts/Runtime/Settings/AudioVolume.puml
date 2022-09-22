@@ -1,0 +1,6 @@
+@startuml
+class AudioVolume {
+    + SetVolume(volume:float) : void
+}
+MonoBehaviour <|-- AudioVolume
+@enduml

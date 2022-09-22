@@ -1,0 +1,8 @@
+@startuml
+class AnimateRawImage {
+    + animRate : Vector2
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- AnimateRawImage
+@enduml

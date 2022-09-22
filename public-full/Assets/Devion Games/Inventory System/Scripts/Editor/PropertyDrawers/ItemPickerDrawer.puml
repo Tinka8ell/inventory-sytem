@@ -1,0 +1,5 @@
+@startuml
+class ItemPickerDrawer {
+}
+"PickerDrawer`1" "<Item>" <|-- ItemPickerDrawer
+@enduml

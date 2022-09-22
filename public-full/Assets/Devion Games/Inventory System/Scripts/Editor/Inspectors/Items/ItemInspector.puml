@@ -1,0 +1,6 @@
+@startuml
+class ItemInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- ItemInspector
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class ChangeHeight {
+    + <<override>> OnStart() : void
+    + <<override>> OnStop() : void
+}
+MotionState <|-- ChangeHeight
+@enduml

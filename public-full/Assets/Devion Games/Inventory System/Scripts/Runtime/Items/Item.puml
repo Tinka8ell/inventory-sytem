@@ -1,0 +1,46 @@
+@startuml
+class Item {
+    + Id : string <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + DisplayName : string <<get>> <<set>>
+    + Icon : Sprite <<get>> <<set>>
+    + Prefab : GameObject <<get>> <<set>>
+    + Description : string <<get>>
+    + Category : Category <<get>> <<set>>
+    + Rarity : Rarity <<get>> <<set>>
+    + IsSellable : bool <<get>> <<set>>
+    + BuyPrice : int <<get>>
+    + CanBuyBack : bool <<get>>
+    + BuyCurrency : Currency <<get>> <<set>>
+    + SellPrice : int <<get>>
+    + SellCurrency : Currency <<get>> <<set>>
+    + <<virtual>> Stack : int <<get>> <<set>>
+    + <<virtual>> MaxStack : int <<get>>
+    + CanDestroy : bool <<get>>
+    + IsDroppable : bool <<get>>
+    + DropSound : AudioClip <<get>>
+    + OverridePrefab : GameObject <<get>>
+    + CraftingRecipe : CraftingRecipe <<get>> <<set>>
+    + EnchantingRecipe : CraftingRecipe <<get>> <<set>>
+    + Container : ItemContainer <<get>>
+    + Slot : Slot <<get>>
+    + Slots : List<Slot> <<get>> <<set>>
+    + ReferencedSlots : List<Slot> <<get>> <<set>>
+    + CooldownTime : float <<get>>
+    + CooldownDuration : float <<get>>
+    + IsInCooldown : bool <<get>>
+    + SetCooldown(duration:float) : void
+    + AddProperty(name:string, value:object) : void
+    + RemoveProperty(name:string) : void
+    + FindProperty(name:string) : ObjectProperty
+    + GetProperties() : ObjectProperty[]
+    + SetProperties(properties:ObjectProperty[]) : void
+    + GetPropertyInfo() : List<KeyValuePair<string, string>>
+    + <<virtual>> Use() : void
+    + <<virtual>> GetObjectData(data:Dictionary<string, object>) : void
+    + <<virtual>> SetObjectData(data:Dictionary<string, object>) : void
+}
+ScriptableObject <|-- Item
+INameable <|-- Item
+IJsonSerializable <|-- Item
+@enduml

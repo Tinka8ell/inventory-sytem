@@ -1,0 +1,46 @@
+@startuml
+interface ITriggerSelectSellItem {
+    OnSelectSellItem(item:Item, player:GameObject) : void
+}
+interface ITriggerSoldItem {
+    OnSoldItem(item:Item, player:GameObject) : void
+}
+interface ITriggerFailedToSellItem {
+    OnFailedToSellItem(item:Item, player:GameObject, failureCause:Trigger.FailureCause) : void
+}
+interface ITriggerSelectBuyItem {
+    OnSelectBuyItem(item:Item, player:GameObject) : void
+}
+interface ITriggerBoughtItem {
+    OnBoughtItem(item:Item, player:GameObject) : void
+}
+interface ITriggerFailedToBuyItem {
+    OnFailedToBuyItem(item:Item, player:GameObject, failureCause:Trigger.FailureCause) : void
+}
+interface ITriggerCraftStart {
+    OnCraftStart(item:Item, player:GameObject) : void
+}
+interface ITriggerFailedCraftStart {
+    OnFailedCraftStart(item:Item, player:GameObject, failureCause:Trigger.FailureCause) : void
+}
+interface ITriggerCraftItem {
+    OnCraftItem(item:Item, player:GameObject) : void
+}
+interface ITriggerFailedToCraftItem {
+    OnFailedToCraftItem(item:Item, player:GameObject, failureCause:Trigger.FailureCause) : void
+}
+interface ITriggerCraftStop {
+    OnCraftStop(item:Item, player:GameObject) : void
+}
+ITriggerEventHandler <|-- ITriggerSelectSellItem
+ITriggerEventHandler <|-- ITriggerSoldItem
+ITriggerEventHandler <|-- ITriggerFailedToSellItem
+ITriggerEventHandler <|-- ITriggerSelectBuyItem
+ITriggerEventHandler <|-- ITriggerBoughtItem
+ITriggerEventHandler <|-- ITriggerFailedToBuyItem
+ITriggerEventHandler <|-- ITriggerCraftStart
+ITriggerEventHandler <|-- ITriggerFailedCraftStart
+ITriggerEventHandler <|-- ITriggerCraftItem
+ITriggerEventHandler <|-- ITriggerFailedToCraftItem
+ITriggerEventHandler <|-- ITriggerCraftStop
+@enduml

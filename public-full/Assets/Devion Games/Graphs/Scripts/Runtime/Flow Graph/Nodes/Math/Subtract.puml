@@ -1,0 +1,9 @@
+@startuml
+class Subtract {
+    + a : float
+    + b : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Subtract
+@enduml

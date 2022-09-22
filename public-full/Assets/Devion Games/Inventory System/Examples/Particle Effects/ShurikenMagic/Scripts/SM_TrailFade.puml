@@ -1,0 +1,9 @@
+@startuml
+class SM_TrailFade {
+    + fadeInTime : float = 0.1f
+    + stayTime : float = 1f
+    + fadeOutTime : float = 0.7f
+    + thisTrail : TrailRenderer
+}
+MonoBehaviour <|-- SM_TrailFade
+@enduml

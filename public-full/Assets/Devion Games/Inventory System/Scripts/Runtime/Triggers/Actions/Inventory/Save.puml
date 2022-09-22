@@ -1,0 +1,6 @@
+@startuml
+class Save {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Save
+@enduml

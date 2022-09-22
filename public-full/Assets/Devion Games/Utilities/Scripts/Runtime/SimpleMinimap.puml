@@ -1,0 +1,5 @@
+@startuml
+class SimpleMinimap {
+}
+MonoBehaviour <|-- SimpleMinimap
+@enduml

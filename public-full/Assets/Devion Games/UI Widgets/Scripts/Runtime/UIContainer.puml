@@ -1,0 +1,12 @@
+@startuml
+class "UIContainer`1"<T> {
+    + <<override>> Callbacks : string[] <<get>>
+    + Slots : ReadOnlyCollection<UISlot<T>> <<get>>
+    + <<virtual>> AddItem(item:T) : bool
+    + <<virtual>> RemoveItem(index:int) : bool
+    + <<virtual>> ReplaceItem(index:int, item:T) : T
+    + <<virtual>> CanAddItem(item:T, slot:UISlot<T>, createSlot:bool) : bool
+    + RefreshSlots() : void
+}
+UIWidget <|-- "UIContainer`1"
+@enduml

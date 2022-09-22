@@ -1,0 +1,7 @@
+@startuml
+class MoveTo {
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- MoveTo
+@enduml

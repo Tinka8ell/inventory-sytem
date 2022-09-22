@@ -1,0 +1,6 @@
+@startuml
+class AddItem {
+    + <<override>> OnUpdate() : ActionStatus
+}
+ItemAction <|-- AddItem
+@enduml

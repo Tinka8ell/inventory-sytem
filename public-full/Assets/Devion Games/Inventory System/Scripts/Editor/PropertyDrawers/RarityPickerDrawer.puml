@@ -1,0 +1,5 @@
+@startuml
+class RarityPickerDrawer {
+}
+"PickerDrawer`1" "<Rarity>" <|-- RarityPickerDrawer
+@enduml

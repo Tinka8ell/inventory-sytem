@@ -1,0 +1,11 @@
+@startuml
+class ObjectWindow {
+    + {static} ShowWindow(title:string, serializedObject:SerializedObject, serializedProperty:SerializedProperty) : void
+    + {static} ShowWindow(title:string, list:IList, onChange:System.Action) : void
+    OnEnable() : void
+    OnDisable() : void
+    + OnBeforeAssemblyReload() : void
+    + OnAfterAssemblyReload() : void
+}
+EditorWindow <|-- ObjectWindow
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class UsableItem {
+    + Cooldown : float <<get>>
+    + actions : List<Action>
+    + <<override>> Use() : void
+}
+Item <|-- UsableItem
+@enduml

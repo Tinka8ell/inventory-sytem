@@ -1,0 +1,6 @@
+@startuml
+class ThirdPersonCameraEditor {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- ThirdPersonCameraEditor
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class SetPosition {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SetPosition
+@enduml

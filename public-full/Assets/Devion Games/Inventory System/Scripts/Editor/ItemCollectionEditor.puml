@@ -1,0 +1,7 @@
+@startuml
+class ItemCollectionEditor {
+    + <<override>> ToolbarName : string <<get>>
+    + ItemCollectionEditor(target:UnityEngine.Object, items:List<Item>, searchFilters:List<string>)
+}
+"ScriptableObjectCollectionEditor`1" "<Item>" <|-- ItemCollectionEditor
+@enduml

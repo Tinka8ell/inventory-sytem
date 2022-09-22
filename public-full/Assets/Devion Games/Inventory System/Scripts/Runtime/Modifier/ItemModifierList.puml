@@ -1,0 +1,6 @@
+@startuml
+class ItemModifierList {
+    + modifiers : List<ItemModifier>
+    + Modify(item:Item) : void
+}
+@enduml

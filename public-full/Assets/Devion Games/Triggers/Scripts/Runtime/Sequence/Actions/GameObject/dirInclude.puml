@@ -1,0 +1,10 @@
+@startuml
+!include BroadcastMessage.puml
+!include CompareTag.puml
+!include Destroy.puml
+!include InstantiateAtMouse.puml
+!include Instantiate.puml
+!include SendMessage.puml
+!include SendMessageUpwards.puml
+!include SetName.puml
+@enduml

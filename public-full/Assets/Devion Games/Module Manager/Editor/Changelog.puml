@@ -1,0 +1,6 @@
+@startuml
+class Changelog {
+    + version : string
+    + changes : string[]
+}
+@enduml

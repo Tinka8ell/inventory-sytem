@@ -1,0 +1,6 @@
+@startuml
+class DeleteVariable {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- DeleteVariable
+@enduml

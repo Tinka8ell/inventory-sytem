@@ -1,0 +1,11 @@
+@startuml
+class PlayerInfo {
+    + PlayerInfo(tag:string)
+    + gameObject : GameObject <<get>>
+    + transform : Transform <<get>>
+    + collider : Collider <<get>>
+    + collider2D : Collider2D <<get>>
+    + animator : Animator <<get>>
+    + bounds : Bounds <<get>>
+}
+@enduml

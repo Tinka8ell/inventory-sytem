@@ -1,0 +1,7 @@
+@startuml
+class UpdateNotificationWindow {
+    + Icon : Texture2D <<get>>
+    + {static} ShowWindow(updatedItems:ModuleItem[]) : void
+}
+EditorWindow <|-- UpdateNotificationWindow
+@enduml

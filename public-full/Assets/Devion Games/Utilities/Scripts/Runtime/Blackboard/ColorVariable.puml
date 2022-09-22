@@ -1,0 +1,10 @@
+@startuml
+class ColorVariable {
+    + Value : Color <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + ColorVariable()
+    + ColorVariable(name:string)
+}
+Variable <|-- ColorVariable
+@enduml

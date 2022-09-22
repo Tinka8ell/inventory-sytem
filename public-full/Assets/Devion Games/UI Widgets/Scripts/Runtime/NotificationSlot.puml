@@ -1,0 +1,6 @@
+@startuml
+class NotificationSlot {
+    + <<override>> Repaint() : void
+}
+"UISlot`1" "<NotificationOptions>" <|-- NotificationSlot
+@enduml

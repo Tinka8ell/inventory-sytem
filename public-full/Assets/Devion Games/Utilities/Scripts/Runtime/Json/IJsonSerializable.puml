@@ -1,0 +1,6 @@
+@startuml
+interface IJsonSerializable {
+    GetObjectData(data:Dictionary<string,object>) : void
+    SetObjectData(data:Dictionary<string,object>) : void
+}
+@enduml

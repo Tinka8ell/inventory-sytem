@@ -1,0 +1,11 @@
+@startuml
+class CameraEffects {
+    + amount : Vector3
+    + duration : float = 1
+    + speed : float = 10
+    + curve : AnimationCurve
+    + deltaMovement : bool = true
+    + {static} Shake(duration:float, speed:float, amount:Vector3?, camera:Camera, deltaMovement:bool, curve:AnimationCurve) : void
+}
+MonoBehaviour <|-- CameraEffects
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+class JsonSerializer <<static>> {
+    + {static} Serialize(objs:IJsonSerializable[]) : string
+    + {static} Deserialize(json:string, objs:IJsonSerializable[]) : void
+    + {static} Deserialize(json:string) : List<T>
+    + {static} Serialize(obj:IJsonSerializable) : string
+    + {static} Deserialize(json:string, obj:IJsonSerializable) : void
+}
+@enduml

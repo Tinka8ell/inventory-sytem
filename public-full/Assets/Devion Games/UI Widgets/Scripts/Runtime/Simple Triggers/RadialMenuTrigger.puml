@@ -1,0 +1,8 @@
+@startuml
+class RadialMenuTrigger {
+    + menuIcons : Sprite[]
+    + OnPointerDown(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- RadialMenuTrigger
+IPointerDownHandler <|-- RadialMenuTrigger
+@enduml

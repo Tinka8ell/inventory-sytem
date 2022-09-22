@@ -1,0 +1,8 @@
+@startuml
+class ContextMenuTrigger {
+    + menu : string[]
+    + OnPointerDown(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- ContextMenuTrigger
+IPointerDownHandler <|-- ContextMenuTrigger
+@enduml

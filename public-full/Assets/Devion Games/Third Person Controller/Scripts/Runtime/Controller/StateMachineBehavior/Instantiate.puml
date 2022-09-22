@@ -1,0 +1,9 @@
+@startuml
+class Instantiate {
+    + original : GameObject
+    + offset : Vector3
+    + normalizedTime : float
+    <<override>> + OnStateUpdate(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+}
+StateMachineBehaviour <|-- Instantiate
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class CompareSkill {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- CompareSkill
+ICondition <|-- CompareSkill
+@enduml

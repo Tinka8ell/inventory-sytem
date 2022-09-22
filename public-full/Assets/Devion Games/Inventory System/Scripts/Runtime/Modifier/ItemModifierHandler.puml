@@ -1,0 +1,8 @@
+@startuml
+class ItemModifierHandler {
+    + modifiers : List<ItemModifier>
+    + ApplyModifiers(item:Item) : void
+    + ApplyModifiers(items:Item[]) : void
+}
+MonoBehaviour <|-- ItemModifierHandler
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class MotionTrigger {
+    + triggerName : string = "Motion"
+}
+MonoBehaviour <|-- MotionTrigger
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+class AnimationEventSender {
+    + <<override>> OnStateMachineEnter(animator:Animator, stateMachinePathHash:int) : void
+    + <<override>> OnStateMachineExit(animator:Animator, stateMachinePathHash:int) : void
+    + <<override>> OnStateEnter(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+    + <<override>> OnStateUpdate(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+    + <<override>> OnStateExit(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+}
+enum AnimationEventType {
+    OnStateEnter,
+    OnStateUpdate,
+    OnStateExit,
+    OnStateMachineEnter,
+    OnStateMachineExit,
+}
+StateMachineBehaviour <|-- AnimationEventSender
+AnimationEventSender +-- AnimationEventType
+@enduml

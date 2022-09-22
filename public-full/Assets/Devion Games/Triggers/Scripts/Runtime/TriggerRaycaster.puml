@@ -1,0 +1,9 @@
+@startuml
+class TriggerRaycaster {
+    {static} Initialize() : void
+    + {static} Raycast(origin:Vector3, direction:Vector3, hit:RaycastHit, maxDistance:float, layerMask:int) : bool
+    + {static} Raycast(ray:Ray, hit:RaycastHit, maxDistance:float, layerMask:int) : bool
+    + {static} IsPointerOverTrigger() : bool
+}
+MonoBehaviour <|-- TriggerRaycaster
+@enduml

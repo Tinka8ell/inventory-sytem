@@ -1,0 +1,7 @@
+@startuml
+class SkillModifier {
+    + Modify(item:Skill) : void
+}
+ScriptableObject <|-- SkillModifier
+"IModifier`1" "<Skill>" <|-- SkillModifier
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class RandomMotion {
+    + <<override>> GetDestinationState() : string
+}
+SimpleMotion <|-- RandomMotion
+@enduml

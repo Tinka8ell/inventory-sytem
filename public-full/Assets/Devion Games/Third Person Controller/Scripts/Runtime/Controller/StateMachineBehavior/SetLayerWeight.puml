@@ -1,0 +1,14 @@
+@startuml
+class SetLayerWeight {
+    + <<override>> OnStateEnter(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+    + <<override>> OnStateUpdate(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+    + <<override>> OnStateExit(animator:Animator, stateInfo:AnimatorStateInfo, layerIndex:int) : void
+}
+enum AnimationEventType {
+    OnStateEnter,
+    OnStateUpdate,
+    OnStateExit,
+}
+StateMachineBehaviour <|-- SetLayerWeight
+SetLayerWeight +-- AnimationEventType
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+class StatCallback {
+    + <<virtual>> Initialize(handler:StatsHandler, stat:Stat) : void
+}
+enum ValueType {
+    Value,
+    CurrentValue,
+}
+enum ConditionType {
+    Greater,
+    GreaterOrEqual,
+    Less,
+    LessOrEqual,
+}
+@enduml

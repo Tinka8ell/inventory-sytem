@@ -1,0 +1,13 @@
+@startuml
+!include Restrictions/dirInclude.puml
+!include Save and Load/dirInclude.puml
+!include View/dirInclude.puml
+!include CurrencySlot.puml
+!include ItemContainer.puml
+!include ItemSlot.puml
+!include ItemTooltip.puml
+!include SkillSlot.puml
+!include Slot.puml
+!include Stack.puml
+!include SwapItems.puml
+@enduml

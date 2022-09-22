@@ -1,0 +1,7 @@
+@startuml
+class ItemGroupGenerator {
+    + GenerateItems() : List<Item>
+}
+MonoBehaviour <|-- ItemGroupGenerator
+IGenerator <|-- ItemGroupGenerator
+@enduml

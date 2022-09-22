@@ -1,0 +1,12 @@
+@startuml
+class Swim {
+    + <<override>> OnStart() : void
+    + <<override>> OnStop() : void
+    + <<override>> CanStart() : bool
+    + <<override>> CanStop() : bool
+    + <<override>> UpdateVelocity(velocity:Vector3) : bool
+    + <<override>> CheckGround() : bool
+    + <<override>> UpdateAnimatorIK(layer:int) : bool
+}
+MotionState <|-- Swim
+@enduml

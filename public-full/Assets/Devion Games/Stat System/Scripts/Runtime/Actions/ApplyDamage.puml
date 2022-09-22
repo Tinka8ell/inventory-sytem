@@ -1,0 +1,7 @@
+@startuml
+class ApplyDamage {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- ApplyDamage
+@enduml

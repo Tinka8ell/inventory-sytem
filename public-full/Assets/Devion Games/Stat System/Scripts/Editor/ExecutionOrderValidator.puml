@@ -1,0 +1,5 @@
+@startuml
+class ExecutionOrderValidator {
+    {static} ExecutionOrderValidator()
+}
+@enduml

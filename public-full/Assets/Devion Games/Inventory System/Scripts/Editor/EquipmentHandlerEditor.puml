@@ -1,0 +1,7 @@
+@startuml
+class EquipmentHandlerEditor {
+    + {static} instance : EquipmentHandlerEditor
+    + {static} ShowWindow(serializedObject:SerializedObject) : void
+}
+EditorWindow <|-- EquipmentHandlerEditor
+@enduml

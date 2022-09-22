@@ -1,0 +1,58 @@
+@startuml
+class MiniJSON <<static>> {
+    + {static} Deserialize(json:string) : object
+    + {static} Serialize(obj:object) : string
+}
+class Parser <<sealed>> {
+    <<const>> WORD_BREAK : string = "{&#125;[],:\""
+    + {static} IsWordBreak(c:char) : bool
+    json : StringReader
+    Parser(jsonString:string)
+    + {static} Parse(jsonString:string) : object
+    + Dispose() : void
+    ParseObject() : Dictionary<string, object>
+    ParseArray() : List<object>
+    ParseValue() : object
+    ParseByToken(token:TOKEN) : object
+    ParseString() : string
+    ParseNumber() : object
+    ToQuaternion(quaternion:string) : Quaternion
+    ToVector4(vector:string) : Vector4
+    ToVector3(vector:string) : Vector3
+    ToVector2(vector:string) : Vector2
+    ToColor(color:string) : Color
+    EatWhitespace() : void
+    PeekChar : char <<get>>
+    NextChar : char <<get>>
+    NextWord : string <<get>>
+    NextToken : TOKEN <<get>>
+}
+class Serializer <<sealed>> {
+    builder : StringBuilder
+    Serializer()
+    + {static} Serialize(obj:object) : string
+    SerializeValue(value:object, indentationLevel:int) : void
+    SerializeObject(obj:IDictionary, indentationLevel:int) : void
+    SerializeArray(anArray:IList, indentationLevel:int) : void
+    SerializeString(str:string) : void
+    SerializeOther(value:object) : void
+}
+enum TOKEN {
+    NONE,
+    CURLY_OPEN,
+    CURLY_CLOSE,
+    SQUARED_OPEN,
+    SQUARED_CLOSE,
+    COLON,
+    COMMA,
+    STRING,
+    NUMBER,
+    TRUE,
+    FALSE,
+    NULL,
+}
+MiniJSON +-- Parser
+IDisposable <|-- Parser
+MiniJSON +-- Serializer
+Parser +-- TOKEN
+@enduml

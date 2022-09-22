@@ -1,0 +1,13 @@
+@startuml
+enum Direction {
+    Forward,
+    Backward,
+    Up,
+    Down,
+    Left,
+    Right,
+}
+class PhysicsUtility <<static>> {
+    + {static} GetDirection(transform:Transform, direction:Direction) : Vector3
+}
+@enduml

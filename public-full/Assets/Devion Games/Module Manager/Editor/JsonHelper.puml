@@ -1,0 +1,11 @@
+@startuml
+class JsonHelper <<static>> {
+    + {static} FromJson(json:string) : T[]
+    + {static} ToJson(array:T[]) : string
+    + {static} ToJson(array:T[], prettyPrint:bool) : string
+}
+class "Wrapper`1"<T> {
+    + Items : T[]
+}
+JsonHelper +-- "Wrapper`1"
+@enduml

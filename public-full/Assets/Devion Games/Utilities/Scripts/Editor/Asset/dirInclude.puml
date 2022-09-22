@@ -1,0 +1,6 @@
+@startuml
+!include AddObjectWindow.puml
+!include AssetWindow.puml
+!include ObjectPickerWindow.puml
+!include ObjectWindow.puml
+@enduml

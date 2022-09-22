@@ -1,0 +1,10 @@
+@startuml
+class ThirdPersonCamera {
+    + Target : Transform <<get>>
+    + Presets : CameraSettings[] <<get>>
+    + FixedUpdate() : void
+    + Activate(preset:string) : void
+    + Deactivate(preset:string) : void
+}
+MonoBehaviour <|-- ThirdPersonCamera
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class ZoomableArea {
+    + {static} Begin(area:Rect, tabHeight:float, zoom:float) : Rect
+    + {static} End() : void
+}
+@enduml

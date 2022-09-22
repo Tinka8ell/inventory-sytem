@@ -1,0 +1,13 @@
+@startuml
+!include Animator/dirInclude.puml
+!include Audio/dirInclude.puml
+!include Blackboard/dirInclude.puml
+!include Component/dirInclude.puml
+!include Debug/dirInclude.puml
+!include GameObject/dirInclude.puml
+!include Physics/dirInclude.puml
+!include Rigidbody/dirInclude.puml
+!include SceneManager/dirInclude.puml
+!include Transform/dirInclude.puml
+!include Wait.puml
+@enduml

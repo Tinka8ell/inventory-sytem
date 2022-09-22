@@ -1,0 +1,14 @@
+@startuml
+class Tab {
+    + selectedColor : Color
+    + isOn : bool
+    + onSelect : TabEvent
+    + onDeselect : TabEvent
+    + Select() : void
+}
+class TabEvent {
+}
+MonoBehaviour <|-- Tab
+Tab +-- TabEvent
+UnityEvent <|-- TabEvent
+@enduml

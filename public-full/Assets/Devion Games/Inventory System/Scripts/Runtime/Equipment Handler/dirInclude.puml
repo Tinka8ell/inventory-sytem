@@ -1,0 +1,8 @@
+@startuml
+!include EquipmentHandler.puml
+!include MeleeWeapon.puml
+!include ShootableWeapon.puml
+!include StaticItem.puml
+!include VisibleItem.puml
+!include Weapon.puml
+@enduml

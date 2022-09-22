@@ -1,0 +1,16 @@
+@startuml
+!include ArrayListVariable.puml
+!include Blackboard.puml
+!include BoolVariable.puml
+!include ColorVariable.puml
+!include FloatVariable.puml
+!include GameObjectVariable.puml
+!include IntVariable.puml
+!include ObjectVariable.puml
+!include SharedAttribute.puml
+!include StringVariable.puml
+!include Variable.puml
+!include VariableType.puml
+!include Vector2Variable.puml
+!include Vector3Variable.puml
+@enduml

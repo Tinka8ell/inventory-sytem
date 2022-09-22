@@ -1,0 +1,7 @@
+@startuml
+class LookAtMouse {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- LookAtMouse
+@enduml

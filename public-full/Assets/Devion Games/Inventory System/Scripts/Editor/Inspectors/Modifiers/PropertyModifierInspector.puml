@@ -1,0 +1,6 @@
+@startuml
+class PropertyModifierInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- PropertyModifierInspector
+@enduml

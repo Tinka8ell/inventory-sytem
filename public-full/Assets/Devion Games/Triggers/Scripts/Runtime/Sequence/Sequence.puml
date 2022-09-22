@@ -1,0 +1,11 @@
+@startuml
+class Sequence {
+    + Status : ActionStatus <<get>>
+    + Sequence(gameObject:GameObject, playerInfo:PlayerInfo, blackboard:Blackboard, actions:IAction[])
+    + Start() : void
+    + Stop() : void
+    + Interrupt() : void
+    + Update() : void
+    + Tick() : bool
+}
+@enduml

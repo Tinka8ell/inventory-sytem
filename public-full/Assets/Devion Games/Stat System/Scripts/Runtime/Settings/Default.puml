@@ -1,0 +1,7 @@
+@startuml
+class Default {
+    + <<override>> Name : string <<get>>
+    + debugMessages : bool = true
+}
+Settings <|-- Default
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+class QualityLevel {
+    + SetQualityLevel(index:float) : void
+    + SetQualityLevel(index:int) : void
+    + IncreaseQualityLevel() : void
+    + DecreaseQualityLevel() : void
+}
+MonoBehaviour <|-- QualityLevel
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class Refresh {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Refresh
+@enduml

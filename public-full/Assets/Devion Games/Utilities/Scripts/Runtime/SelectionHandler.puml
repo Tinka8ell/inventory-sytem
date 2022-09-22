@@ -1,0 +1,26 @@
+@startuml
+class SelectionHandler {
+    + <<override>> Callbacks : string[] <<get>>
+    + selectionType : SelectionInputType
+    + deselectionType : DeselectionInputType
+    + Select(selectable:ISelectable) : void
+    + Deselect() : void
+}
+enum SelectionInputType {
+    LeftClick= 1,
+    RightClick= 2,
+    Key= 4,
+    Raycast= 8,
+    MiddleClick= 16,
+}
+enum DeselectionInputType {
+    LeftClick= 1,
+    RightClick= 2,
+    Key= 4,
+    Distance= 8,
+    MiddleClick= 16,
+}
+CallbackHandler <|-- SelectionHandler
+SelectionHandler +-- SelectionInputType
+SelectionHandler +-- DeselectionInputType
+@enduml

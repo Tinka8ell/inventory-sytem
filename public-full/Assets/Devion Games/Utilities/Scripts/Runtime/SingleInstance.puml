@@ -1,0 +1,7 @@
+@startuml
+class SingleInstance {
+    Awake() : void
+    + {static} GetInstanceObjects() : List<GameObject>
+}
+MonoBehaviour <|-- SingleInstance
+@enduml

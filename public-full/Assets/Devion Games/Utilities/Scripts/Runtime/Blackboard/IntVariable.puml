@@ -1,0 +1,10 @@
+@startuml
+class IntVariable {
+    + Value : int <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + IntVariable()
+    + IntVariable(name:string)
+}
+Variable <|-- IntVariable
+@enduml

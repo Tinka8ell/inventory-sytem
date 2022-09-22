@@ -1,0 +1,7 @@
+@startuml
+class BlackboardInspector {
+    + <<override>> OnInspectorGUI() : void
+    + <<override>> UseDefaultMargins() : bool
+}
+Editor <|-- BlackboardInspector
+@enduml

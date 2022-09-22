@@ -1,0 +1,6 @@
+@startuml
+!include AudioVolume.puml
+!include Fullscreen.puml
+!include QualityLevel.puml
+!include ScreenResolution.puml
+@enduml

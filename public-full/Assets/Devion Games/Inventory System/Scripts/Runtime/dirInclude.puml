@@ -1,0 +1,27 @@
+@startuml
+!include Attributes/dirInclude.puml
+!include Equipment Handler/dirInclude.puml
+!include Generation/dirInclude.puml
+!include Items/dirInclude.puml
+!include Modifier/dirInclude.puml
+!include Settings/dirInclude.puml
+!include Testing/dirInclude.puml
+!include Triggers/dirInclude.puml
+!include UI/dirInclude.puml
+!include AreaOfEffect.puml
+!include Category.puml
+!include CraftingRecipe.puml
+!include CurrencyConversion.puml
+!include EquipmentRegion.puml
+!include InventoryManager.puml
+!include ItemCollectionPopulator.puml
+!include ItemCollection.puml
+!include ItemCondition.puml
+!include ItemContainerPopulator.puml
+!include ItemDatabase.puml
+!include ItemEventData.puml
+!include ItemGroup.puml
+!include PlaceItem.puml
+!include Projectile.puml
+!include Rarity.puml
+@enduml

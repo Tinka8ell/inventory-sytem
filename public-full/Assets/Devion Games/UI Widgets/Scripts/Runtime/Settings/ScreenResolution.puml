@@ -1,0 +1,10 @@
+@startuml
+class ScreenResolution {
+    + SetResolution(index:int) : void
+    + SetResolution(width:int, height:int) : void
+    + IncreaseResolution() : void
+    + DecreaseResolution() : void
+    + IsStandalone : bool <<get>>
+}
+MonoBehaviour <|-- ScreenResolution
+@enduml

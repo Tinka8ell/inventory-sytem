@@ -1,0 +1,26 @@
+@startuml
+class Water {
+    + waterMode : WaterMode
+    + disablePixelLights : bool = true
+    + textureSize : int = 256
+    + clipPlaneOffset : float = 0.07f
+    + reflectLayers : LayerMask
+    + refractLayers : LayerMask
+    + OnWillRenderObject() : void
+    OnDisable() : void
+    Update() : void
+    UpdateCameraModes(src:Camera, dest:Camera) : void
+    CreateWaterObjects(currentCamera:Camera, reflectionCamera:Camera, refractionCamera:Camera) : void
+    GetWaterMode() : WaterMode
+    FindHardwareWaterSupport() : WaterMode
+    CameraSpacePlane(cam:Camera, pos:Vector3, normal:Vector3, sideSign:float) : Vector4
+    {static} CalculateReflectionMatrix(reflectionMat:Matrix4x4, plane:Vector4) : void
+}
+enum WaterMode {
+    Simple= 0,
+    Reflective= 1,
+    Refractive= 2,
+}
+MonoBehaviour <|-- Water
+Water +-- WaterMode
+@enduml

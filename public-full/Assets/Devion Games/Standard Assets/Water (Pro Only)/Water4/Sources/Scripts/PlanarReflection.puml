@@ -1,0 +1,29 @@
+@startuml
+class PlanarReflection {
+    + reflectionMask : LayerMask
+    + reflectSkybox : bool = false
+    + clearColor : Color
+    + reflectionSampler : String = "_ReflectionTex"
+    + clipPlaneOffset : float = 0.07F
+    m_Oldpos : Vector3
+    m_ReflectionCamera : Camera
+    m_SharedMaterial : Material
+    m_HelperCameras : Dictionary<Camera, bool>
+    + Start() : void
+    CreateReflectionCameraFor(cam:Camera) : Camera
+    SetStandardCameraParameter(cam:Camera, mask:LayerMask) : void
+    CreateTextureFor(cam:Camera) : RenderTexture
+    + RenderHelpCameras(currentCam:Camera) : void
+    + LateUpdate() : void
+    + WaterTileBeingRendered(tr:Transform, currentCam:Camera) : void
+    + OnEnable() : void
+    + OnDisable() : void
+    RenderReflectionFor(cam:Camera, reflectCamera:Camera) : void
+    SaneCameraSettings(helperCam:Camera) : void
+    {static} CalculateObliqueMatrix(projection:Matrix4x4, clipPlane:Vector4) : Matrix4x4
+    {static} CalculateReflectionMatrix(reflectionMat:Matrix4x4, plane:Vector4) : Matrix4x4
+    {static} Sgn(a:float) : float
+    CameraSpacePlane(cam:Camera, pos:Vector3, normal:Vector3, sideSign:float) : Vector4
+}
+MonoBehaviour <|-- PlanarReflection
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+class InventoryManager {
+    + dontDestroyOnLoad : bool = true
+    + {static} current : InventoryManager <<get>>
+    + {static} Database : ItemDatabase <<get>>
+    + {static} DefaultSettings : Default <<get>>
+    + {static} UI : UI <<get>>
+    + {static} Notifications : Notifications <<get>>
+    + {static} SavingLoading : SavingLoading <<get>>
+    + {static} Input : Configuration.Input <<get>>
+    + PlayerInfo : PlayerInfo <<get>>
+    + onDataLoaded : UnityEvent
+    + onDataSaved : UnityEvent
+    + {static} IsLoaded : bool <<get>>
+    + GetBounds(obj:GameObject) : Bounds
+    + {static} Delete(key:string) : void
+    + {static} Save() : void
+    + {static} Save(key:string, index:int) : void
+    + {static} Serialize(uiData:string, sceneData:string) : void
+    + {static} Load() : void
+    + {static} Load(key:string) : void
+    + {static} Load(uiData:string, sceneData:string) : void
+    + {static} HasSavedData() : bool
+    + {static} HasSavedData(key:string) : bool
+    + {static} Instantiate(original:GameObject, position:Vector3, rotation:Quaternion) : GameObject
+    + {static} Destroy(gameObject:GameObject) : void
+    + {static} CreateInstances(group:ItemGroup) : Item[]
+    + {static} CreateInstance(item:Item) : Item
+    + {static} CreateInstance(item:Item, amount:int, modiferList:ItemModifierList) : Item
+    + {static} CreateInstances(items:Item[]) : Item[]
+    + {static} CreateInstances(items:Item[], amounts:int[], modifierLists:ItemModifierList[]) : Item[]
+}
+MonoBehaviour <|-- InventoryManager
+@enduml

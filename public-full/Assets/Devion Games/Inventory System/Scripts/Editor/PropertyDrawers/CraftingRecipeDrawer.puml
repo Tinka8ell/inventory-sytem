@@ -1,0 +1,5 @@
+@startuml
+class CraftingRecipeDrawer {
+}
+"PickerDrawer`1" "<CraftingRecipe>" <|-- CraftingRecipeDrawer
+@enduml

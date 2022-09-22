@@ -1,0 +1,9 @@
+@startuml
+interface ITweenValue {
+    TweenValue(floatPercentage:float) : void
+    ignoreTimeScale : bool <<get>>
+    duration : float <<get>>
+    ValidTarget() : bool
+    OnFinish() : void
+}
+@enduml

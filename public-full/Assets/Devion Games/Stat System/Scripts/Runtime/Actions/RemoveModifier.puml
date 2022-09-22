@@ -1,0 +1,7 @@
+@startuml
+class RemoveModifier {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- RemoveModifier
+@enduml

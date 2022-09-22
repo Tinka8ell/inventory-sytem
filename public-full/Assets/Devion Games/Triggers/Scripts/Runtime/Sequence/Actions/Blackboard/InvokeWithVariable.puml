@@ -1,0 +1,7 @@
+@startuml
+class InvokeWithVariable {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- InvokeWithVariable
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+!include Default.puml
+!include Input.puml
+!include Notifications.puml
+!include SavingLoading.puml
+!include Settings.puml
+!include UI.puml
+@enduml

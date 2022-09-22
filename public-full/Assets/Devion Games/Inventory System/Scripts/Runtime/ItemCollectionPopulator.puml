@@ -1,0 +1,6 @@
+@startuml
+class ItemCollectionPopulator {
+    + m_ItemGroup : ItemGroup
+}
+MonoBehaviour <|-- ItemCollectionPopulator
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class HasItem {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- HasItem
+ICondition <|-- HasItem
+@enduml

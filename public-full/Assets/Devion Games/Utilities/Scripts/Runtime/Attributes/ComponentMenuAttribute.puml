@@ -1,0 +1,7 @@
+@startuml
+class ComponentMenu <<sealed>> {
+    + componentMenu : string <<get>>
+    + ComponentMenu(menuName:string)
+}
+Attribute <|-- ComponentMenu
+@enduml

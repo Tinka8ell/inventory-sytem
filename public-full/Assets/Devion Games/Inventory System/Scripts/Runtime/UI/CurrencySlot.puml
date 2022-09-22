@@ -1,0 +1,9 @@
+@startuml
+class CurrencySlot {
+    + GetDefaultCurrency() : Currency
+    + <<override>> Repaint() : void
+    + <<override>> CanAddItem(item:Item) : bool
+    + <<override>> CanUse() : bool
+}
+Slot <|-- CurrencySlot
+@enduml

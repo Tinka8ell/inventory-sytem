@@ -1,0 +1,4 @@
+@startuml
+!include DefaultInspector.puml
+!include SavingLoadingInspector.puml
+@enduml

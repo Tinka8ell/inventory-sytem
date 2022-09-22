@@ -1,0 +1,8 @@
+@startuml
+!include ActionInspector.puml
+!include ActionListDrawer.puml
+!include ActionsDrawer.puml
+!include ActionTemplateInspector.puml
+!include BaseTriggerInspector.puml
+!include BehaviorTriggerInspector.puml
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class BoolVariable {
+    + Value : bool <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + BoolVariable()
+    + BoolVariable(name:string)
+}
+Variable <|-- BoolVariable
+@enduml

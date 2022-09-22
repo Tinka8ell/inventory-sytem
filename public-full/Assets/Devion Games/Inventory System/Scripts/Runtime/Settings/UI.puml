@@ -1,0 +1,18 @@
+@startuml
+class UI {
+    + <<override>> Name : string <<get>>
+    + contextMenuName : string = "ContextMenu"
+    + tooltipName : string = "Tooltip"
+    + sellPriceTooltipName : string = "Sell Price Tooltip"
+    + stackName : string = "Stack"
+    + notificationName : string = "Notification"
+    + dialogBoxName : string = "Dialog Box"
+    + notification : Notification <<get>>
+    + tooltip : Tooltip <<get>>
+    + sellPriceTooltip : ItemContainer <<get>>
+    + stack : Stack <<get>>
+    + contextMenu : UIWidgets.ContextMenu <<get>>
+    + dialogBox : UIWidgets.DialogBox <<get>>
+}
+Settings <|-- UI
+@enduml

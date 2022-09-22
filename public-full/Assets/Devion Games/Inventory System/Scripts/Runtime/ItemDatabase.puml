@@ -1,0 +1,18 @@
+@startuml
+class ItemDatabase {
+    + items : List<Item>
+    + currencies : List<Currency>
+    + craftingRecipes : List<CraftingRecipe>
+    + raritys : List<Rarity>
+    + categories : List<Category>
+    + equipments : List<EquipmentRegion>
+    + itemGroups : List<ItemGroup>
+    + settings : List<Configuration.Settings>
+    + allItems : List<Item> <<get>>
+    + GetItemPrefab(name:string) : GameObject
+    + GetItemGroup(name:string) : ItemGroup
+    + Merge(database:ItemDatabase) : void
+    + RemoveNullReferences() : void
+}
+ScriptableObject <|-- ItemDatabase
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class Wait {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Wait
+@enduml

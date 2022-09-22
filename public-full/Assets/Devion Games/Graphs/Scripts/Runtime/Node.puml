@@ -1,0 +1,11 @@
+@startuml
+abstract class Node {
+    + id : string
+    + name : string
+    + position : Vector2
+    + graph : Graph
+    + Node()
+    + <<virtual>> OnAfterDeserialize() : void
+    + <<virtual>> OnBeforeSerialize() : void
+}
+@enduml

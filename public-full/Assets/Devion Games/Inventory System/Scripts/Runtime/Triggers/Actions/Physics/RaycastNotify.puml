@@ -1,0 +1,6 @@
+@startuml
+class RaycastNotify {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Raycast <|-- RaycastNotify
+@enduml

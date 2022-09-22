@@ -1,0 +1,11 @@
+@startuml
+class PropertyModifier {
+    + <<override>> Modify(item:Item) : void
+}
+enum PropertyModifierType {
+    Flat,
+    Percent,
+}
+ItemModifier <|-- PropertyModifier
+PropertyModifier +-- PropertyModifierType
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+!include ChangeHeight.puml
+!include ChangeSpeed.puml
+!include Climb.puml
+!include Fall.puml
+!include Jump.puml
+!include Ladder.puml
+!include Push.puml
+!include RandomMotion.puml
+!include SimpleMotion.puml
+!include Slide.puml
+!include Swim.puml
+@enduml

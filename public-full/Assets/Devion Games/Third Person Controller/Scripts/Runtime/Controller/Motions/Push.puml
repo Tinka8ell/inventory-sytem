@@ -1,0 +1,12 @@
+@startuml
+class Push {
+    + <<override>> CanStart() : bool
+    + <<override>> CanStop() : bool
+    + <<override>> OnStart() : void
+    + <<override>> OnStop() : void
+    + <<override>> UpdateVelocity(velocity:Vector3) : bool
+    + <<override>> UpdateAnimatorIK(layer:int) : bool
+    + <<override>> UpdateRotation() : bool
+}
+MotionState <|-- Push
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+!include AddVisualItem.puml
+!include CanPickup.puml
+!include HasCategoryItem.puml
+!include HasGroupItem.puml
+!include HasItem.puml
+!include LockAll.puml
+!include Lock.puml
+!include Pickup.puml
+!include RemoveVisualItem.puml
+!include Save.puml
+!include ShowWindow.puml
+!include UpdateEquipment.puml
+@enduml

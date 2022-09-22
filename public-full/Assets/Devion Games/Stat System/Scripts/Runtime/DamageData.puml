@@ -1,0 +1,32 @@
+@startuml
+class DamageData {
+    + sendingStat : string = "Damage"
+    + criticalStrikeStat : string = "Critical Strike"
+    + receivingStat : string = "Health"
+    + maxDistance : float = 2f
+    + maxAngle : float = 60f
+    + displayDamage : bool = false
+    + damagePrefab : GameObject
+    + damageColor : Color
+    + criticalDamageColor : Color
+    + intensity : Vector3
+    + particleEffect : GameObject
+    + offset : Vector3
+    + randomize : Vector3
+    + lifeTime : float = 3f
+    + audioMixerGroup : AudioMixerGroup
+    + volumeScale : float = 0.7f
+    + hitSounds : AudioClip[]
+    + enableShake : bool
+    + duration : float = 0.4f
+    + speed : float = 5f
+    + amount : Vector3
+    + enableKnockback : bool
+    + knockbackChance : float = 0.7f
+    + knockbackStrength : float = 30f
+    + knockbackAcceleration : float = 50f
+    + knockbackDuration : float = 1f
+    + sender : GameObject
+}
+ScriptableObject <|-- DamageData
+@enduml

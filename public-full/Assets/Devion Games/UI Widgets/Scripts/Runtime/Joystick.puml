@@ -1,0 +1,15 @@
+@startuml
+class Joystick {
+    + onChange : JoystickEvent
+    + position : Vector2 <<get>>
+    + OnDrag(eventData:PointerEventData) : void
+    + <<override>> OnPointerDown(eventData:PointerEventData) : void
+    + <<override>> OnPointerUp(eventData:PointerEventData) : void
+}
+class JoystickEvent {
+}
+Selectable <|-- Joystick
+IDragHandler <|-- Joystick
+Joystick +-- JoystickEvent
+"UnityEvent`1" "<Vector2>" <|-- JoystickEvent
+@enduml

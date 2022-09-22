@@ -1,0 +1,8 @@
+@startuml
+class RadialMenu {
+    + <<virtual>> Show(target:GameObject, icons:Sprite[], result:UnityAction<int>) : void
+    + <<override>> Close() : void
+    + <<override>> Show() : void
+}
+UIWidget <|-- RadialMenu
+@enduml

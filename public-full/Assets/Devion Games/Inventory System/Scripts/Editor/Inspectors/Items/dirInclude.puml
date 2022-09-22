@@ -1,0 +1,7 @@
+@startuml
+!include CurrencyInspector.puml
+!include EquipmentItemInspector.puml
+!include ItemInspector.puml
+!include SkillInspector.puml
+!include UsableItemInspector.puml
+@enduml

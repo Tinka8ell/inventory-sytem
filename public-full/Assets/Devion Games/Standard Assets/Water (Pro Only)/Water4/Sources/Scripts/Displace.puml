@@ -1,0 +1,8 @@
+@startuml
+class Displace {
+    + Awake() : void
+    + OnEnable() : void
+    + OnDisable() : void
+}
+MonoBehaviour <|-- Displace
+@enduml

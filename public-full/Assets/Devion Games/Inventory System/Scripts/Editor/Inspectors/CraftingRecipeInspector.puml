@@ -1,0 +1,6 @@
+@startuml
+class CraftingRecipeInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- CraftingRecipeInspector
+@enduml

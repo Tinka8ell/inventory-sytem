@@ -1,0 +1,6 @@
+@startuml
+class ItemGenerator {
+}
+MonoBehaviour <|-- ItemGenerator
+IGenerator <|-- ItemGenerator
+@enduml

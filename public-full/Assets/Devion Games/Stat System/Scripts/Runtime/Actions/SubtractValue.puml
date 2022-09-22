@@ -1,0 +1,7 @@
+@startuml
+class SubtractValue {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SubtractValue
+@enduml

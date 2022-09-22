@@ -1,0 +1,8 @@
+@startuml
+class GraphEditorWindow {
+    + {static} ShowWindow() : GraphEditorWindow
+    + Load(behavior:IGraphProvider, target:UnityEngine.Object) : void
+    + Load(type:Type, behavior:IGraphProvider, target:UnityEngine.Object) : void
+}
+EditorWindow <|-- GraphEditorWindow
+@enduml

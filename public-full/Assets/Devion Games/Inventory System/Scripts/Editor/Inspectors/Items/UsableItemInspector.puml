@@ -1,0 +1,8 @@
+@startuml
+class UsableItemInspector {
+    + <<override>> OnInspectorGUI() : void
+    + OnBeforeAssemblyReload() : void
+    + OnAfterAssemblyReload() : void
+}
+ItemInspector <|-- UsableItemInspector
+@enduml

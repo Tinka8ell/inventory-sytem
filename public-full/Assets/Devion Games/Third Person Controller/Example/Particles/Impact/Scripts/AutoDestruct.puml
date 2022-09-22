@@ -1,0 +1,8 @@
+@startuml
+class AutoDestruct {
+    + OnlyDeactivate : bool
+    OnEnable() : void
+    CheckIfAlive() : IEnumerator
+}
+MonoBehaviour <|-- AutoDestruct
+@enduml

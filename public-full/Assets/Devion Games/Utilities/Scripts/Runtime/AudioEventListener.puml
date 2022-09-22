@@ -1,0 +1,11 @@
+@startuml
+class AudioEventListener {
+}
+class AudioGroup {
+    + name : string = "SFX"
+    + audioSource : AudioSource <<get>> <<set>>
+    + PlayOneShot(clip:AudioClip, volumeScale:float) : void
+}
+MonoBehaviour <|-- AudioEventListener
+AudioEventListener +-- AudioGroup
+@enduml

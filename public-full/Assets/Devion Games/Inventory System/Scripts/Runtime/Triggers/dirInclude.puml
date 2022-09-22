@@ -1,0 +1,13 @@
+@startuml
+!include Actions/dirInclude.puml
+!include CraftingTrigger.puml
+!include DisplayCursor.puml
+!include DisplayName.puml
+!include DisplayTriggerTooltip.puml
+!include EnchantingTrigger.puml
+!include Trigger2D.puml
+!include TriggerInterfaces.puml
+!include Trigger.puml
+!include TriggerTooltip.puml
+!include VendorTrigger.puml
+@enduml

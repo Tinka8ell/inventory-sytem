@@ -1,0 +1,6 @@
+@startuml
+class SlotInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+CallbackHandlerInspector <|-- SlotInspector
+@enduml

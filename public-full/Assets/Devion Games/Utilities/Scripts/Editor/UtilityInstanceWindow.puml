@@ -1,0 +1,10 @@
+@startuml
+class UtilityInstanceWindow {
+    + {static} instance : UtilityInstanceWindow
+    + {static} ShowWindow(title:string, onGUI:System.Action) : UtilityInstanceWindow
+    + {static} ShowWindow(title:string, size:Vector2, onGUI:System.Action) : UtilityInstanceWindow
+    + {static} ShowWindow(title:string, size:Vector2, onGUI:System.Action, onClose:System.Action) : UtilityInstanceWindow
+    + {static} CloseWindow() : void
+}
+EditorWindow <|-- UtilityInstanceWindow
+@enduml

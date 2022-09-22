@@ -1,0 +1,7 @@
+@startuml
+class FloatingTextManager {
+    + {static} Add(target:GameObject, text:string, color:Color, offset:Vector3) : void
+    + {static} Remove(target:GameObject) : void
+}
+MonoBehaviour <|-- FloatingTextManager
+@enduml

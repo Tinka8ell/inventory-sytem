@@ -1,0 +1,7 @@
+@startuml
+class FormulaOutput {
+    + result : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+EventNode <|-- FormulaOutput
+@enduml

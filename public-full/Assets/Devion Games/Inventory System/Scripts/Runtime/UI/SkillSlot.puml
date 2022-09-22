@@ -1,0 +1,6 @@
+@startuml
+class SkillSlot {
+    + <<override>> Repaint() : void
+}
+ItemSlot <|-- SkillSlot
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+class ItemContainerCallbackTester {
+}
+MonoBehaviour <|-- ItemContainerCallbackTester
+@enduml

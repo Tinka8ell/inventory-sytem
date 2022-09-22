@@ -1,0 +1,13 @@
+@startuml
+!include Inspectors/dirInclude.puml
+!include PropertyDrawers/dirInclude.puml
+!include EquipmentHandlerEditor.puml
+!include InventorySystemEditor.puml
+!include InventorySystemInspector.puml
+!include InventorySystemMenu.puml
+!include ItemCollectionEditor.puml
+!include ItemReferenceEditor.puml
+!include ItemSettingsEditor.puml
+!include MergeDatabaseEditor.puml
+!include VisibleItemsEditor.puml
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class UtilityWindow {
+    + {static} ShowWindow(title:string, onGUI:System.Action) : UtilityWindow
+    + {static} ShowWindow(title:string, size:Vector2, onGUI:System.Action) : UtilityWindow
+    + {static} ShowWindow(title:string, size:Vector2, onGUI:System.Action, onClose:System.Action, useScrollView:bool) : UtilityWindow
+}
+EditorWindow <|-- UtilityWindow
+@enduml

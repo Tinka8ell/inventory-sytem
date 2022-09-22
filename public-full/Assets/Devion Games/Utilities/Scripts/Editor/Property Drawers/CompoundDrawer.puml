@@ -1,0 +1,7 @@
+@startuml
+class CompoundDrawer {
+    + <<override>> OnGUI(position:Rect, property:SerializedProperty, label:GUIContent) : void
+    + <<override>> GetPropertyHeight(property:SerializedProperty, label:GUIContent) : float
+}
+PropertyDrawer <|-- CompoundDrawer
+@enduml

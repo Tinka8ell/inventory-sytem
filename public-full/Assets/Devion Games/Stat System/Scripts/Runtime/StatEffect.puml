@@ -1,0 +1,9 @@
+@startuml
+class StatEffect {
+    + Name : string <<get>> <<set>>
+    + Initialize(handler:StatsHandler) : void
+    + Execute() : void
+}
+ScriptableObject <|-- StatEffect
+INameable <|-- StatEffect
+@enduml

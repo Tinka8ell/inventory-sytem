@@ -1,0 +1,9 @@
+@startuml
+class Multiply {
+    + a : float
+    + b : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Multiply
+@enduml

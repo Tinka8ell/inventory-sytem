@@ -1,0 +1,13 @@
+@startuml
+class Jump {
+    + <<override>> OnStart() : void
+    + <<override>> UpdateAnimator() : bool
+    + <<override>> CheckGround() : bool
+    + <<override>> CheckStep() : bool
+    + OnControllerGrounded(grounded:bool) : void
+    + <<override>> CanStart() : bool
+    + <<override>> CanStop() : bool
+}
+MotionState <|-- Jump
+IControllerGrounded <|-- Jump
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class ActionTemplateInspector {
+    + <<override>> OnInspectorGUI() : void
+    + <<override>> UseDefaultMargins() : bool
+}
+Editor <|-- ActionTemplateInspector
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class FocusTarget {
+    +  <<event>> OnFocusChange : FucusDelegate 
+    + Focused : bool <<get>> <<set>>
+}
+MonoBehaviour <|-- FocusTarget
+@enduml

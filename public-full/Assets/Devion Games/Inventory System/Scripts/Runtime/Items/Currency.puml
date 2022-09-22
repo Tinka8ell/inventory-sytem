@@ -1,0 +1,7 @@
+@startuml
+class Currency {
+    + <<override>> MaxStack : int <<get>>
+    + currencyConversions : CurrencyConversion[]
+}
+Item <|-- Currency
+@enduml

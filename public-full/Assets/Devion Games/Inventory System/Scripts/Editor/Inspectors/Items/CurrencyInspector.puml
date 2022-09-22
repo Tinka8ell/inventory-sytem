@@ -1,0 +1,6 @@
+@startuml
+class CurrencyInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+ItemInspector <|-- CurrencyInspector
+@enduml

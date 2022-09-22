@@ -1,0 +1,8 @@
+@startuml
+class WidgetInputHandler {
+    Update() : void
+    + {static} RegisterInput(key:KeyCode, widget:UIWidget) : void
+    + {static} UnregisterInput(key:KeyCode, widget:UIWidget) : void
+}
+MonoBehaviour <|-- WidgetInputHandler
+@enduml

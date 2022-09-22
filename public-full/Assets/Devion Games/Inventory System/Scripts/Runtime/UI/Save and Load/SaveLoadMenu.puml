@@ -1,0 +1,7 @@
+@startuml
+class SaveLoadMenu {
+    + Save() : void
+    + CreateSlot(name:string) : SaveLoadSlot
+}
+UIWidget <|-- SaveLoadMenu
+@enduml

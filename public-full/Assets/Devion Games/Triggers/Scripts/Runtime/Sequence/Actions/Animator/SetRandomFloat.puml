@@ -1,0 +1,8 @@
+@startuml
+class SetRandomFloat {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+    + <<override>> Update() : void
+}
+Action <|-- SetRandomFloat
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+abstract class "PickerDrawer`1"<T> {
+    + <<override>> OnGUI(position:Rect, property:SerializedProperty, label:GUIContent) : void
+}
+PropertyDrawer <|-- "PickerDrawer`1"
+@enduml

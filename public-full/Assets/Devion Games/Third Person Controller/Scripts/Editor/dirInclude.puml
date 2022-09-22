@@ -1,0 +1,6 @@
+@startuml
+!include ThirdPersonCameraEditor.puml
+!include ThirdPersonControllerEditor.puml
+!include ThirdPersonControllerSetupWindow.puml
+!include WriteInputManager.puml
+@enduml

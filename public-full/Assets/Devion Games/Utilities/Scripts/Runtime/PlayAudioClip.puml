@@ -1,0 +1,5 @@
+@startuml
+class PlayAudioClip {
+}
+MonoBehaviour <|-- PlayAudioClip
+@enduml

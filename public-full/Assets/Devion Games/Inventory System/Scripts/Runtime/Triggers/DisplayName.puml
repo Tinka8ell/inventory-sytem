@@ -1,0 +1,22 @@
+@startuml
+class DisplayName {
+    + OnPointerEnterTrigger() : void
+    + OnPointerExitTrigger() : void
+    + OnCameInRange(player:GameObject) : void
+    + OnTriggerUsed(player:GameObject) : void
+    + OnTriggerUnUsed(player:GameObject) : void
+    + OnWentOutOfRange(player:GameObject) : void
+}
+enum DisplayNameType {
+    Always= 1,
+    InRange= 2,
+    InUse= 4,
+    Raycast= 8,
+}
+MonoBehaviour <|-- DisplayName
+ITriggerCameInRange <|-- DisplayName
+ITriggerUsedHandler <|-- DisplayName
+ITriggerUnUsedHandler <|-- DisplayName
+ITriggerWentOutOfRange <|-- DisplayName
+DisplayName +-- DisplayNameType
+@enduml

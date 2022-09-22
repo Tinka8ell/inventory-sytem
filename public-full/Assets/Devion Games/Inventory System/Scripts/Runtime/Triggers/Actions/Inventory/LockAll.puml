@@ -1,0 +1,6 @@
+@startuml
+class LockAll {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- LockAll
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+abstract class Action {
+    + enabled : bool <<get>> <<set>>
+    + isActiveAndEnabled : bool <<get>>
+    + Action()
+    + Initialize(gameObject:GameObject, playerInfo:PlayerInfo, blackboard:Blackboard) : void
+    + {abstract} OnUpdate() : ActionStatus
+    + <<virtual>> Update() : void
+    + <<virtual>> OnStart() : void
+    + <<virtual>> OnEnd() : void
+    + <<virtual>> OnSequenceStart() : void
+    + <<virtual>> OnSequenceEnd() : void
+    + <<virtual>> OnInterrupt() : void
+}
+enum TargetType {
+    Self,
+    Player,
+    Camera,
+}
+IAction <|-- Action
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+!include IIdentity.puml
+!include INameable.puml
+!include ISelectable.puml
+@enduml

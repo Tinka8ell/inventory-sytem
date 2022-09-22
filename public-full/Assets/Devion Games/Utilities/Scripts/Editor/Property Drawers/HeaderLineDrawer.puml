@@ -1,0 +1,8 @@
+@startuml
+class HeaderLineDrawer {
+    + HeaderLineDrawer()
+    + <<override>> GetHeight() : float
+    + <<override>> OnGUI(position:Rect) : void
+}
+DecoratorDrawer <|-- HeaderLineDrawer
+@enduml

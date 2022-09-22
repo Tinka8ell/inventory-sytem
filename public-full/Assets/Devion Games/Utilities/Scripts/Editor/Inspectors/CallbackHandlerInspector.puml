@@ -1,0 +1,6 @@
+@startuml
+class CallbackHandlerInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- CallbackHandlerInspector
+@enduml

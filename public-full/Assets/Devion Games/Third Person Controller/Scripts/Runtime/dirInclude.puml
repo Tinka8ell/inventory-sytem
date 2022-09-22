@@ -1,0 +1,4 @@
+@startuml
+!include Camera/dirInclude.puml
+!include Controller/dirInclude.puml
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class HeaderLineAttribute {
+    + <<readonly>> header : string
+    + HeaderLineAttribute(header:string)
+}
+PropertyAttribute <|-- HeaderLineAttribute
+@enduml

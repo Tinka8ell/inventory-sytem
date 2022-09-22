@@ -1,0 +1,29 @@
+@startuml
+class Stat {
+    + onValueChange : System.Action
+    + Name : string <<get>> <<set>>
+    + Value : float <<get>>
+    + <<virtual>> Initialize(handler:StatsHandler, statOverride:StatOverride) : void
+    + <<virtual>> ApplyStartValues() : void
+    + Set(amount:float) : void
+    + Add(amount:float) : void
+    + Subtract(amount:float) : void
+    + CalculateValue() : void
+    + CalculateValue(invokeCallbacks:bool) : void
+    + AddModifier(modifier:StatModifier) : void
+    + RemoveModifier(modifier:StatModifier) : bool
+    + RemoveModifiersFromSource(source:object) : bool
+    + GetGraph() : Graph
+    + <<override>> ToString() : string
+    + <<virtual>> GetObjectData(data:Dictionary<string, object>) : void
+    + <<virtual>> SetObjectData(data:Dictionary<string, object>) : void
+}
+class StatOverride {
+    + overrideBaseValue : bool = false
+    + baseValue : float
+}
+ScriptableObject <|-- Stat
+INameable <|-- Stat
+IGraphProvider <|-- Stat
+IJsonSerializable <|-- Stat
+@enduml

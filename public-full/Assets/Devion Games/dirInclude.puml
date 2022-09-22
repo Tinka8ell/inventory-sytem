@@ -1,0 +1,11 @@
+@startuml
+!include Graphs/dirInclude.puml
+!include Inventory System/dirInclude.puml
+!include Module Manager/dirInclude.puml
+!include Standard Assets/dirInclude.puml
+!include Stat System/dirInclude.puml
+!include Third Person Controller/dirInclude.puml
+!include Triggers/dirInclude.puml
+!include UI Widgets/dirInclude.puml
+!include Utilities/dirInclude.puml
+@enduml

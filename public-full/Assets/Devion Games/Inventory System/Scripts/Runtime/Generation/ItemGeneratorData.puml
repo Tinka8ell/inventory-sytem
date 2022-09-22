@@ -1,0 +1,9 @@
+@startuml
+class ItemGeneratorData {
+    + item : Item
+    + minStack : int = 1
+    + maxStack : int = 1
+    + chance : float = 1.0f
+    + modifiers : ItemModifierList
+}
+@enduml

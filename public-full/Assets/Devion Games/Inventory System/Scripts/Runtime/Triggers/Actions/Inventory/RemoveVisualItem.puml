@@ -1,0 +1,7 @@
+@startuml
+class RemoveVisualItem {
+    + <<override>> OnUpdate() : ActionStatus
+    + <<override>> OnInterrupt() : void
+}
+Action <|-- RemoveVisualItem
+@enduml

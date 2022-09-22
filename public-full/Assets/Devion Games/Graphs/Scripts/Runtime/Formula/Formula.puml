@@ -1,0 +1,7 @@
+@startuml
+class Formula {
+    + GetGraph() : Graph
+}
+ScriptableObject <|-- Formula
+IGraphProvider <|-- Formula
+@enduml

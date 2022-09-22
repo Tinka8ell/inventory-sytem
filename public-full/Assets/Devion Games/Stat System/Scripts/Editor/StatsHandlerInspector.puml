@@ -1,0 +1,6 @@
+@startuml
+class StatsHandlerInspector {
+    + <<override>> OnInspectorGUI() : void
+}
+Editor <|-- StatsHandlerInspector
+@enduml

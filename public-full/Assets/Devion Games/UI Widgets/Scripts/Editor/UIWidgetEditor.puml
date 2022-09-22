@@ -1,0 +1,13 @@
+@startuml
+class UIWidgetEditor {
+    + {static} ShowWindow() : void
+    + {static} GetHierarchyPath(transform:Transform) : string
+    + {static} FindInScene() : List<T>
+}
+enum DisplayType {
+    Path,
+    Name,
+}
+EditorWindow <|-- UIWidgetEditor
+UIWidgetEditor +-- DisplayType
+@enduml

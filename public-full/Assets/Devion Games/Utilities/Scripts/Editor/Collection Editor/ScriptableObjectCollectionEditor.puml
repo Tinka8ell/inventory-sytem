@@ -1,0 +1,8 @@
+@startuml
+class "ScriptableObjectCollectionEditor`1"<T> {
+    + ScriptableObjectCollectionEditor(target:UnityEngine.Object, items:List<T>, useInspectorDefaultMargins:bool)
+    + ScriptableObjectCollectionEditor(title:string, target:UnityEngine.Object, items:List<T>, useInspectorDefaultMargins:bool)
+    + <<override>> OnDestroy() : void
+}
+"CollectionEditor`1" "<T>" <|-- "ScriptableObjectCollectionEditor`1"
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class LoadScene {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- LoadScene
+@enduml

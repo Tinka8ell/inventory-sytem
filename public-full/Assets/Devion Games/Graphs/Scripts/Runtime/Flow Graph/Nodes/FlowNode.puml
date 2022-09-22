@@ -1,0 +1,17 @@
+@startuml
+abstract class FlowNode {
+    + Ports : List<Port> <<get>>
+    + InputPorts : List<Port> <<get>>
+    + OutputPorts : List<Port> <<get>>
+    + FlowNode()
+    + {abstract} OnRequestValue(port:Port) : object
+    + GetInputValue(portName:string, defaultValue:T) : T
+    + GetOutputValue(portName:string) : T
+    + GetPort(fieldName:string) : Port
+    + GetPort(index:int) : Port
+    + AddPort(port:Port) : void
+    + DisconnectAllPorts() : void
+    + <<override>> OnAfterDeserialize() : void
+}
+Node <|-- FlowNode
+@enduml

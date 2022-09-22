@@ -1,0 +1,8 @@
+@startuml
+class HorizontalCompass {
+    + image : RawImage
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- HorizontalCompass
+@enduml

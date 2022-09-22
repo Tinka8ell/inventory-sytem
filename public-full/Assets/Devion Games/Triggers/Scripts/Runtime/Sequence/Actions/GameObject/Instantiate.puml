@@ -1,0 +1,7 @@
+@startuml
+class Instantiate {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Instantiate
+@enduml

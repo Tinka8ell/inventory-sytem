@@ -1,0 +1,5 @@
+@startuml
+class ItemContainerInspector {
+}
+UIWidgetInspector <|-- ItemContainerInspector
+@enduml

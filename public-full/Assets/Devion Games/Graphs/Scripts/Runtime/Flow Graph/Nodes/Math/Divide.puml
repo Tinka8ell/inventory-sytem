@@ -1,0 +1,9 @@
+@startuml
+class Divide {
+    + a : float
+    + b : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Divide
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class SwapItems {
+    + key : KeyCode
+    + first : ItemSlot
+    + second : ItemSlot
+}
+MonoBehaviour <|-- SwapItems
+@enduml

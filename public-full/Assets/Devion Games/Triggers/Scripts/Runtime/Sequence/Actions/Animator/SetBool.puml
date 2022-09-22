@@ -1,0 +1,7 @@
+@startuml
+class SetBool {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- SetBool
+@enduml

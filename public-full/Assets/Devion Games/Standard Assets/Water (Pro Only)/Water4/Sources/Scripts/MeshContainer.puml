@@ -1,0 +1,9 @@
+@startuml
+class MeshContainer {
+    + mesh : Mesh
+    + vertices : Vector3[]
+    + normals : Vector3[]
+    + MeshContainer(m:Mesh)
+    + Update() : void
+}
+@enduml

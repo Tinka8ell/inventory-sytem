@@ -1,0 +1,10 @@
+@startuml
+class Notification {
+    + fade : bool = true
+    + timeFormat : string = "HH:mm:ss"
+    + <<virtual>> AddItem(item:NotificationOptions, replacements:string[]) : bool
+    + <<virtual>> AddItem(text:string, replacements:string[]) : bool
+    + <<override>> CanAddItem(item:NotificationOptions, slot:UISlot<NotificationOptions>, createSlot:bool) : bool
+}
+"UIContainer`1" "<NotificationOptions>" <|-- Notification
+@enduml

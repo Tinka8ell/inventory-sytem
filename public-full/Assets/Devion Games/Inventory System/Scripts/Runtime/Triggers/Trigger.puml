@@ -1,0 +1,21 @@
+@startuml
+class Trigger {
+    + <<override>> PlayerInfo : PlayerInfo <<get>>
+    + {static} currentUsedWindow : ItemContainer
+    + StartUse() : void
+    + StartUse(window:ItemContainer) : void
+    + StopUse() : void
+    + <<virtual>> OverrideUse(slot:Slot, item:Item) : bool
+}
+enum FailureCause {
+    Unknown,
+    FurtherAction,
+    NotEnoughCurrency,
+    Remove,
+    ContainerFull,
+    InUse,
+    Requirement,
+}
+BehaviorTrigger <|-- Trigger
+Trigger +-- FailureCause
+@enduml

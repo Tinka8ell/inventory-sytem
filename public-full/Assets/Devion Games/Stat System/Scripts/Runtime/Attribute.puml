@@ -1,0 +1,12 @@
+@startuml
+class Attribute {
+    + onCurrentValueChange : System.Action
+    + CurrentValue : float <<get>> <<set>>
+    + <<override>> Initialize(handler:StatsHandler, statOverride:StatOverride) : void
+    + <<override>> ApplyStartValues() : void
+    + <<override>> ToString() : string
+    + <<override>> GetObjectData(data:Dictionary<string, object>) : void
+    + <<override>> SetObjectData(data:Dictionary<string, object>) : void
+}
+Stat <|-- Attribute
+@enduml

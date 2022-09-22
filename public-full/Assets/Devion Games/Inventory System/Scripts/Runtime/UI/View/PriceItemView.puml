@@ -1,0 +1,11 @@
+@startuml
+class PriceItemView {
+    + <<override>> Repaint(item:Item) : void
+}
+enum PriceType {
+    Buy,
+    Sell,
+}
+ItemView <|-- PriceItemView
+PriceItemView +-- PriceType
+@enduml

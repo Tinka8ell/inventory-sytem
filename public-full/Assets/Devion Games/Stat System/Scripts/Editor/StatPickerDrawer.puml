@@ -1,0 +1,6 @@
+@startuml
+class StatPickerDrawer {
+    + <<override>> OnGUI(position:Rect, property:SerializedProperty, label:GUIContent) : void
+}
+PropertyDrawer <|-- StatPickerDrawer
+@enduml

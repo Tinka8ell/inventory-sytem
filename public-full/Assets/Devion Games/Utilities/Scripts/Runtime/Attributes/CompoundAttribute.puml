@@ -1,0 +1,7 @@
+@startuml
+class CompoundAttribute {
+    + <<readonly>> propertyPath : string
+    + CompoundAttribute(propertyPath:string)
+}
+PropertyAttribute <|-- CompoundAttribute
+@enduml

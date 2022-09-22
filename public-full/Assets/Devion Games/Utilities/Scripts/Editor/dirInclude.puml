@@ -1,0 +1,12 @@
+@startuml
+!include Asset/dirInclude.puml
+!include Collection Editor/dirInclude.puml
+!include Inspectors/dirInclude.puml
+!include Internal/dirInclude.puml
+!include Property Drawers/dirInclude.puml
+!include CustomDrawerAttribute.puml
+!include CustomDrawer.puml
+!include EditorTools.puml
+!include UtilityInstanceWindow.puml
+!include UtilityWindow.puml
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+enum WaterQuality {
+    High= 2,
+    Medium= 1,
+    Low= 0,
+}
+class WaterBase {
+    + sharedMaterial : Material
+    + waterQuality : WaterQuality
+    + edgeBlend : bool = true
+    + UpdateShader() : void
+    + WaterTileBeingRendered(tr:Transform, currentCam:Camera) : void
+    + Update() : void
+}
+MonoBehaviour <|-- WaterBase
+@enduml

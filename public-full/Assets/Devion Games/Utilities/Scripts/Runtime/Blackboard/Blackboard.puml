@@ -1,0 +1,14 @@
+@startuml
+class Blackboard {
+    + GetValue(name:string) : T
+    + GetValue(variable:Variable) : T
+    + SetValue(name:string, value:object) : void
+    + SetValue(name:string, value:object, type:Type) : void
+    + DeleteVariable(name:string) : bool
+    + GetVariable(name:string) : Variable
+    + AddVariable(variable:Variable) : void
+    + AddVariable(name:string, value:object) : Variable
+    + AddVariable(name:string, value:object, type:Type) : Variable
+}
+MonoBehaviour <|-- Blackboard
+@enduml

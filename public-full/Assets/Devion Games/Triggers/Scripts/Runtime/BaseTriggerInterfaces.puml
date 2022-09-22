@@ -1,0 +1,28 @@
+@startuml
+interface ITriggerEventHandler {
+}
+interface ITriggerUsedHandler {
+    OnTriggerUsed(player:GameObject) : void
+}
+interface ITriggerUnUsedHandler {
+    OnTriggerUnUsed(player:GameObject) : void
+}
+interface ITriggerCameInRange {
+    OnCameInRange(player:GameObject) : void
+}
+interface ITriggerWentOutOfRange {
+    OnWentOutOfRange(player:GameObject) : void
+}
+interface ITriggerPointerEnter {
+    OnPointerEnter(eventData:PointerEventData) : void
+}
+interface ITriggerPointerExit {
+    OnPointerExit(eventData:PointerEventData) : void
+}
+ITriggerEventHandler <|-- ITriggerUsedHandler
+ITriggerEventHandler <|-- ITriggerUnUsedHandler
+ITriggerEventHandler <|-- ITriggerCameInRange
+ITriggerEventHandler <|-- ITriggerWentOutOfRange
+ITriggerEventHandler <|-- ITriggerPointerEnter
+ITriggerEventHandler <|-- ITriggerPointerExit
+@enduml

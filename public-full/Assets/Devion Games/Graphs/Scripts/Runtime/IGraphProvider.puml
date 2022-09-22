@@ -1,0 +1,5 @@
+@startuml
+interface IGraphProvider {
+    GetGraph() : Graph
+}
+@enduml

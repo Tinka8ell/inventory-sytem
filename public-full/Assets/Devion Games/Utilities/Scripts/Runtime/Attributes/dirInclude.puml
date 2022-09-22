@@ -1,0 +1,11 @@
+@startuml
+!include CategoryAttribute.puml
+!include ComponentMenuAttribute.puml
+!include CompoundAttribute.puml
+!include EnumFlagsAttribute.puml
+!include ExcludeFromCreation.puml
+!include HeaderLineAttribute.puml
+!include IconAttribute.puml
+!include InspectorLabelAttribute.puml
+!include MinMaxSliderAttribute.puml
+@enduml

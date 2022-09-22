@@ -1,0 +1,5 @@
+@startuml
+class CurrencyPickerDrawer {
+}
+"PickerDrawer`1" "<Currency>" <|-- CurrencyPickerDrawer
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+class TriggerEventListener {
+}
+class TriggerEvent {
+    + name : string = "SFX"
+    + actionTemplate : ActionTemplate
+    + actions : List<Action>
+}
+MonoBehaviour <|-- TriggerEventListener
+TriggerEventListener +-- TriggerEvent
+@enduml

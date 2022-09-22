@@ -1,0 +1,5 @@
+@startuml
+class CharacterIK {
+}
+MonoBehaviour <|-- CharacterIK
+@enduml

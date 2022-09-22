@@ -1,0 +1,12 @@
+@startuml
+class ResizePanel {
+    + minSize : Vector2
+    + maxSize : Vector2
+    Awake() : void
+    + OnPointerDown(data:PointerEventData) : void
+    + OnDrag(data:PointerEventData) : void
+}
+MonoBehaviour <|-- ResizePanel
+IPointerDownHandler <|-- ResizePanel
+IDragHandler <|-- ResizePanel
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class SM_Rotate {
+    + rotation : Vector3
+    + space : Space
+}
+MonoBehaviour <|-- SM_Rotate
+@enduml

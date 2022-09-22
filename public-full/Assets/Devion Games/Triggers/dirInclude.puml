@@ -1,0 +1,4 @@
+@startuml
+!include Integrations/dirInclude.puml
+!include Scripts/dirInclude.puml
+@enduml

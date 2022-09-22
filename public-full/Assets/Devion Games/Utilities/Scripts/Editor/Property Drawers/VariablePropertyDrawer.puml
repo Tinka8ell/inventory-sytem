@@ -1,0 +1,7 @@
+@startuml
+class VariablePropertyDrawer {
+    + <<override>> OnGUI(position:Rect, property:SerializedProperty, label:GUIContent) : void
+    + <<virtual>> DrawSharedToggle(position:Rect, isShared:SerializedProperty) : bool
+}
+PropertyDrawer <|-- VariablePropertyDrawer
+@enduml

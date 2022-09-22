@@ -1,0 +1,10 @@
+@startuml
+class ArrayListVariable {
+    + Value : ArrayList <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + ArrayListVariable()
+    + ArrayListVariable(name:string)
+}
+Variable <|-- ArrayListVariable
+@enduml

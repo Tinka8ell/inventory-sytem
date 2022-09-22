@@ -1,0 +1,6 @@
+@startuml
+class Close {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Close
+@enduml

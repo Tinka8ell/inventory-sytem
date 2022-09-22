@@ -1,0 +1,9 @@
+@startuml
+interface ICollectionEditor {
+    ToolbarName : string <<get>>
+    OnGUI(position:Rect) : void
+    OnEnable() : void
+    OnDisable() : void
+    OnDestroy() : void
+}
+@enduml

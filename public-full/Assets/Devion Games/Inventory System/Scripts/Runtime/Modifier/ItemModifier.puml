@@ -1,0 +1,7 @@
+@startuml
+abstract class ItemModifier {
+    + {abstract} Modify(item:Item) : void
+}
+ScriptableObject <|-- ItemModifier
+"IModifier`1" "<Item>" <|-- ItemModifier
+@enduml

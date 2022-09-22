@@ -1,0 +1,23 @@
+@startuml
+class ObjectProperty {
+    + Name : string <<get>> <<set>>
+    + SerializedType : Type <<get>>
+    + stringValue : string
+    + intValue : int
+    + floatValue : float
+    + colorValue : Color
+    + boolValue : bool
+    + objectReferenceValue : UnityEngine.Object
+    + vector2Value : Vector2
+    + vector3Value : Vector3
+    + show : bool
+    + color : Color
+    + GetValue() : object
+    + SetValue(value:object) : void
+    + {static} GetPropertyName(mType:Type) : string
+    + ToString(format:string) : string
+    + {static} SupportedTypes : Type[] <<get>>
+    + {static} DisplayNames : string[] <<get>>
+}
+INameable <|-- ObjectProperty
+@enduml

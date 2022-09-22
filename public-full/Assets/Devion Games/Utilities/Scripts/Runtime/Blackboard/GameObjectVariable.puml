@@ -1,0 +1,10 @@
+@startuml
+class GameObjectVariable {
+    + Value : GameObject <<get>> <<set>>
+    + <<override>> RawValue : object <<get>> <<set>>
+    + <<override>> type : System.Type <<get>>
+    + GameObjectVariable()
+    + GameObjectVariable(name:string)
+}
+Variable <|-- GameObjectVariable
+@enduml

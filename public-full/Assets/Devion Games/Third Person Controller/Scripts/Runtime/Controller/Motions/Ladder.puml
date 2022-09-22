@@ -1,0 +1,13 @@
+@startuml
+class Ladder {
+    + <<override>> OnStart() : void
+    + <<override>> OnStop() : void
+    + <<override>> CanStart() : bool
+    + <<override>> CanStop() : bool
+    + <<override>> UpdateVelocity(velocity:Vector3) : bool
+    + <<override>> UpdateAnimator() : bool
+    + <<override>> CheckGround() : bool
+    + <<override>> UpdateRotation() : bool
+}
+MotionState <|-- Ladder
+@enduml

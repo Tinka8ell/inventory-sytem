@@ -1,0 +1,6 @@
+@startuml
+class SM_DestroyTimed {
+    + destroyTime : float = 5f
+}
+MonoBehaviour <|-- SM_DestroyTimed
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class PushableObject {
+    + leftHandOffset : Vector3
+    + rightHandOffset : Vector3
+    + StartMove(controller:ThirdPersonController) : void
+    + StopMove() : void
+    + Move(position:Vector3) : bool
+}
+MonoBehaviour <|-- PushableObject
+@enduml

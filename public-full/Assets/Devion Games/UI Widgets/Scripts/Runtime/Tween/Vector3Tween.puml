@@ -1,0 +1,25 @@
+@startuml
+class Vector3Tween <<struct>> {
+    + easeType : EasingEquations.EaseType <<get>> <<set>>
+    + startValue : Vector3 <<get>> <<set>>
+    + targetValue : Vector3 <<get>> <<set>>
+    + duration : float <<get>> <<set>>
+    + ignoreTimeScale : bool <<get>> <<set>>
+    + ValidTarget() : bool
+    + TweenValue(floatPercentage:float) : void
+    + AddOnChangedCallback(callback:UnityAction<Vector3>) : void
+    + AddOnFinishCallback(callback:UnityAction) : void
+    + OnFinish() : void
+}
+class Vector3TweenCallback {
+    + Vector3TweenCallback()
+}
+class Vector3TweenFinishCallback {
+    + Vector3TweenFinishCallback()
+}
+ITweenValue <|-- Vector3Tween
+Vector3Tween +-- Vector3TweenCallback
+"UnityEvent`1" "<Vector3>" <|-- Vector3TweenCallback
+Vector3Tween +-- Vector3TweenFinishCallback
+UnityEvent <|-- Vector3TweenFinishCallback
+@enduml

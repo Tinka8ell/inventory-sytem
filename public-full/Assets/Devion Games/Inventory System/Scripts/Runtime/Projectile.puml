@@ -1,0 +1,16 @@
+@startuml
+class Projectile {
+}
+enum StartDirection {
+    None,
+    Camera,
+    Player,
+}
+enum LookType {
+    TowardsTarget,
+    TowardsTargetSmooth,
+}
+MonoBehaviour <|-- Projectile
+Projectile +-- StartDirection
+Projectile +-- LookType
+@enduml

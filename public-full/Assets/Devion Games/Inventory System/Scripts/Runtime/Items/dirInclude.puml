@@ -1,0 +1,8 @@
+@startuml
+!include Actions/dirInclude.puml
+!include Currency.puml
+!include EquipmentItem.puml
+!include Item.puml
+!include Skill.puml
+!include UsableItem.puml
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class EquipmentRegion {
+    + region : DevionGames.InventorySystem.EquipmentRegion
+    + <<override>> CanAddItem(item:Item) : bool
+}
+Restriction <|-- EquipmentRegion
+@enduml

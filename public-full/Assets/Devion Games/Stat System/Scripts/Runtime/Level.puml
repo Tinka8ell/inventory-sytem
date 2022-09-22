@@ -1,0 +1,6 @@
+@startuml
+class Level {
+    + <<override>> Initialize(handler:StatsHandler, statOverride:StatOverride) : void
+}
+Stat <|-- Level
+@enduml

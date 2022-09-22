@@ -1,0 +1,9 @@
+@startuml
+class WindowsRuntimeExtension <<static>> {
+    + {static} GetBaseType(type:Type) : Type
+    + {static} GetAssembly(type:Type) : Assembly
+    + {static} IsValueType(type:Type) : bool
+    + {static} IsGenericType(type:Type) : bool
+    + {static} MatchBindingFlags(isPublic:bool, isPrivate:bool, isStatic:bool, bindingAttr:BindingFlags, baseClass:bool) : bool
+}
+@enduml

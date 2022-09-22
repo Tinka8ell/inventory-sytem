@@ -1,0 +1,6 @@
+@startuml
+class Destroy {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Destroy
+@enduml

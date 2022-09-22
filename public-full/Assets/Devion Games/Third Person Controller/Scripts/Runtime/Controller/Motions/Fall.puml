@@ -1,0 +1,11 @@
+@startuml
+class Fall {
+    + <<override>> OnStart() : void
+    + <<override>> UpdateVelocity(velocity:Vector3) : bool
+    + <<override>> UpdateAnimator() : bool
+    + <<override>> CanStart() : bool
+    + OnControllerGrounded(grounded:bool) : void
+}
+MotionState <|-- Fall
+IControllerGrounded <|-- Fall
+@enduml

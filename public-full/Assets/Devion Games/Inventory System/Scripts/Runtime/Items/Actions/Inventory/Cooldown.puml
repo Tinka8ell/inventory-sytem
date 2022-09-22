@@ -1,0 +1,6 @@
+@startuml
+class Cooldown {
+    + <<override>> OnUpdate() : ActionStatus
+}
+ItemAction <|-- Cooldown
+@enduml

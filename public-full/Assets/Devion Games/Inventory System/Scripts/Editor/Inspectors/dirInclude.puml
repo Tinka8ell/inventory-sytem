@@ -1,0 +1,14 @@
+@startuml
+!include Items/dirInclude.puml
+!include Modifiers/dirInclude.puml
+!include Settings/dirInclude.puml
+!include UI/dirInclude.puml
+!include AttachmentPropertyDrawer.puml
+!include CraftingRecipeInspector.puml
+!include EquipmentHandlerInspector.puml
+!include ItemCollectionInspector.puml
+!include ItemContainerPopulatorInspector.puml
+!include ItemGeneratorInspector.puml
+!include ItemGroupGeneratorInspector.puml
+!include ItemGroupInspector.puml
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+class CoroutineQueue {
+    m_Owner : MonoBehaviour = null
+    m_InternalCoroutine : Coroutine = null
+    actions : Queue<IEnumerator>
+    + CoroutineQueue(coroutineOwner:MonoBehaviour)
+    + Start() : void
+    + Stop() : void
+    + EnqueueAction(aAction:IEnumerator) : void
+}
+@enduml

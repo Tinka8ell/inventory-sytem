@@ -1,0 +1,7 @@
+@startuml
+class Lock {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- Lock
+@enduml

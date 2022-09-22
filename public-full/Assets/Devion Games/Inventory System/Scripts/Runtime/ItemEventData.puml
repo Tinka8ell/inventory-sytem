@@ -1,0 +1,9 @@
+@startuml
+class ItemEventData {
+    + item : Item
+    + slot : Slot
+    + gameObject : GameObject
+    + ItemEventData(item:Item)
+}
+CallbackEventData <|-- ItemEventData
+@enduml

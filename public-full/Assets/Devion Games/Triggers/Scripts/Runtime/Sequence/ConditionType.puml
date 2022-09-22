@@ -1,0 +1,8 @@
+@startuml
+enum ConditionType {
+    Greater,
+    GreaterOrEqual,
+    Less,
+    LessOrEqual,
+}
+@enduml

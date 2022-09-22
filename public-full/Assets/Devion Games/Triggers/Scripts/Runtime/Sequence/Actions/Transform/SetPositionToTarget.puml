@@ -1,0 +1,8 @@
+@startuml
+class SetPositionToTarget {
+    + <<override>> OnStart() : void
+    + <<override>> OnUpdate() : ActionStatus
+    GetClosest(self:Transform, transforms:Transform[]) : Transform
+}
+Action <|-- SetPositionToTarget
+@enduml

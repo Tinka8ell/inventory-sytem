@@ -1,0 +1,10 @@
+@startuml
+class WaterTile {
+    + reflection : PlanarReflection
+    + waterBase : WaterBase
+    + Start() : void
+    AcquireComponents() : void
+    + OnWillRenderObject() : void
+}
+MonoBehaviour <|-- WaterTile
+@enduml

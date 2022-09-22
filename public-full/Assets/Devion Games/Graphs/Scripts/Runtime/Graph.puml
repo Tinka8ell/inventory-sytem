@@ -1,0 +1,11 @@
+@startuml
+class Graph {
+    + serializationData : string
+    + serializedObjects : List<Object>
+    + nodes : List<Node>
+    + FindNodesOfType() : List<T>
+    + OnBeforeSerialize() : void
+    + OnAfterDeserialize() : void
+}
+ISerializationCallbackReceiver <|-- Graph
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class RemoveItem {
+    + <<override>> OnUpdate() : ActionStatus
+}
+ItemAction <|-- RemoveItem
+@enduml

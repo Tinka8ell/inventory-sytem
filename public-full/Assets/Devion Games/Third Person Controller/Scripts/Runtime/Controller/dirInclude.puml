@@ -1,0 +1,11 @@
+@startuml
+!include Motions/dirInclude.puml
+!include StateMachineBehavior/dirInclude.puml
+!include CharacterIK.puml
+!include ControllerInterfaces.puml
+!include MotionState.puml
+!include MotionTrigger.puml
+!include PushableObject.puml
+!include SwimTrigger.puml
+!include ThirdPersonController.puml
+@enduml

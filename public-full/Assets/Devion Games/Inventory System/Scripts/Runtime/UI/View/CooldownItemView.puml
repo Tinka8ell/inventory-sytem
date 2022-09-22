@@ -1,0 +1,7 @@
+@startuml
+class CooldownItemView {
+    + <<override>> Repaint(item:Item) : void
+    + <<override>> RequiresConstantRepaint() : bool
+}
+ItemView <|-- CooldownItemView
+@enduml

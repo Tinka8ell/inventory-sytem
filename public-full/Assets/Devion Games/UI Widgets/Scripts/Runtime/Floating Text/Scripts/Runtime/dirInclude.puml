@@ -1,0 +1,4 @@
+@startuml
+!include FloatingTextManager.puml
+!include FloatingText.puml
+@enduml

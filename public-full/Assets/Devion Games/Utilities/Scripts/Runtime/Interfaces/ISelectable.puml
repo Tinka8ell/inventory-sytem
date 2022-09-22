@@ -1,0 +1,8 @@
+@startuml
+interface ISelectable {
+    enabled : bool <<get>>
+    position : Vector3 <<get>>
+    OnSelect() : void
+    OnDeselect() : void
+}
+@enduml

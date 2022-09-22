@@ -1,0 +1,8 @@
+@startuml
+class Floor {
+    + value : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Floor
+@enduml

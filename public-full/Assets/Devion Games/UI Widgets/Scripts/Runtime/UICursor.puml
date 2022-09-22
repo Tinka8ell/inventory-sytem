@@ -1,0 +1,10 @@
+@startuml
+class UICursor {
+    Update() : void
+    + {static} Clear() : void
+    + {static} Set(sprite:Sprite) : void
+    + {static} Set(sprite:Sprite, size:Vector2, showCursor:bool, animatorState:string) : void
+    + SetAnimatorState(animatorState:string) : void
+}
+MonoBehaviour <|-- UICursor
+@enduml

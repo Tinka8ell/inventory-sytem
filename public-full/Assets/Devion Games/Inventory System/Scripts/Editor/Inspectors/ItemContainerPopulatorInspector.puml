@@ -1,0 +1,7 @@
+@startuml
+class ItemContainerPopulatorInspector {
+    + <<override>> OnInspectorGUI() : void
+    + <<override>> UseDefaultMargins() : bool
+}
+Editor <|-- ItemContainerPopulatorInspector
+@enduml

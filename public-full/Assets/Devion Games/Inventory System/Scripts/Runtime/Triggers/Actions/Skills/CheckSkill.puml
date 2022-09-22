@@ -1,0 +1,7 @@
+@startuml
+class CheckSkill {
+    + <<override>> OnUpdate() : ActionStatus
+}
+Action <|-- CheckSkill
+ICondition <|-- CheckSkill
+@enduml

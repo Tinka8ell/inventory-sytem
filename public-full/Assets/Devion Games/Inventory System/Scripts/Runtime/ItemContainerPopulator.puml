@@ -1,0 +1,10 @@
+@startuml
+class ItemContainerPopulator {
+}
+class Entry {
+    + name : string = "Inventory"
+    + group : ItemGroup
+}
+MonoBehaviour <|-- ItemContainerPopulator
+ItemContainerPopulator +-- Entry
+@enduml

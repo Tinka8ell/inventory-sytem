@@ -1,0 +1,8 @@
+@startuml
+class LookAtMainCamera {
+    + ignoreRaycast : bool = true
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- LookAtMainCamera
+@enduml

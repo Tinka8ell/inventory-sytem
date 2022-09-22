@@ -1,0 +1,34 @@
+@startuml
+class CameraSettings {
+    + Name : string <<get>> <<set>>
+    + InputName : string <<get>> <<set>>
+    + Activation : ActivationType <<get>> <<set>>
+    + Offset : Vector2 <<get>> <<set>>
+    + Distance : float <<get>> <<set>>
+    + InheritDistance : bool <<get>> <<set>>
+    + Crosshair : Sprite <<get>> <<set>>
+    + TurnButton : string <<get>> <<set>>
+    + TurnSpeed : float <<get>> <<set>>
+    + TurnSmoothing : float <<get>> <<set>>
+    + YawLimit : Vector2 <<get>> <<set>>
+    + PitchLimit : Vector2 <<get>> <<set>>
+    + VisibilityDelta : float <<get>> <<set>>
+    + ZoomSpeed : float <<get>> <<set>>
+    + ZoomLimit : Vector2 <<get>> <<set>>
+    + ZoomSmoothing : float <<get>> <<set>>
+    + MoveSmoothing : float <<get>> <<set>>
+    + CursorMode : CursorLockMode <<get>> <<set>>
+    + ConsumeInputOverUI : bool <<get>> <<set>>
+    + CollisionLayer : LayerMask <<get>> <<set>>
+    + CollisionRadius : float <<get>> <<set>>
+    + IsActive : bool <<get>> <<set>>
+    + Zoom : float <<get>> <<set>>
+}
+enum ActivationType {
+    Automatic,
+    Manual,
+    Button,
+    Toggle,
+}
+CameraSettings +-- ActivationType
+@enduml

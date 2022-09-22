@@ -1,0 +1,9 @@
+@startuml
+class IconAttribute {
+    + <<readonly>> type : Type
+    + <<readonly>> path : string
+    + IconAttribute(type:Type)
+    + IconAttribute(path:string)
+}
+Attribute <|-- IconAttribute
+@enduml

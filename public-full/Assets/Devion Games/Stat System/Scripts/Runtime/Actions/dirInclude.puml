@@ -1,0 +1,12 @@
+@startuml
+!include AddEffect.puml
+!include AddModifier.puml
+!include AddValue.puml
+!include ApplyDamage.puml
+!include Compare.puml
+!include Refresh.puml
+!include RemoveEffect.puml
+!include RemoveModifier.puml
+!include SetValue.puml
+!include SubtractValue.puml
+@enduml

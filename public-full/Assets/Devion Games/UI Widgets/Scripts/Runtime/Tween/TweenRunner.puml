@@ -1,0 +1,7 @@
+@startuml
+class "TweenRunner`1"<T> {
+    + Init(coroutineContainer:MonoBehaviour) : void
+    + StartTween(info:T) : void
+    + StopTween() : void
+}
+@enduml

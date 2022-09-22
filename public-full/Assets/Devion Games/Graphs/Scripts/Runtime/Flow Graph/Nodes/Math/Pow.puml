@@ -1,0 +1,9 @@
+@startuml
+class Pow {
+    + f : float
+    + p : float
+    + output : float
+    + <<override>> OnRequestValue(port:Port) : object
+}
+FlowNode <|-- Pow
+@enduml

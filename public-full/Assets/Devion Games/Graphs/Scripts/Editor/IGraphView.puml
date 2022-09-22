@@ -1,0 +1,6 @@
+@startuml
+interface IGraphView {
+    OnGUI(position:Rect) : void
+    CenterGraphView() : void
+}
+@enduml

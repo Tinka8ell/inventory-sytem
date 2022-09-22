@@ -1,0 +1,12 @@
+@startuml
+!include CooldownItemView.puml
+!include DescriptionItemView.puml
+!include IconItemView.puml
+!include ItemView.puml
+!include NameItemView.puml
+!include PriceItemView.puml
+!include PropertyItemView.puml
+!include RecipeItemView.puml
+!include SkillItemView.puml
+!include StackItemView.puml
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class MergeDatabaseEditor {
+    + {static} ShowWindow() : void
+}
+EditorWindow <|-- MergeDatabaseEditor
+@enduml
