@@ -1,0 +1,17 @@
+@startuml Visible Item
+/'
+!include EquipmentHandler.puml
+'/
+!include VisibleItem.puml
+!include Weapon.puml
+!include MeleeWeapon.puml
+!include ShootableWeapon.puml
+!include StaticItem.puml
+
+remove ActivationType
+remove StartType
+remove StopType 
+remove ProjectileVisibility
+
+
+@enduml

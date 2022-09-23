@@ -1,0 +1,8 @@
+@startuml Equipment Handler
+
+!include EquipmentHandler.puml
+!include SimpleVisibleItem.puml
+
+EquipmentHandler o-- VisibleItem
+
+@enduml

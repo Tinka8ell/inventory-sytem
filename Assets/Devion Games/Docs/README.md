@@ -40,7 +40,9 @@ to include everything at that level and below in the directory stucture
 * Generated some UML diagrams starting at [Inventory System](UMLInventorySystem.md)
   * They are not simple
   * Difficult to see the wood for the trees!
-* Next, plan to generate simplified diagrams ...
+* Next, plan to generate simplified diagrams
+  * [Simple Inventory System UML](SimpleUMLInventorySystem.md)
+  * [Simple Inventory Manager UML](SimpleUMLInventoryManager.md)
 
 ### Main Scene
 * [Top-level GameObjects](MainGameScene.md)

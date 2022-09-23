@@ -1,0 +1,23 @@
+@startuml Settings
+
+!include Settings.puml
+!include Notifications.puml
+!include UI.puml
+!include Default.puml
+!include Input.puml
+!include SavingLoading.puml
+
+hide NotificationExtension
+hide UnstackInput
+hide SavingProvider
+hide INameable
+
+together {
+    class Notifications
+    class UI
+    class Default
+    class Input
+    class SavingLoading
+}
+
+@enduml

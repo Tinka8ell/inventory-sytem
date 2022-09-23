@@ -1,0 +1,38 @@
+@startuml
+/'
+!include Restrictions/dirInclude.puml
+!include Save and Load/dirInclude.puml
+!include View/dirInclude.puml
+!include CurrencySlot.puml
+!include ItemTooltip.puml
+!include SkillSlot.puml
+!include Stack.puml
+!include SwapItems.puml
+'/
+!include ItemSlot.puml
+!include Slot.puml
+!include ItemContainer.puml
+
+hide IBeginDragHandler
+hide IDragHandler
+hide IEndDragHandler
+hide IPointerDownHandler
+hide IPointerUpHandler
+hide IPointerEnterHandler
+hide IPointerExitHandler
+hide MoveItemCondition
+Hide DragObject
+Hide InputButton
+
+together {
+    class CallbackHandler
+    class IDropHandler
+    class UIWidget
+}
+
+together {
+    class Slot
+    class ItemContainer
+}
+
+@enduml
