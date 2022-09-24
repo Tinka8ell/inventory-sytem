@@ -4,6 +4,12 @@ This are generic bits used in other UI Game Objects.
 
 ## Contains:
 
+### Currency Container
+Has:
+* Gold is a [Currency Slot](#currency-slot)
+* Silver is a [Currency Slot](#currency-slot)
+* Copper is a [Currency Slot](#currency-slot)
+
 ### Currency Slot
 Has is an [Item Slot](#item-slot) with CurrencySlot.cs
 

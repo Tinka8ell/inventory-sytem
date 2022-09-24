@@ -40,11 +40,8 @@ Has Notification.cs and:
       * Text
 
 ### Tooltip 
-Is a [Tooltip UI Element](CommonUIGameObjects#yooltip-ui-element) and:
-* Price - PriceItem.cd, ItemContainer.cs & ItemCollection.cs
-  * Gold is a [Currency Slot](CommonUIGameObjects#currency-slot)
-  * Silver is a [Currency Slot](CommonUIGameObjects#currency-slot)
-  * Copper is a [Currency Slot](CommonUIGameObjects#currency-slot)
+Is a [Tooltip UI Element](CommonUIGameObjects.md#tooltip-ui-element) and:
+* Price is a [Currency Container](./CommonUIGameObjects.md#currency-container) with PriceItem.cd
 
 ### Context Menu 
 Has ContextMenu.cs and:
@@ -53,7 +50,7 @@ Has ContextMenu.cs and:
   * Outline
 
 # Menu Tooltip
-Is just a [Tooltip UI Element](CommonUIGameObjects#yooltip-ui-element).
+Is just a [Tooltip UI Element](CommonUIGameObjects.md#tooltip-ui-element).
 
 ### Progressbar
 Has Progressbar.cs and:
