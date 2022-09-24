@@ -16,7 +16,7 @@ One is a Prefab (Inventory), and the other is a Prefabs of Prefabs (General UI).
   * Chest
   * BuySellDialog
   * Equipment
-  * Inventory
+  * [Inventory](InventoryGameObject.md)
   * Loot
   * Spells
   * Skills
@@ -37,7 +37,7 @@ One is a Prefab (Inventory), and the other is a Prefabs of Prefabs (General UI).
   * Main Menu
   * Options
   * SaveLoadMenu
-* Genaral UI
+* [Genaral UI](GenaralUIGameObject.md)
   * Floating UI
   * Notification
   * Tooltip
@@ -55,4 +55,5 @@ One is a Prefab (Inventory), and the other is a Prefabs of Prefabs (General UI).
 Further work is required to look into the structure of a typical UI GameObject.
 
 ## Significant dependant GameObjects
-* [Game Object](GameObject.md)
+* [Genaral UI Game Object](GenaralUIGameObject.md)
+* [Inventory Game Object](InventoryGameObject.md)
