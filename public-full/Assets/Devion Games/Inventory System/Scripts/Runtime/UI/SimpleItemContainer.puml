@@ -1,0 +1,10 @@
+@startuml Item Container
+
+!include ItemContainer.puml
+
+remove InputButton
+
+ItemContainer o--ItemCollection
+ItemContainer o--Slot
+
+@enduml

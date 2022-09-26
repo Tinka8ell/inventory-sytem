@@ -1,0 +1,16 @@
+@startuml Item Slot
+
+!include ItemSlot.puml
+!include Slot.puml
+
+remove IBeginDragHandler
+remove IDragHandler
+remove IEndDragHandler
+remove IPointerDownHandler
+remove IPointerUpHandler
+remove IPointerEnterHandler
+remove IPointerExitHandler
+remove MoveItemCondition
+remove DragObject
+
+@enduml

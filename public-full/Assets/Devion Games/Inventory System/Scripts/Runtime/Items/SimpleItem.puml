@@ -1,0 +1,13 @@
+@startuml Item
+
+!include Currency.puml
+!include EquipmentItem.puml
+!include Item.puml
+!include Skill.puml
+!include UsableItem.puml
+
+remove ScriptableObject
+remove INameable
+remove IJsonSerializable
+
+@enduml

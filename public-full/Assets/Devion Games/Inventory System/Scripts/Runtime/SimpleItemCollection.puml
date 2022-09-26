@@ -1,0 +1,10 @@
+@startuml Item Collection
+
+!include ItemCollection.puml
+
+remove IEnumerable`1
+remove IJsonSerializable
+
+ItemCollection o-- Item
+
+@enduml

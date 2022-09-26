@@ -1,0 +1,9 @@
+@startuml Item Collection
+
+!include SimpleItemCollection.puml
+!include UI/SimpleUI.puml
+!include Items/SimpleItem.puml
+
+CallbackHandler <|-- UIWidget
+
+@enduml
