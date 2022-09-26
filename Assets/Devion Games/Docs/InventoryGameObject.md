@@ -4,7 +4,7 @@ This is a Prefab.
 
 ## Contains:
 
-* Inventory - ItemContainer.cs & ItemCollection.cs
+* Inventory - [ItemContainer.cs & ItemCollection.cs](ItemContainerCollection.md)
   * Background
   * Background Outline
   * Header
@@ -13,7 +13,7 @@ This is a Prefab.
   * Slots
     * [Rounded Grid Slot](#rounded-grid-slot)
     * Rounded Grid Slot (1-20) are [Rounded Grid Slot](#rounded-grid-slot)s
-  * Currency is just a [Currency Container](./CommonUIGameObjects.md#currency-container)
+  * Currency is just a [Currency Container](CommonUIGameObjects.md#currency-container)
   * Drag Handle
 
 ## What is it?
@@ -23,7 +23,7 @@ A UI GameObject to represent an Inventory with title, slots and currency.
 ## Significant dependant GameObjects
 
 ### Rounded Grid Slot
-Is an [Item Slot](./CommonUIGameObjects.md#item-slot) whose Icon has been extended with:
+Is an [Item Slot](CommonUIGameObjects.md#item-slot) whose Icon has been extended with:
 * Icon:
   * Background
   * Mask

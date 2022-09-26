@@ -9,6 +9,6 @@
 
 ## Main UML
 
-![Simple UML for the Inventory System](../../../public-full/Assets/Devion%20Games/Inventory%20System/Scripts/Runtime/SimpleUMLInventorySystem.png)
+![Simple UML for the Inventory System](UML/SimpleUMLInventorySystem.png)
 
 

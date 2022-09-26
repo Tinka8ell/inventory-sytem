@@ -1,4 +1,4 @@
-# [UI Gameobjects](UIScreenshot.png)
+# [UI Gameobjects](Screenshots/UIScreenshot.png)
 
 UI is a canvas that "holds" all the separate overlays.  
 Most of these are aranged in groups, e.g. Main UI.

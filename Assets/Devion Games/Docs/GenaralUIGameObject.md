@@ -1,4 +1,4 @@
-# [Genaral UI Game Object](./GenaralUIGameObject.png)
+# [Genaral UI Game Object](Screenshots/GenaralUIGameObject.png)
 
 This Prefab "holds" a number of overlays which are all Prefabs.
 

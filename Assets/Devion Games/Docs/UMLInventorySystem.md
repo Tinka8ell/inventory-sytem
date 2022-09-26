@@ -7,6 +7,6 @@
 
 ## Main System
 
-![UML for the Inventory System Runtime](../../../public-full/Assets/Devion%20Games/Inventory%20System/Scripts/Runtime/UML.png)
+![UML for the Inventory System Runtime](UML/UMLInventorySystem.png)
 
 

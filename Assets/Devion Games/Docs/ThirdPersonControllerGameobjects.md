@@ -1,4 +1,4 @@
-# [Third Person Controller Gameobjects](DefaultAvatarScreenshot.png)
+# [Third Person Controller Gameobjects](Screenshots/DefaultAvatarScreenshot.png)
 
 As discussed before there are two related Prefabs (Default Avatar and Third Person Camera).
 The Avatar itself is constructed from further Prefabs.  

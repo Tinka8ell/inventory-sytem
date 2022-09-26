@@ -1,7 +1,7 @@
 # StatsHandler
 
 Thing that looks after Stats.
-From the [Default Avatar](DAStatsHandler.png)
+From the [Default Avatar](Screenshots/DAStatsHandler.png)
 we can get some idea of how it is supposed to be used.
 In this case, there are a lot of Stats and a couple of Effects listed.
 

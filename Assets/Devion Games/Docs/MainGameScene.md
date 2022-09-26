@@ -1,4 +1,4 @@
-# [Main Game Scene](MainSceneScreenshot.png)
+# [Main Game Scene](Screenshots/MainSceneScreenshot.png)
 
 There is a lot in here, and most of it is "fluff".
 Ok, it is all important as an example, 

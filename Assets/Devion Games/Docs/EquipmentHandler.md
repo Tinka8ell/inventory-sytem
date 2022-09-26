@@ -2,11 +2,11 @@
 
 Seems a significant object to do with instantiating "Visible Items"
 and moving them to and from ItemContainers.
-From the [Default Avatar](DAEquipementHandler.png)
+From the [Default Avatar](Screenshots/DAEquipementHandler.png)
 we can get some idea of how it is supposed to be used.
 
 ## Contains:
-* [Bones](DAEquipementHandlerBones.png) - a List of EquipmentBone
+* [Bones](Screenshots/DAEquipementHandlerBones.png) - a List of EquipmentBone
   * List of bones seems to be taken from the database (in the Inventoymanager?)
   * Intersetingly, only 2 are defined in the working example:
     * Right Hand Items
@@ -14,7 +14,7 @@ we can get some idea of how it is supposed to be used.
   * These are "extra" "null" (zero Transform) bones in the respective hands
   * So the "hand bones" tak us to where the fingers are mounted 
   and this placement is at that point
-* [VisibleItems](DAEquipementHandlerItems.png) - a List of VisibleItem
+* [VisibleItems](Screenshots/DAEquipementHandlerItems.png) - a List of VisibleItem
   * This is prefilled
   * Does it list the itmes we can hold?
 * Refs:

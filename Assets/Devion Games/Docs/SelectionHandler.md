@@ -1,7 +1,7 @@
 # SelectionHandler
 
 It's a CallbackHandler for OnSelect and  OnDeselect.
-From the [Default Avatar](DASelectionHandler.png)
+From the [Default Avatar](Screenshots/DASelectionHandler.png)
 we can get some idea of how it is supposed to be used.
 
 ## Contains:

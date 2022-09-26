@@ -44,11 +44,11 @@ i.e. no databases defined.
 
 ### Stats System Editor
 
-[A "database" editor for Stats databases](StatsSystem.png).
+[A "database" editor for Stats databases](Screenshots/StatsSystem.png).
 
 ### Information System Editor
 
-[A "database" editor for Item databases](InformationSystem.png).
+[A "database" editor for Item databases](Screenshots/InformationSystem.png).
 
 ### Database Editors
 
@@ -63,11 +63,11 @@ There are also buttons to create new entries and delete them.
 
 ### Setup Character
 
-This [wizard window](CharacterSetup.png) allows you to set up a pre-existing player GameObject 
+This [wizard window](Screenshots/CharacterSetup.png) allows you to set up a pre-existing player GameObject 
 as a third person character.  
-By selecting or dropping the GameObject it becomes a [build window](CharacterSetupBuild.png)
+By selecting or dropping the GameObject it becomes a [build window](Screenshots/CharacterSetupBuild.png)
 with options to change which components are added.
-Pressing the Build Character button populates the given [GameObject](CharacterSetupBuild.png).
+Pressing the Build Character button populates the given [GameObject](Screenshots/CharacterSetupBuild.png).
 This is only for the motion control of the character.  
 **It does not add any inventory components.**
 
@@ -78,7 +78,7 @@ This is much like the Information System works (inernally) the the main and chil
 
 ### Item Reference Updater
 
-[Interesting wizard](ItemReferenceUpdater.png).
+[Interesting wizard](Screenshots/ItemReferenceUpdater.png).
 Seems to enable you to combine 
 * scenes (with button to add open ones)
 * prefabs root directory
@@ -91,7 +91,7 @@ ArgumentOutOfRangeException: StartIndex cannot be less than zero.
 
 ### UI Widgets
 
-Provides a [list](UIManager.png) of all the UI Widgets in the project.
+Provides a [list](Screenshots/UIManager.png) of all the UI Widgets in the project.
 Viewed by:
 * name
 * path

@@ -4,7 +4,7 @@ Understanably this is a complicated object.
 We can seperate out the "Unity" stuff, the controller stuff and the inventory stuff.
 
 ## Contains:
-[Default Avatar](DefaultAvatarComponentsInspector.png):
+[Default Avatar](Screenshots/DefaultAvatarComponentsInspector.png):
 * Transform - Unity standard for gameObject
 * Animator - Unity standard - 
 links Third Person Controller.controller and DefaultAvatar.avatar's Avatar
