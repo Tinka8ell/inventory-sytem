@@ -29,5 +29,65 @@ This highlighted some issues:
       * In the Editor.log (in ~.config/unity3d) the last entry was out of resource error and it had over 8000 entries in the stack for that method call!
       * That would eat up all the space memory!
 
+## EquipmentRegion and "=="
+
+EquipmentRegion, and probably all the INameable classes, do not handle "==" or even Equals() well.
+The lookup for various "items" will often do a `.Find(x => x.name == name)` type search on a collection.
+An example is Equipmenthandler's GetBone(equipmentRegion) which tries to find an EquipmentBone using:
+
+```Java
+   EquipmentBone bone = Bones.Find(x => x.region == region);
+```
+
+But this fails if the EquipmentRegion used is not the same Object as the ones in the list, 
+even though they are recognised by their INameable property, which seems to be considered as a unique name.
+A fix in this case was to add the following code, but maybe this should be at the INameable interface.  Can it be done there though?  Maybe it can be done as a generic?
+
+```Java
+		public override bool Equals(object obj) => this.Equals(obj as EquipmentRegion);
+		
+		public bool Equals(EquipmentRegion p){
+	        if (p is null)
+    	    {
+        	    return false;
+	        }
+
+    	    // Optimization for a common success case.
+        	if (Object.ReferenceEquals(this, p))
+	        {
+    	        return true;
+        	}
+
+	        // If run-time types are not exactly the same, return false.
+    	    if (this.GetType() != p.GetType())
+        	{
+            	return false;
+        	}
+
+	        // Return true if the fields match.
+    	    // Note that the base class is not invoked because it is
+        	// System.Object, which defines Equals as reference equality.
+	        return (name == p.Name);
+    	}
+
+	    public override int GetHashCode() => (Name).GetHashCode();
+
+    	public static bool operator ==(EquipmentRegion lhs, EquipmentRegion rhs){
+	        if (lhs is null)
+    	    {
+        	    if (rhs is null)
+            	{
+                	return true;
+	            }
+
+    	        // Only the left side is null.
+        	    return false;
+	        }
+    	    // Equals handles case of null on right side.
+        	return lhs.Equals(rhs);
+    	}
+
+	    public static bool operator !=(EquipmentRegion lhs, EquipmentRegion rhs) => !(lhs == rhs);
+```
 
 
