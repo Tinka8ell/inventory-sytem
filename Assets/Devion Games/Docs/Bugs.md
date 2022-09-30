@@ -1,5 +1,61 @@
 # Bugs discovered ...
 
+## Editor Error
+
+This is a bug.
+```
+System.InvalidOperationException: The operation is not possible when moved past all properties (Next returned false)
+  at UnityEditor.SerializedProperty.get_stringValue () [0x00012] in /home/bokken/buildslave/unity/build/Editor/Mono/SerializedProperty.bindings.cs:914 
+  at DevionGames.WriteInputManager.AxisDefined (System.String axisName) [0x0003c] in /home/tinka/Zenva/Under Development/DevionGames/Assets/Devion Games/Third Person Controller/Scripts/Editor/WriteInputManager.cs:84 
+  at DevionGames.WriteInputManager..cctor () [0x00000] in /home/tinka/Zenva/Under Development/DevionGames/Assets/Devion Games/Third Person Controller/Scripts/Editor/WriteInputManager.cs:13 
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /home/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+```
+The basic issue is that the script expects to find all the required "Axes" defined in the "Input Manger".
+Unfortunately the base code did not put in error checks for not finding them, 
+so when it falls off the loop looking, but didn't find it keeps looking beyond the end of the desierialised data.
+You are missing 4: 
+* Crouch
+* Change Speed
+* No Control
+* Evade
+
+![Input Wanager wth four new "Axes"](./Screenshots/InputManagerWith4NewAxes.png)
+
+The only one I know, so far, is "Crouch", which is supposed to be keyboard 'c'.  
+I set this and the other 3 to nothing, and this passes, but may cause another issue:
+
+### State comes from an incompatible keyword space - wierd warning!
+
+When I re-opened my project I was surprised and shoked to find this message.
+As I had changed my Input manager settings and had 3 ill-defined cases, this may be the problem :-(
+I will try and correct those and see if it goes away.
+
+## Self-intersecting polygon mesh Warning
+
+ A polygon of Mesh 'prop_fish_01' in Assets/Devion Games/Inventory System/Examples/Models/Fish/Fish.fbx is self-intersecting and has been discarded.
+
+ At another time I discovered that using some polygon meshes have been dropped as collision meshes as well, 
+ but unless you want to use the fish without fixing this, you are ok.  It's a warning after all!
+
+## Animation Import Warnings
+
+There are a number of them, and not easy to find.  
+The message is: 
+"File 'Climb' has rig import warnings. See Import Messages in Rig Import Tab for more details.",
+where the File 'Climb' was one of many.  
+If you search the project for, in this case, Climb, you will find a couple and the one you want is the "boxy" one.
+It is an "Animation".  It will open in the inspector and the 3rd tab (Animation) is where the message is.
+It tells you to open the 2nd tab (Rig) where you will be told to open the "Import Messages" foldout -
+this the drop down by "Import Messages" and it will show the message:
+'''
+Copied Avatar Rig Configuration mis-match. 
+Bone length in copied configuration does not match position in animation file:
+"LeftLeg': position error = 7.696520 mm
+'LeftFoot': position error = 15.233778 mm
+'''
+It is the same for all the files.  Looks like the "rig" had been adjusted on just the left leg and foor, but the animation not updated! - What do I know?  Hopeully it is now fixed.
+![For completenes: the Animation and Rig tab in the ispector](./Screenshots/AnimationImportWarning.png)
+
 ## UI Utility scripts
 
 * When the Inventroy System Example Scene - Main Scene
