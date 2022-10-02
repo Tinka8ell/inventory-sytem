@@ -1,6 +1,6 @@
 # Item & Inventory System Review and Update (fix)
 
-## First thoughts
+## First Thoughts
 
 When I came across this asset I was impressed and encouraged.  
 The inventory system seemed clean and simple - clear and minimalist, 
@@ -56,6 +56,27 @@ and there is the places where things link through Unity objects (components, etc
 
 Got to start somewhere, so let's hit the 
 ["Inventory Ststem"](Assets/Devion%20Games/Docs/README.md) ...
+
+## Second Thoughts!
+
+Despite the lack of support for the new Input System, and a few other limitations,
+I kind of like the idea of building on a fully fledged system, that seems thought through.
+
+### Ok, but where do I start from?  
+The ["current release"](https://assetstore.unity.com/packages/tools/gui/item-inventory-system-45568) is 2.1.3.  
+The ["project release"](https://github.com/DevionGames/inventory-sytem) calls itself 2.1.4 Preview
+What's changed?  A lot!  I loaded the 2.1.3 version over a clone of the 2.1.4 - over 600 file changes!
+2.1.3 is the "stable", "working" version that has been around for 19 months (released 26 Feb 2021).
+2.1.4 was being worked on up to 14 months ago (last commit 30 Jul 2021).
+
+### Where to go?
+
+* I like the new Input System and Cinemachine packages (used by Starter Assets and their 1st and 3rd person coltroller).  
+* Devion Games uses their own bespoke 3rd person camera with ray-caster to identify what is being "looked at".
+* Devion Games 3rd person controller (and avatar) uses a very involved Input Manager interaction.
+* Devion Games inventory / stat / UI also uses the same Input Manager and it is as clear as mud!
+* I like the extra triggers and annimations in Devion Games, but they "should" be transferable.
+* Devion Games "interactions" are intertwined in the item database.  How to decouple?
 
 ## From Original Item & Inventory System 2.1.4 preview
 
