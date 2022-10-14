@@ -1,5 +1,27 @@
 # Bugs discovered ...
 
+## Third Person Cntroller never stops "falling"
+
+The third persn controller uses MotionStates to control much of the animation.
+The Fall MotionState has commented out code in its OnControllerGrounded() method.
+This would allow the event to invoke the OnControllerLanded() method, which calls the StopMotio() action.
+It may have been intended that whatever detected that we have landed should call StopMotion() directly, 
+or the OnControllerLanded() event instead, but that code is not there.
+Once re-instated the falling state does finish, but slowly, so this may be why there was a change of code.
+It just seems incomplete.  Unfortunately, jumping ends in falling so this bug gets the avatar locked and won't move.
+In the Fall class:
+```
+        public void OnControllerGrounded(bool grounded)
+        {
+			if (this.IsActive)
+            {
+                this.m_Animator.SetInteger("Int Value", 1);
+                Invoke("OnControllerLanded", 1f); // anything shorter seems to cause a timing conflict
+            }
+        }
+```
+I tried reducing this further, but it left the avatar in this strange not able to move state.
+
 ## Editor Error
 
 This is a bug.
@@ -30,6 +52,36 @@ When I re-opened my project I was surprised and shoked to find this message.
 As I had changed my Input manager settings and had 3 ill-defined cases, this may be the problem :-(
 I will try and correct those and see if it goes away.
 
+### Real cause / solution
+
+It turns out that this bit of code is looking for missing, but required "axes".
+The problem is either the code was wrong, or more recent Unity versions chaged how deserialisation works.
+The search through the defined axes looks for the "name" of each by searching in children.
+To do this it makes a copy of the iterator and uses that, but that seems to move on the original too.
+making a copy of the iterator and then reseting back to that clears the issue:
+```C#
+		private static bool AxisDefined (string axisName)
+		{
+			SerializedObject serializedObject = new SerializedObject (AssetDatabase.LoadAllAssetsAtPath ("ProjectSettings/InputManager.asset") [0]);
+			SerializedProperty axesProperty = serializedObject.FindProperty ("m_Axes");
+
+			axesProperty.Next (true);
+			axesProperty.Next (true);
+			while (axesProperty.Next(false)) { // get next axis
+				SerializedProperty finger = axesProperty.Copy (); // keep a finder here
+				if (axesProperty.Next (true)) { // look for name
+					if (axesProperty.stringValue == axisName)
+						return true;
+				}
+				axesProperty = finger; // reset back to where we left our finger
+			}
+			return false;
+		}
+```
+This is in class WriteInputManager. 
+This is marked as "InitializeOnLoad", so it gets run when the editor starts or recompiles the scripts.
+It ensures that the Input Manger has the extra required axes to support the 3rd person controller.
+
 ## Self-intersecting polygon mesh Warning
 
  A polygon of Mesh 'prop_fish_01' in Assets/Devion Games/Inventory System/Examples/Models/Fish/Fish.fbx is self-intersecting and has been discarded.
@@ -39,10 +91,10 @@ I will try and correct those and see if it goes away.
 
 ## Animation Import Warnings
 
-There are a number of them, and not easy to find.  
+There are a number of them, and not easy to find. 
 The message is: 
 "File 'Climb' has rig import warnings. See Import Messages in Rig Import Tab for more details.",
-where the File 'Climb' was one of many.  
+where the File 'Climb' was one of many. 
 If you search the project for, in this case, Climb, you will find a couple and the one you want is the "boxy" one.
 It is an "Animation".  It will open in the inspector and the 3rd tab (Animation) is where the message is.
 It tells you to open the 2nd tab (Rig) where you will be told to open the "Import Messages" foldout -
@@ -84,6 +136,9 @@ This highlighted some issues:
     * The very clever, but badly implented Reflection code in ItemReferenceEditor calls UpdateReference() recursively without checks
       * In the Editor.log (in ~.config/unity3d) the last entry was out of resource error and it had over 8000 entries in the stack for that method call!
       * That would eat up all the space memory!
+* Now disovered that the default avatar has some extra stuff in it.
+  * Some may be created on the fly (using the Bones and Items lists)
+  * One is an extra camera, facing back at the avatar face, used to show avata in UI
 
 ## EquipmentRegion and "=="
 

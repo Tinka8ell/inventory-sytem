@@ -27,7 +27,7 @@ links Third Person Controller.controller and DefaultAvatar.avatar's Avatar
   * Stats Handler
 
 ## Significant dependant objects
-* Third Person Controller
+* [Third Person Controller](ThirdPersonController.md)
 * Character IK
 * [Equipment Handler](EquipmentHandler.md)
 * [Selection Handler](SelectionHandler.md)

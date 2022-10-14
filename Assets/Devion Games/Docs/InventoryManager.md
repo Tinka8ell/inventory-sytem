@@ -38,7 +38,7 @@ but I think this one only creates and empty game object with this as a component
   * Subscribes to: UnityEngine.SceneManagement.SceneManager.activeSceneChanged
   * If marked as "Do Not Destroy", detaches from any parent and makes itself "Do Not Destroy"
   * If autoSave is enables starts the RepeatSaving() Coroutine
-* Load and Save use (Serializable) JSON and a complicated key system in PlayerPrefs 
+* [Load and Save](LoadAndSave.md) use (Serializable) JSON and a complicated key system in PlayerPrefs 
 * GetPrefab(name)
   * Takes from cache (dictionary) if there
   * Takes from the ItemDatabase if there

@@ -37,3 +37,43 @@ we can get some idea of how it is supposed to be used.
 * [ItemDatabase](ItemDatabase.md)
 * ItemContainer - part of the UI
 * [WidgetUtility](WidgetUtility.md)
+
+## Analysis
+
+### class EquipmentHandler
+* No direct interaction with Input Manager
+* Extends MonoBehaviour
+* Fields
+  * WindowName(string) defaults to "Equipment"
+  * ItemDatabase - set in Editor
+  * Bones List of EquipmentBone
+  * VisibleItems List of VisibleItem marked disabled at Start()
+  * ItemContainer found by WindowName using WidgetUtility at Start()
+* Mathods
+  * Start
+    * add OnAddItem() to ItemContainer.OnAddItem listener
+    * add OnRemoveItem() to ItemContainer.OnRemoveItem listener
+    * call UpdateEquipment()
+    * if InventoryManager has current AddListener to onDataLoaded event to UpdateEquipment()
+  * OnAddItem(Item, Slot)
+    * if Item is EquipmentItem, call EquipItem(EquipmentItem)
+  * OnRemoveItem(Item, amount, Slot)
+    * if Item is EquipmentItem, call UnEquipItem(EquipmentItem)
+  * EquipItem(EquipmentItem)
+    * for each ObjectProperty in EquipmentItem Properties
+      * if numeric property, call SendMessage("AddModifier" with suitable object)
+    * for the matching VisibleItems call OnItemEquip(EquipmentItem)
+    * else create one and call OnItemEquip(EquipmentItem)
+  * UnEquipItem(EquipmentItem)
+    * for each ObjectProperty in EquipmentItem Properties
+      * if numeric property, call SendMessage("RemoveModifiersFromSource" with suitable object)
+    * for the matching VisibleItems call OnItemUnEquip(EquipmentItem)
+  * UpdateEquipment
+    * for each VisibleItems call OnItemUnEquip(it's item)
+    * for each EquipmentItem in ItemContainer call EquipItem()
+  * GetBone(EquipmentRegion) find matching bone's Transform from Bones
+
+## class EquipmentBone{
+* Fields
+  * EquipmentRegion
+  * GameObject of that bone
